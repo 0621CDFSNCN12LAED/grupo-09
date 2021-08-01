@@ -1,0 +1,16 @@
+html,body{
+    margin:0
+}
+
+body{
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+.background_amarillo{
+    background-color:#f8f53f;
+}
+
+.background_azulceleste{
+    background-color:#3f89f8;
+}

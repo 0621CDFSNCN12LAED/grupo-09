@@ -1,4 +1,4 @@
-# grupo-09
+# grupo-09 appedal
 Al 87% de los ciclistas se les pincha una rueda por mes. Este dato no es cierto pero seguro te paso alguna vez y estando en un lugar lejos de tu casa, en ese momento pensaste "bueno, para esto sirve google" y buscaste en el mapa bicileterias "near me" pero justo se dio que no hay ninguna cerca. 
 Si, esto nos ha pasado a todos. Pero tenemos una buena noticia para que no suceda mas! 
 
@@ -9,7 +9,8 @@ Nuestra plataforma se basa en poder conectarte con un mecanico ambulante para bi
 Además por estar registrado podrás obtener descuentos exclusivos en la tienda del sitio para la compra de accesorios y respuestos para tu bici, contratar un seguro por robo a un costo preferencial o participar de eventos patrocinados junto con el resto de los miembros de la comunidad para disfrutar de la pasión de ir pedaleando por la vida.
 
 Quienes somos?
-    Marcos Young
-    Pedro Medina
-    Roberto Loncan
-    Hernan Cerda
+
+    Marcos Young;
+    Pedro Medina;
+    Roberto Loncan;
+    Hernan Cerda;
