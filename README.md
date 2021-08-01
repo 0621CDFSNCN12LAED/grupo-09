@@ -8,9 +8,8 @@ Nuestra plataforma se basa en poder conectarte con un mecanico ambulante para bi
 
 Además por estar registrado podrás obtener descuentos exclusivos en la tienda del sitio para la compra de accesorios y respuestos para tu bici, contratar un seguro por robo a un costo preferencial o participar de eventos patrocinados junto con el resto de los miembros de la comunidad para disfrutar de la pasión de ir pedaleando por la vida.
 
-Quienes somos?
-
-    Marcos Young;
-    Pedro Medina;
-    Roberto Loncan;
-    Hernan Cerda;
+## Quienes somos?
+-Marcos Young;
+-Pedro Medina;
+-Roberto Loncan;
+-Hernan Cerda;
