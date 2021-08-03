@@ -3,14 +3,25 @@ html,body{
 }
 
 body{
-    font-family: sans-serif;
+    font-family: Helvetica;
     font-size: 12px;
 }
 
+h1{
+    font-family: Verdana;
+    font-size: 24px;
+    font-weight: lighter;
+    text-align: center;
+}
+
 .background_amarillo{
-    background-color:#f8f53f;
+    background-color:#f4e92e;
 }
 
 .background_azulceleste{
-    background-color:#3f89f8;
+    background-color:#0f6af2
+}
+
+.background_verde{
+    background-color:#26bc3a
 }

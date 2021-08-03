@@ -8,8 +8,23 @@ Nuestra plataforma se basa en poder conectarte con un mecanico ambulante para bi
 
 Además por estar registrado podrás obtener descuentos exclusivos en la tienda del sitio para la compra de accesorios y respuestos para tu bici, contratar un seguro por robo a un costo preferencial o participar de eventos patrocinados junto con el resto de los miembros de la comunidad para disfrutar de la pasión de ir pedaleando por la vida.
 
+## Público Objetivo
+Usuarios de bicicleta en general
+
+
+## Sitios de Referencia
+- https://www.segurobici.com.ar/blog/ ->
+- https://www.bikerepairapp.com/ ->
+- https://biciurbana.com.ar/ ->
+- https://www.borningarage.com.ar/
+- https://bicyshop.com.ar/
+- https://www.transvisionbike.com/
+
+
+
+
 ## Quienes somos?
--Marcos Young;
--Pedro Medina;
--Roberto Loncan;
--Hernan Cerda;
+- Marcos Young;
+- Pedro Medina;
+- Roberto Loncan;
+- Hernan Cerda;
