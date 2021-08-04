@@ -1,0 +1,27 @@
+html,body{
+    margin:0
+}
+
+body{
+    font-family: Helvetica;
+    font-size: 12px;
+}
+
+h1{
+    font-family: Verdana;
+    font-size: 24px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.background_amarillo{
+    background-color:#f4e92e;
+}
+
+.background_azulceleste{
+    background-color:#0f6af2
+}
+
+.background_verde{
+    background-color:#26bc3a
+}
