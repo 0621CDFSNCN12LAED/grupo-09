@@ -25,3 +25,18 @@ h1{
 .background_verde{
     background-color:#26bc3a
 }
+
+.text-center{
+    text-align: center;
+}
+
+.align-right{
+    text-align: right;
+}
+
+.size-65x20{ 
+    width: 65px;
+    height: 20px;
+    font-size: x-small;
+
+}

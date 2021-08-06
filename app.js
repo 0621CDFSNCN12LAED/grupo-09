@@ -14,3 +14,14 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, '/views/home.html')
     )
 });
+
+app.route('/login')
+ 	.get(function (req, res) {
+		res.sendFile(path.join(__dirname, "/views/login.html"));
+	});
+
+    app.route('/register')
+ 	.get(function (req, res) {
+		res.sendFile(path.join(__dirname, "/views/Registro.html"));
+	});
+
