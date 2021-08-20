@@ -1,0 +1,27 @@
+.w-100 {
+  width: 100%;
+}
+.no-wrap {
+  flex-wrap: nowrap;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.padding-8 {
+  padding: 8px;
+}
+.text-align {
+  text-align: center;
+}
+.article-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.imgs {
+  border-radius: 5px;
+}
+#main-content {
+  padding: 0 8%;
+  border-radius: 10px;
+}

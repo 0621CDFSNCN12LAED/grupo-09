@@ -1,42 +1,97 @@
-html,body{
-    margin:0
+html,
+body {
+  margin: 0;
 }
 
-body{
-    font-family: Helvetica;
-    font-size: 12px;
+body {
+  font-family: Helvetica;
+  font-size: 12px;
 }
 
-h1{
-    font-family: Verdana;
-    font-size: 24px;
-    font-weight: lighter;
-    text-align: center;
+h1 {
+  font-family: Verdana;
+  font-size: 24px;
+  font-weight: lighter;
+  text-align: center;
 }
 
-.background_amarillo{
-    background-color:#f4e92e;
+.background_amarillo {
+  background-color: #f4e92e;
 }
 
-.background_azulceleste{
-    background-color:#0f6af2
+.background_azulceleste {
+  background-color: #0f6af2;
 }
 
-.background_verde{
-    background-color:#26bc3a
+.background_verde {
+  background-color: #26bc3a;
 }
 
-.text-center{
-    text-align: center;
+.text-center {
+  text-align: center;
 }
 
-.align-right{
-    text-align: right;
+.align-right {
+  text-align: right;
 }
 
-.size-65x20{ 
-    width: 65px;
-    height: 20px;
-    font-size: x-small;
+.size-65x20 {
+  width: 65px;
+  height: 20px;
+  font-size: x-small;
+}
+.searchbar {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.searchbar input,
+.searchbar button {
+  background-color: white;
+  border: none;
+  height: 30px;
+}
 
+.style-h2 {
+  font-family: Verdana;
+  font-size: 24px;
+  font-weight: lighter;
+  text-align: center;
+}
+.styke-h4 {
+  font-family: Verdana;
+  font-size: 16px;
+  font-weight: lighter;
+  text-align: center;
+}
+.style-nav {
+  text-align: center;
+}
+.banner {
+  width: 100%;
+  display: block;
+  border-radius: 5%;
+  height: 50%;
+}
+
+.style-h3 {
+  font-family: Verdana;
+  font-size: 24px;
+  font-weight: lighter;
+  text-align: center;
+}
+.product {
+  border: 1px solid #ebebeb;
+}
+.product-wrapper {
+  padding: 15px;
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+.product-content {
+  position: relative;
+  border-top: 1px solid #ebebeb;
+}
+.style-section {
+  display: flex;
+  flex-wrap: nowrap;
 }
