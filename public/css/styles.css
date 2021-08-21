@@ -95,3 +95,23 @@ h1 {
   display: flex;
   flex-wrap: nowrap;
 }
+
+.navbar a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+
+.navbar li {
+  display: inline;
+  margin-left: 5%;
+}
+
+.navbar ul {
+  list-style: none;
+}
+
+.navbar {
+  justify-content: space-between;
+  margin: 0 auto;
+}

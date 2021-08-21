@@ -24,3 +24,7 @@ app.route("/register").get(function (req, res) {
 app.route("/productDetail").get(function (req, res) {
   res.sendFile(path.join(__dirname, "views/productDetail.html"));
 });
+
+app.get("/productcart", (req, res) => {
+  res.sendFile(path.join(__dirname, "/views/productcart.html"));
+});
