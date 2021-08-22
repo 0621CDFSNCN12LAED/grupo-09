@@ -115,3 +115,15 @@ h1 {
   justify-content: space-between;
   margin: 0 auto;
 }
+
+.main-label{
+  font-size: medium;
+}
+.form-input{
+  width: 100%;
+  text-align: center;
+}
+.form-input input{
+  border-radius: 15px;
+}
+

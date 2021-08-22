@@ -4,6 +4,7 @@
     margin: 200px auto;
     border: solid white 2px;
     background-color: rgb(255, 255, 255);
+    
 }
 
 .main-title{
@@ -14,5 +15,9 @@
 .sub-title{
     font-size: medium;
     font-weight: 500;
+}
+
+.bg-white{
+    background-color: white;
 }
 

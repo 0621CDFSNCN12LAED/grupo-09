@@ -11,19 +11,38 @@
     
     <title>appedal-Login</title>
 </head>
-<body class="background_amarillo">
-    <div class="container text-center">
+<header class="background_amarillo">
+<div>
+    <img src="/img/appedal-logo.svg" alt="logo" width="50%">
+    <form action="/login" method="GET" class="align-right">
+    <button class="size-65x20">Login <i class="fas fa-sign-in-alt"></i></button>
+    </form>
+</div>
+<nav class="navbar flex w-100 no-wrap">
+   <ul>
+    <li><a href="#">Quienes Somos</a></li>
+    <li><a href="/login">Login</a></li>
+    <li><a href="/productDetail">Productos</a></li>
+    <li><a href="/productcart">Mis Compras</a></li>
+    <li><a href="#">Sugerencias</a></li>
+
+   </ul>
+</nav>
+</header>
+<body >
+    <form>
+    <div class="container text-center product-wrapper">
         <h1 class="main-title">Login</h1>
         <p class="sub-title">Usuario:</p>
-        <input placeholder="Usuario">
+        <input id="name" type="text" name="name" placeholder="Usuario">
         <p class="sub-title">Contrasena:</p>
-        <input placeholder="Contrasena">
+        <input id="password" type="password" name="password" placeholder="Contrasena">
         <p>no tenes ususario?</p>
-        
-        <form action="/Registro" method="GET">
-        <a href="/Registro.html">Registrate ahora!</a>
+    
+        <form>
+        <a href="/register">Registrate ahora!</a>
         </form>
-        
     </div>
+    </form>
 </body>
 </html>
