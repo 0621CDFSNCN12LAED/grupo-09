@@ -1,101 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/boxes.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/boxes.css" />
 
-    
     <title>appedal-Registro</title>
-</head>
-<header class="background_amarillo">
+  </head>
+  <header class="background_amarillo">
     <div>
-        <img src="/img/appedal-logo.svg" alt="logo" width="50%">
-        <form action="/login" method="GET" class="align-right">
-        <button class="size-65x20">Login <i class="fas fa-sign-in-alt"></i></button>
-        </form>
+      <img src="/img/appedal-logo.svg" alt="logo" width="50%" />
+      <form action="/login" method="GET" class="align-right">
+        <button class="size-65x20">
+          Login <i class="fas fa-sign-in-alt"></i>
+        </button>
+      </form>
     </div>
     <nav class="navbar flex w-100 no-wrap">
-       <ul>
+      <ul>
         <li><a href="#">Quienes Somos</a></li>
         <li><a href="/login">Login</a></li>
         <li><a href="/productDetail">Productos</a></li>
         <li><a href="/productcart">Mis Compras</a></li>
         <li><a href="#">Sugerencias</a></li>
-    
-       </ul>
+      </ul>
     </nav>
-</header>
-<body>
+  </header>
+  <body>
     <main>
-    <div class="flex container product-wrapper">
+      <div class="flex container product-wrapper">
         <h1 class="main-title w-100">Registro</h1>
         <form class="bg-white">
-            <div class="form-input">
-                <label class="main-label" for="name"
-                    >Nombre y apellido</label
-                >
-                <input id="name" type="text" name="name" />
-                <p class="error">Este campo es requerido</p>
-            </div>
-            <br>
-            <div class="form-input">
-                <label class="main-label" for="username"
-                    >Nombre de usuario</label
-                >
-                <input id="username" type="text" name="username" />
-                
-            </div>
-            <br>
-            <div class="form-input">
-                <label class="main-label">Perfil de usuario</label>
-                <input
-                    type="radio"
-                    name="user-profile"
-                    id="user-profile-seller"
-                    value="seller"
-                />
-                <label for="user-profile-seller">Mecanico</label>
-                <input
-                    type="radio"
-                    name="user-profile"
-                    id="user-profile-buyer"
-                    value="buyer"
-                />
-                <label for="user-profile-buyer">Usuario</label>
-            </div>
-            
-            <br>
-            <div class="form-input">
-                <label class="main-label" for="profile-pic"
-                    >Foto de perfil</label
-                >
-                <input
-                    id="profile-pic"
-                    type="file"
-                    name="profile-pic"
-                    accept="image/png,image/jpeg"
-                />
-            </div>
-            <br>
-            <div class="form-input">
-                <label class="main-label" for="password">Contraseña</label>
-                <input id="password" type="password" name="password" />
-            </div>
-            <br>
-            <div class="form-input">
-                <label class="main-label" for="rePassword"
-                    >Repetir Contraseña</label
-                >
-                <input id="rePassword" type="password" name="rePassword" />
-            </div>
-    
-            <button type="submit">Enviar</button>
-            <button type="reset">Resetear</button>
+          <div class="form-input">
+            <label class="main-label" for="name">Nombre y apellido</label>
+            <input id="name" type="text" name="name" />
+            <p class="error">Este campo es requerido</p>
+          </div>
+          <br />
+          <div class="form-input">
+            <label class="main-label" for="username">Nombre de usuario</label>
+            <input id="username" type="text" name="username" />
+          </div>
+          <br />
+          <div class="form-input">
+            <label class="main-label">Perfil de usuario</label>
+            <input
+              type="radio"
+              name="user-profile"
+              id="user-profile-seller"
+              value="seller"
+            />
+            <label for="user-profile-seller">Mecanico</label>
+            <input
+              type="radio"
+              name="user-profile"
+              id="user-profile-buyer"
+              value="buyer"
+            />
+            <label for="user-profile-buyer">Usuario</label>
+          </div>
+
+          <br />
+          <div class="form-input">
+            <label class="main-label" for="profile-pic">Foto de perfil</label>
+            <input
+              id="profile-pic"
+              type="file"
+              name="profile-pic"
+              accept="image/png,image/jpeg"
+            />
+          </div>
+          <br />
+          <div class="form-input">
+            <label class="main-label" for="password">Contraseña</label>
+            <input id="password" type="password" name="password" />
+          </div>
+          <br />
+          <div class="form-input">
+            <label class="main-label" for="rePassword"
+              >Repetir Contraseña</label
+            >
+            <input id="rePassword" type="password" name="rePassword" />
+          </div>
+
+          <button type="submit">Enviar</button>
+          <button type="reset">Resetear</button>
         </form>
-    </div>
+      </div>
     </main>
-</body>
+    <%- include('./partials/footer') %>
+  </body>
+</html>
