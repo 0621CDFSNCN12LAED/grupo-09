@@ -127,6 +127,113 @@ h1 {
   border-radius: 15px;
 }
 
+/*seteos logo*/
+.logo {
+  max-width: 50%;
+}
+
+/*seteos footer*/
+footer {
+  background: #202020;
+  padding-top: 25px;
+  font-family: "Montserrat", sans-serif;
+}
+
+footer h4 {
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+footer ul li {
+  list-style: none;
+}
+
+footer ul {
+  padding: 0;
+}
+
+footer ul a {
+  color: dimgrey;
+}
+
+footer p {
+  color: dimgrey;
+  width: 100%;
+}
+
+.row {
+  display: block;
+}
+
+.col-footer {
+  width: 90%;
+  padding-left: 5vw;
+}
+.separador1 {
+  background: #f4e92e;
+  height: 5px;
+  width: 70px;
+}
+
+.padliless li {
+  padding: 2px 0;
+}
+
+.foot-contacto {
+  background: #0e80de;
+  width: 332px;
+  margin: 10px 0 5px 0;
+  padding: 20px 0;
+  display: block;
+  text-align: center;
+  color: #fff;
+}
+
+.foot-contacto:hover {
+  color: #ffffff;
+  text-decoration: underline;
+  background-color: rgb(12, 114, 231);
+}
+.row-fix a {
+  color: #fff;
+  padding: 15px;
+  display: inline-block;
+  width: 50px;
+  text-align: center;
+}
+
+.frow-fix i {
+  background: #ffffff;
+  color: #3b5998;
+  font-size: 48px;
+}
+
+footer i {
+  color: #ffffff;
+}
+
+.fb {
+  background: #3b5998;
+}
+.tw {
+  background: #55acee;
+}
+.gp {
+  background: #e75041;
+}
+.lin {
+  background: #007bb5;
+}
+
+.btm-foot {
+  background: #fff;
+  margin-top: 10vw 25vh;
+  padding: 15px 0;
+  font-size: 8px;
+}
+
 /* seteos boton whatsapp */
 .btn-whatsapp {
   display: block;

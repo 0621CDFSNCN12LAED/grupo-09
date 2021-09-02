@@ -1,3 +1,13 @@
+/*seteos logo*/
+.logo {
+  max-width: 30%;
+}
+
+/*seteos footer*/
+.btm-foot {
+  font-size: 13px;
+}
+
 .btn-whatsapp {
   right: 5%;
   bottom: 15%;

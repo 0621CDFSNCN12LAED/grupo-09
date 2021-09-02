@@ -13,6 +13,7 @@
        
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/boxes.css">
+    <link rel="stylesheet" href="/css/utils.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/styles-sm.css" media="(min-width:481px)">
@@ -22,7 +23,7 @@
 <body>
     <header class="background_amarillo">
         <div>
-            <img src="/img/appedal-logo.svg" alt="logo" width="50%">
+            <img class="logo" src="/img/appedal-logo.svg" alt="logo">
             <form action="/login" method="GET" class="align-right">
             <button class="size-65x20">Login <i class="fas fa-sign-in-alt"></i></button>
             </form>
@@ -46,9 +47,7 @@
         <p><i class="fas fa-map-marker-alt"></i> Busca en el mapa la asistencia mas cercana a tu posición </i></p>
 
     </main>
-    <footer class="background_verde">
-    <p>prototio para ver tipografia y tamaño de letra del footer</p>
-    </footer>
+        <%- include('./partials/footer') %>
          <a  href="https://api.whatsapp.com/send?l=es&amp;phone=54911XXXXXXXX&amp;
       text=Hola, me gustaría recibir información sobre..."
       class="btn-whatsapp"
