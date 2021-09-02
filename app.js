@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 
 const path = require("path");
+const router = require("./routes/main");
 
 app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs");
@@ -10,22 +11,4 @@ app.listen(3000, () => {
   console.log("Servidor corriendo");
 });
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "/views/home.html"));
-});
-
-app.route("/login").get(function (req, res) {
-  res.sendFile(path.join(__dirname, "/views/login.html"));
-});
-
-app.route("/register").get(function (req, res) {
-  res.sendFile(path.join(__dirname, "/views/Registro.html"));
-});
-
-app.route("/productDetail").get(function (req, res) {
-  res.sendFile(path.join(__dirname, "views/productDetail.html"));
-});
-
-app.get("/productcart", (req, res) => {
-  res.sendFile(path.join(__dirname, "/views/productcart.html"));
-});
+app.use("/", router);
