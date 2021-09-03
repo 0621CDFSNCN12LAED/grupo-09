@@ -10,9 +10,14 @@ body {
 
 h1 {
   font-family: Verdana;
-  font-size: 24px;
+  font-size: 5vw;
   font-weight: lighter;
   text-align: center;
+  margin: 1vh;
+}
+
+h3 {
+  font-size: 3.5vw;
 }
 
 .background_amarillo {
