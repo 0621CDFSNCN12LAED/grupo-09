@@ -11,17 +11,29 @@
 - Less Of
   - Demoras en el trabajo que puede poner en riezgo el cumplimiento de las fechas de entrega
 - Stop Doing
+
   - Trabajo individual sin coordinar con el grupo
+
+  https://jamboard.google.com/d/1QjkiYpiN-MyVCFG_fT2Mn_I5TXhwJhkNjpFVF9wDR3k/viewer?f=0
 
 ---
 
 ### Retro Sprint 2 >_Minuta_
 
 - Start Doing
+  - Mejorar y ordenar el desarrollo con EJS.
+  - Ver diseño para distintos tamaños de pantalla
+  - uso de las ramas de GIT para tener diferentes ideas y propuestas.
 - More Of
+  - Coordinación en la distribución de tareas.
 - Keep Doing
+  - Juntarnos a analizar los proximos pasos que queremos dar y como seguir trabajando.
+  - Trabajo en equipo.
 - Less Of
+  - Demoras en el desarrollo para las entregas
 - Stop Doing
+
+https://jamboard.google.com/d/1QjkiYpiN-MyVCFG_fT2Mn_I5TXhwJhkNjpFVF9wDR3k/viewer?f=1
 
 ---
 
