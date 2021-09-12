@@ -36,15 +36,6 @@ h3 {
   text-align: center;
 }
 
-.align-right {
-  text-align: right;
-}
-
-.size-65x20 {
-  width: 65px;
-  height: 20px;
-  font-size: x-small;
-}
 .searchbar {
   background-color: white;
   border-radius: 10px;
@@ -63,7 +54,7 @@ h3 {
   font-weight: lighter;
   text-align: center;
 }
-.styke-h4 {
+.style-h4 {
   font-family: Verdana;
   font-size: 16px;
   font-weight: lighter;
@@ -100,10 +91,42 @@ h3 {
   display: flex;
   flex-wrap: nowrap;
 }
+/*seteos header*/
+.h1-header {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: lighter;
+  text-align: center;
+}
+.titulo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.align-center {
+  text-align: center;
+}
 
+.size-65x20 {
+  width: 65px;
+  height: 20px;
+  font-size: x-small;
+  border-radius: 5px;
+  border: coral;
+  margin: 5px;
+}
+.size-65x20:hover {
+  background-color: rgb(100, 100, 100);
+}
 .navbar a {
   text-decoration: none;
   color: #000000;
+  font-weight: bold;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
   font-weight: bold;
 }
 
@@ -117,10 +140,22 @@ h3 {
 }
 
 .navbar {
+  display: none;
+  font-family: "Poppins", Arial, sans-serif;
+  text-align: center;
   justify-content: space-between;
   margin: 0 auto;
+
+  margin: 0px 20px;
+  padding: 2px;
 }
 
+.navbar li a:hover {
+  color: red;
+}
+.quienes {
+  color: red !important;
+}
 .main-label {
   font-size: medium;
 }

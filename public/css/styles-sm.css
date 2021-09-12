@@ -17,3 +17,21 @@ footer h4 {
   right: 10%;
   bottom: 45%;
 }
+.navbar {
+  background: #202020;
+  display: block;
+  font-family: "Poppins", Arial, sans-serif;
+  text-align: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.size-65x20 {
+  display: none;
+  width: 65px;
+  height: 20px;
+  font-size: x-small;
+  border-radius: 5px;
+  border: coral;
+  margin: 5px;
+}

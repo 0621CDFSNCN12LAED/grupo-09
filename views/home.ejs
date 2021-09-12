@@ -6,31 +6,13 @@
     <title>appedal</title>
 </head>
 <body>
-    <header class="background_amarillo">
-        <div>
-            <a href="/">
-            <img class="logo" src="/img/appedal-logo.svg" alt="logo">
-        </a>
-            <form action="/login" method="GET" class="align-right">
-            <button class="size-65x20">Login <i class="fas fa-sign-in-alt"></i></button>
-            </form>
-        </div>
-       <nav class="navbar flex w-100 no-wrap">
-           <ul>
-            <li><a href="#">Quienes Somos</a></li>
-            <li><a href="/login">Login</a></li>
-            <li><a href="/productDetail">Productos</a></li>
-            <li><a href="/productcart">Mis Compras</a></li>
-            <li><a href="#">Sugerencias</a></li>
-
-           </ul>
-       </nav>
-        <h1>Ayudandote donde estes</h1>
-        <img src="/img/en_bici_free_copyright.jpg" alt="fondo" width="100%">
-        <h3>Cerca tuyo siempre!</h3>
-
+    <header>
+        <%- include('partials/header') %>
     </header>
     <main>
+        <img src="/img/en_bici_free_copyright.jpg" alt="fondo" width="100%" />
+        
+        
         <p><i class="fas fa-map-marker-alt"></i> Busca en el mapa la asistencia mas cercana a tu posición </i></p>
 
     </main>

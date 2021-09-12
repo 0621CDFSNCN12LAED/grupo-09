@@ -8,9 +8,7 @@ module.exports = {
   registro: (req, res) => {
     res.render("registro");
   },
-  detalleProducto: (req, res) => {
-    res.render("productDetail");
-  },
+
   cartaProducto: (req, res) => {
     res.render("productCart");
   },
