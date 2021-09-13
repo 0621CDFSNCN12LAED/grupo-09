@@ -1,12 +1,25 @@
-const express = requiere("express");
+const express = require("express");
 const router = express.Router();
 const productController = require("../controllers/productControllers");
 
+//get todos los productos 
 router.get("/", productController.show);
+
+//get un solo producto
 router.get("/:id", productController.productDetail);
 
-router.post("/create", productController.create);
-router.put("/edit/:id", productController.update);
-router.delete("/delete/:id", productController.delete);
+//get pagina de creacion de producto 
+router.get("/create/:id", productController.create);
+
+//Post producto creado a base de datos
+router.post("/", productController.store)
+
+//get pagina de editacion de producto 
+router.get("/edit/:id", productController.update);
+//put ultima version de producto
+router.put('/:id', productController.store)
+
+//Dlete un unico producto
+router.delete("/:id", productController.delete);
 
 module.exports = router;
