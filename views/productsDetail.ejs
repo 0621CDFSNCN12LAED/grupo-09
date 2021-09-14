@@ -1,37 +1,19 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-<%- include('./partials/head') %>
-    <title>Detalle de Producto</title>
-  </head>
-  <body>
-    <header class="background_amarillo">
-        <%- include('partials/header') %>
-    </header>
-    <main id="main-content">
-      <img class="banner" src="/img/pexels-snapwire-310983.jpg" alt="banner" />
-      
-      <h3 class="style-h3">Lo mas buscado</h3>
-    <section >
-      
-        
-        <div  class="product-wrapper" >
-        <article class="product">
-          <% for(let prod of productoUnico){%>
-        <img class="imgs" src="<%-prod.imagen%>" alt="casco"  width="100%" >
-        <div class="product-content text-align">
-        <h4 class="style-h4"><%= prod.Proveedor%></h4>
-        <p class="precios"><%=prod.Precio%></p>
-        <p class="descripciones"><%= prod.Prodcuto%></p>
-        </div>
-        <% } %>
-        </article>
-        </div>
-      </section>
-      
-     </div>
-</section>
-    </main>
-    <%- include('./partials/footer') %>
-  </body>
+	<head>
+		<%- include('./partials/head') %>
+		<title>Detalle de Producto</title>
+	</head>
+	<body>
+		<header class="background_amarillo">
+			<%- include('partials/header') %>
+		</header>
+		<main id="main-content">
+			<h3 class="style-h3">Detalle del item <%= productoUnico.id%></h3>
+			<%- include('./partials/prodUnicoDetail')%>
+		</main>
+		<%- include('./partials/footer') %>
+	</body>
 </html>

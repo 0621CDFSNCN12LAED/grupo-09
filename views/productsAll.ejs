@@ -8,29 +8,13 @@
     <header>
         <%- include('partials/header') %>
       
-        
+
     </header>
     <main id="main-content">
       <img class="banner" src="/img/pexels-snapwire-310983.jpg" alt="banner" />
       
       <h3 class="style-h3">Lo mas buscado</h3>
-    <section >
-      
-        
-        <div  class="product-wrapper" >
-        <article class="product">
-          <% for(let prod of productosDb){%>
-        <img class="imgs" src="<%-prod.imagen%>" alt="casco"  width="100%" >
-        <div class="product-content text-align">
-        
-        <h4 class="style-h4"><%= prod.Proveedor%> + <%= prod.id%></h4>
-        <p class="precios"><%=prod.Precio%></p>
-        <p class="descripciones"><%= prod.Prodcuto%></p>
-        </div>
-        <% } %>
-        </article>
-        </div>
-      </section>
+   <%- include('./partials/prodDetail') %>
       
      </div>
 </section>

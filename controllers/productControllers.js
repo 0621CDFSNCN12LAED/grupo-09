@@ -6,6 +6,8 @@ const path = require('path');
 const productosJSON = path.join(__dirname, '../Data/MOCK_DATA.json');
 const productosDb = JSON.parse(fs.readFileSync(productosJSON, 'utf-8'));
 
+const productService = require('../controllers/product-service');
+
 const product = {
 	//mostrar todos los items
 	show: (req, res) => {
@@ -13,24 +15,22 @@ const product = {
 	},
 	//mostrar detalle de producto
 	productDetail: (req, res) => {
-		const prodId = req.params.id;
-		const productoUnico = productosDb.find((prod) => {
-			return prod.id == prodId;
-		});
-
+		const productoUnico = productService.productoUnico(req.params.id);
 		res.render('productsDetail', {productoUnico});
 	},
 
 	//crear un item nuevo y guardarlo
 	create: (req, res) => {
 		//va por get y trae el formulario en blanco
-		res.send('hay q crear el ejs de product creation');
+		//	res.render('productForm');
 	},
 
 	//modificar un item especifico
 	//extraer item especifico y editarlo
 	update: (req, res) => {
 		//va por put y tiene Id, trae el formulario con los datos del producto
+		const productoUnico = productService.productoUnico(req.params.id);
+		res.render('productForm', {productoUnico});
 	},
 
 	//borrar un item especifico
