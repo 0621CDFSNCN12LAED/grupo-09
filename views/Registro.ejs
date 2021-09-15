@@ -5,25 +5,8 @@
 
     <title>appedal-Registro</title>
   </head>
-  <header class="background_amarillo">
-    <div>
-      <img src="/img/appedal-logo.svg" alt="logo" width="50%" />
-      <form action="/login" method="GET" class="align-right">
-        <button class="size-65x20">
-          Login <i class="fas fa-sign-in-alt"></i>
-        </button>
-      </form>
-    </div>
-    <nav class="navbar flex w-100 no-wrap">
-      <ul>
-        <li><a href="#">Quienes Somos</a></li>
-        <li><a href="/login">Login</a></li>
-        <li><a href="/productDetail">Productos</a></li>
-        <li><a href="/productcart">Mis Compras</a></li>
-        <li><a href="#">Sugerencias</a></li>
-      </ul>
-    </nav>
-  </header>
+  <header>
+       <%- include('partials/header') %>  </header>
   <body>
     <main>
       <div class="flex container product-wrapper">

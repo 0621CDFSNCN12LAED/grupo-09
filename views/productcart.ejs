@@ -6,31 +6,8 @@
     <title>appedal-productcart</title>
   </head>
   <body>
-    <header class="background_amarillo">
-      <div>
-        <a href="/">
-          <img
-            class="logo"
-            src="/img/appedal-logo.svg"
-            alt="logo"
-            width="50%"
-          />
-        </a>
-        <form action="/login" method="GET" class="align-right">
-          <button class="size-65x20">
-            Login <i class="fas fa-sign-in-alt"></i>
-          </button>
-        </form>
-      </div>
-
-      <h1>Ayudandote donde estes</h1>
-      <img
-        class="fondo_fijo"
-        src="/img/en_bici_free_copyright.jpg"
-        alt="fondo"
-        width="100%"
-      />
-      <h3>Cerca tuyo siempre!</h3>
+    <header>
+         <%- include('partials/header') %>
     </header>
     <main></main>
     <%- include('./partials/footer') %>
