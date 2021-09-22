@@ -6,7 +6,7 @@ const path = require('path');
 const productosJSON = path.join(__dirname, '../Data/MOCK_DATA.json');
 const productosDb = JSON.parse(fs.readFileSync(productosJSON, 'utf-8'));
 
-const productService = require('../controllers/product-service');
+
 
 const product = {
 	//mostrar todos los items
@@ -15,9 +15,12 @@ const product = {
 	},
 	//mostrar detalle de producto
 	productDetail: (req, res) => {
-		const productoUnico = productService.productoUnico(req.params.id);
-		res.render('productsDetail', {productoUnico});
-	},
+    const product = productosDb.find((prod) => {
+      return prod.id == req.params.id;
+    });
+
+    res.render("productsDetail", { product });
+  },
 
 	//crear un item nuevo y guardarlo
 	create: (req, res) => {

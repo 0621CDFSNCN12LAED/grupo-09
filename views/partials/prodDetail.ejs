@@ -11,9 +11,10 @@
 			<% for(let prod of productosDb){%>
 			<div class="product-wrapper">
 				<article class="product">
+					<a href="/product/detail/<%= prod.id %> ">
 					<img
 						class="imgs"
-						src="<%-prod.imagen%>"
+						src="<%=prod.imagen%>"
 						alt="casco"
 						width="100%"
 					/>
@@ -22,6 +23,7 @@
 						<p class="precios"><%=prod.Precio%></p>
 						<p class="descripciones"><%= prod.Prodcuto%></p>
 					</div>
+				 </a>
 				</article>
 			</div>
 			<% } %>
