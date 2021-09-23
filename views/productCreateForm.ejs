@@ -1,0 +1,62 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('./partials/head') %>
+
+		<title>appedal-Registro</title>
+	</head>
+	<header class="background_amarillo">
+		<%- include('./partials/header') %>
+	</header>
+	<body>
+		<main class="flex">
+			<div class="flex new-margin container product-wrapper w-35">
+				<h1 class="main-title w-100">Create</h1>
+				<form class="bg-white" method="POST">
+					<div class="form-input">
+						<label class="main-label" for="producto"
+							>Nombre de Producto</label
+						>
+						<input id="producto" type="text" name="producto" />
+						<p class="error">Este campo es requerido</p>
+					</div>
+					<br />
+					<div class="form-input">
+						<label class="main-label" for="proveedor"
+							>Nombre de Proveedor</label
+						>
+						<input id="proveedor" type="text" name="proveedor" />
+					</div>
+					<br />
+					<div class="form-input">
+						<label class="main-label" for="precio">Precio</label>
+						<input id="precio" type="number" name="precio" />
+					</div>
+
+					<br />
+					<div class="form-input">
+						<label class="main-label" for="imagen"
+							>Foto de producto</label
+						>
+						<input
+							id="imagen"
+							type="file"
+							name="product-image"
+							accept="image/png,image/jpeg"
+						/>
+					</div>
+
+					<button type="submit">Enviar</button>
+					<button type="reset">Resetear</button>
+				</form>
+			</div>
+
+			<div class="w-65">
+				<!--%-include('./partials/prodUnicoDetail.ejs') %> -->
+			</div>
+		</main>
+		<%- include('./partials/footer') %>
+	</body>
+</html>

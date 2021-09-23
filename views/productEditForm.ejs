@@ -14,7 +14,11 @@
 		<main class="flex">
 			<div class="flex new-margin container product-wrapper w-35">
 				<h1 class="main-title w-100">Create</h1>
-				<form class="bg-white">
+				<form
+					class="bg-white"
+					action="/product/edit/<%= productoUnico.id %>?method=PUT"
+					method="POST"
+				>
 					<div class="form-input">
 						<label class="main-label" for="producto"
 							>Nombre de Producto</label

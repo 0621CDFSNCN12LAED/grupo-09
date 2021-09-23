@@ -6,7 +6,7 @@ const path = require('path');
 const productosJSON = path.join(__dirname, '../Data/MOCK_DATA.json');
 const productosDb = JSON.parse(fs.readFileSync(productosJSON, 'utf-8'));
 
-
+const productService = require('../services/product-service');
 
 const product = {
 	//mostrar todos los items
@@ -15,17 +15,14 @@ const product = {
 	},
 	//mostrar detalle de producto
 	productDetail: (req, res) => {
-    const product = productosDb.find((prod) => {
-      return prod.id == req.params.id;
-    });
-
-    res.render("productsDetail", { product });
-  },
+		const productoUnico = productService.productoUnico(req.params.id);
+		res.render('productsDetail', {productoUnico});
+	},
 
 	//crear un item nuevo y guardarlo
 	create: (req, res) => {
 		//va por get y trae el formulario en blanco
-		//	res.render('productForm');
+		res.render('productCreateForm');
 	},
 
 	//modificar un item especifico
@@ -33,13 +30,20 @@ const product = {
 	update: (req, res) => {
 		//va por put y tiene Id, trae el formulario con los datos del producto
 		const productoUnico = productService.productoUnico(req.params.id);
-		res.render('productForm', {productoUnico});
+		res.render('productEditForm', {productoUnico});
+	},
+	edit: (req, res) => {
+		productService.edit(req.params.id, req.body, req.file);
+		res.redirect('productsAll');
 	},
 
 	//borrar un item especifico
 	delete: (req, res) => {},
 	//guardar datos de los items
-	store: (pop) => {},
+	store: (req, res) => {
+		productsService.productCreate(req.body, req.file);
+		res.redirect('/products');
+	},
 };
 
 module.exports = product;
