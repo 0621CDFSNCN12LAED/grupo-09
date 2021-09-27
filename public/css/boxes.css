@@ -1,23 +1,21 @@
-.container{
-    width: 50%;
-    height: auto;
-    margin: 200px auto;
-    border: solid white 2px;
-    background-color: rgb(255, 255, 255);
-    
+.container {
+  width: 50%;
+  height: auto;
+  margin: 50px auto;
+  border: solid white 2px;
+  background-color: rgb(255, 255, 255);
 }
 
-.main-title{
-    font-size: large;
-    font-weight: 800;
+.main-title {
+  font-size: large;
+  font-weight: 800;
 }
 
-.sub-title{
-    font-size: medium;
-    font-weight: 500;
+.sub-title {
+  font-size: medium;
+  font-weight: 500;
 }
 
-.bg-white{
-    background-color: white;
+.bg-white {
+  background-color: white;
 }
-
