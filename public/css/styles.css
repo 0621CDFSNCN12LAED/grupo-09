@@ -95,7 +95,7 @@ h3 {
 /*seteos header*/
 .h1-header {
   font-family: "Poppins", Arial, sans-serif;
-  font-size: 24px;
+  font-size: 4vw;
   font-weight: lighter;
   text-align: center;
 }
@@ -312,4 +312,8 @@ footer i {
   z-index: 99999;
   visibility: hidden;
   border-radius: 6px;
+}
+.mapa {
+  margin: auto;
+  padding: 0 1%;
 }
