@@ -12,18 +12,18 @@
 			<div class="product-wrapper">
 				<article class="product">
 					<a href="/product/detail/<%= prod.id %> ">
-					<img
-						class="imgs"
-						src="<%=prod.imagen%>"
-						alt="casco"
-						width="100%"
-					/>
-					<div class="product-content text-align">
-						<h4 class="style-h4"><%= prod.Proveedor%></h4>
-						<p class="precios"><%=prod.Precio%></p>
-						<p class="descripciones"><%= prod.Prodcuto%></p>
-					</div>
-				 </a>
+						<img
+							class="imgs"
+							src="<%=prod.imagen%>"
+							alt="casco"
+							width="100%"
+						/>
+						<div class="product-content text-align">
+							<h4 class="style-h4"><%= prod.proveedor%></h4>
+							<p class="precios"><%=prod.precio%></p>
+							<p class="descripciones"><%= prod.producto%></p>
+						</div>
+					</a>
 				</article>
 			</div>
 			<% } %>
