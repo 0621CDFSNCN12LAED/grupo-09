@@ -34,15 +34,15 @@ const product = {
 	},
 	edit: (req, res) => {
 		productService.edit(req.params.id, req.body, req.file);
-		res.redirect('productsAll');
+		res.redirect('/product');
 	},
 
 	//borrar un item especifico
 	delete: (req, res) => {},
 	//guardar datos de los items
 	store: (req, res) => {
-		productsService.productCreate(req.body, req.file);
-		res.redirect('/products');
+		productService.productCreate(req.body, req.file);
+		res.redirect('/product');
 	},
 };
 

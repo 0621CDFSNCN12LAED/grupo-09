@@ -92,7 +92,7 @@
 		"producto": "Jones Lang LaSalle Incorporated",
 		"proveedor": "Thoughtstorm",
 		"vendido": false,
-		"precio": "$3656.12",
+		"precio": 3656.12,
 		"imagen": "http://dummyimage.com/215x100.png/ff4444/ffffff"
 	}
 ]

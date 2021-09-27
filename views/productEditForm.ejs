@@ -16,7 +16,7 @@
 				<h1 class="main-title w-100">Create</h1>
 				<form
 					class="bg-white"
-					action="/product/edit/<%= productoUnico.id %>?_method=PUT"
+					action="/product/<%= productoUnico.id %>?_method=PUT"
 					method="POST"
 				>
 					<div class="form-input">
@@ -52,7 +52,7 @@
 						/>
 					</div>
 
-					<button type="submit">Enviar</button>
+					<button type="submit" action="/:id ">Enviar</button>
 					<button type="reset">Resetear</button>
 				</form>
 			</div>
