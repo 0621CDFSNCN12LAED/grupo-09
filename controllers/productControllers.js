@@ -19,12 +19,16 @@ const product = {
 		res.render('productsDetail', {productoUnico});
 	},
 
-	//crear un item nuevo y guardarlo
+	//crear un item nuevo y guardarlos
 	create: (req, res) => {
 		//va por get y trae el formulario en blanco
 		res.render('productCreateForm');
 	},
-
+	//guardar datos de los items
+	store: (req, res) => {
+		productService.productCreate(req.body, req.file);
+		res.redirect('/product');
+	},
 	//modificar un item especifico
 	//extraer item especifico y editarlo
 	update: (req, res) => {
@@ -39,11 +43,6 @@ const product = {
 
 	//borrar un item especifico
 	delete: (req, res) => {},
-	//guardar datos de los items
-	store: (req, res) => {
-		productService.productCreate(req.body, req.file);
-		res.redirect('/product');
-	},
 };
 
 module.exports = product;
