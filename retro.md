@@ -1,3 +1,29 @@
+### Retro Sprint 4 >_Minuta_
+
+- Keep Doing
+
+  - Reuniones de Trabajo de los Domingos y de Coordinacion de tareas de los Lunes
+  - Trabajo en equipo pidiendo ayuda cuando alguien lo necesita.
+
+- More Of
+
+  - Finalizacion de las paginas creadas
+  - Mejora continua de las vistas generales del sitio
+
+- Start Doing
+
+  - Repensar el perfil del sitio para centrarnos en una plataforma mas orientada a la venta de productos que a los servicios de auxilio mecánico.
+  - Discutir el futuro de trello y como seguimos con la organizacion de tareas
+  - Mensajes de tareas realizadas y pendientes en Discord
+
+- Less of
+  - Ignorando los retros y terminar el grafico de la estrella
+  - Demoras en finalizacion de tareas para los cierres de cada Sprint
+
+https://jamboard.google.com/d/1QjkiYpiN-MyVCFG_fT2Mn_I5TXhwJhkNjpFVF9wDR3k/viewer?f=3
+
+---
+
 ### Retro Sprint 3 >_Minuta_
 
 - Keep Doing
@@ -67,3 +93,12 @@ https://jamboard.google.com/d/1QjkiYpiN-MyVCFG_fT2Mn_I5TXhwJhkNjpFVF9wDR3k/viewe
   - Trabajo individual sin coordinar con el grupo
 
   https://jamboard.google.com/d/1QjkiYpiN-MyVCFG_fT2Mn_I5TXhwJhkNjpFVF9wDR3k/viewer?f=0
+
+---
+
+### Retro Sprint >_Minuta_
+
+- Keep Doing
+- More Of
+- Start Doing
+- Less of
