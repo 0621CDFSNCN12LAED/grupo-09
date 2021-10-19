@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-   <%- include('./partials/head') %>
-   
-   <title>appedal-Login</title>
+    <%- include('./partials/head') %>
+
+    <title>appedal-login</title>
   </head>
   <body>
-  <header>
-    <%- include('partials/header') %>
-  </header>
+    <header><%- include('partials/header') %></header>
     <form>
       <div class="container text-center product-wrapper">
         <h1 class="main-title">Login</h1>
-        <p class="sub-title">Usuario:</p>
-        <input id="name" type="text" name="name" placeholder="Usuario" />
-        <p class="sub-title">Contrasena:</p>
-        <input
-          id="password"
-          type="password"
-          name="password"
-          placeholder="Contrasena"
-        />
+        <div class="flex">
+          <p class="sub-title">Usuario:</p>
+          <input id="name" type="text" name="name" placeholder="Usuario" />
+        </div>
+        <div class="flex">
+          <p class="sub-title">Contrasena:</p>
+          <input
+            id="password"
+            type="password"
+            name="password"
+            placeholder="Contrasena"
+          />
+        </div>
         <div>
-        <button type="submit">Enviar</button>
+          <button type="submit">Enviar</button>
         </div>
         <p>no tenes ususario?</p>
 
