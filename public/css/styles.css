@@ -90,9 +90,22 @@ h3 {
 .product-content {
   position: relative;
   border: 1px solid #111111;
-  align-self: center;
-  padding: 3%;
+  padding: 1%;
 }
+
+.zindex-1 {
+  z-index: -1;
+}
+.compras {
+  align-items: center;
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.total {
+  justify-content: flex-end;
+}
+
 .style-section {
   display: flex;
   flex-wrap: nowrap;
@@ -339,4 +352,11 @@ footer i {
 .mapa {
   margin: auto;
   padding: 0 1%;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }

@@ -5,7 +5,7 @@
   <head>
     <%- include('./partials/head') %>
 
-    <title>appedal-Registro</title>
+    <title>Editar Producto <%= productoUnico.producto %></title>
   </head>
   <header class="background_amarillo">
     <%- include('./partials/header') %>
@@ -13,7 +13,7 @@
   <body>
     <main class="flex background_amarillo">
       <div class="flex new-margin container product-wrapper w-35 box-shadow">
-        <h1 class="main-title w-100">Create</h1>
+        <h1 class="main-title w-100">Editar <%= productoUnico.producto %></h1>
         <form
           class="bg-white"
           action="/product/<%= productoUnico.id %>?_method=PUT"

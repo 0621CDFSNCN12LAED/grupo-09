@@ -2,14 +2,49 @@
 <html lang="en">
   <head>
     <%- include('./partials/head') %>
-
-    <title>appedal-productcart</title>
+    <title>Carrito de Compra</title>
   </head>
   <body>
-    <header>
-         <%- include('partials/header') %>
-    </header>
-    <main></main>
+    <header><%- include('partials/header') %></header>
+    <main class="background_amarillo">
+      <h1>Mis Compras</h1>
+      <section>
+        <div class="product-wraper box-shadow w-85 margin-auto bg-white">
+          <div class="compras flex padding-8 bg-white">
+            <img
+              class="imgs w-25"
+              src="http://dummyimage.com/215x100.png/ff4444/ffffff"
+              alt=""
+              width="20%"
+            />
+            <h4 class="style-h3 w-25">"Thoughtstorm"</h4>
+            <p class="style-h3 w-15">$3656.12</p>
+            <p class="style-h3 w-15">2</p>
+            <p class="style-h3 w-15">$7312,24</p>
+          </div>
+          <div class="compras flex padding-8">
+            <img
+              class="imgs w-25"
+              src="http://dummyimage.com/153x100.png/5fa2dd/ffffff"
+              alt=""
+              width="20%"
+            />
+            <h4 class="style-h3 w-25">"QCR Holdings, Inc."</h4>
+            <p class="style-h3 w-15">$7604.91</p>
+            <p class="style-h3 w-15">1</p>
+            <p class="style-h3 w-15">$7604.91</p>
+          </div>
+        </div>
+        <div
+          class="product-wraper box-shadow w-85 margin-auto flex total bg-white"
+        >
+          <p class="style-h3 w-25"></p>
+          <p class="style-h3 w-15"></p>
+          <p class="style-h3 w-15">Total a Pagar:</p>
+          <p class="style-h3 w-15">$14917.15</p>
+        </div>
+      </section>
+    </main>
     <%- include('./partials/footer') %>
   </body>
 </html>
