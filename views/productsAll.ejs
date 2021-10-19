@@ -5,19 +5,12 @@
     <title>Listado de Productos</title>
   </head>
   <body>
-    <header>
-        <%- include('partials/header') %>
-    </header>
+    <header><%- include('partials/header') %></header>
 
     <main id="main-content">
       <img class="banner" src="/img/pexels-snapwire-310983.jpg" alt="banner" />
-      
-      <h3 class="style-h3">Lo mas buscado</h3>
-   
-      <%- include('./partials/prodDetail') %>
-      
-     </div>
-</section>
+
+      <div><%- include('./partials/prodDetail') %></div>
     </main>
     <%- include('./partials/footer') %>
   </body>
