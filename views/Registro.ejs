@@ -3,28 +3,27 @@
   <head>
     <%- include('./partials/head') %>
 
-    <title>appedal-Registro</title>
+    <title>Registro</title>
   </head>
-  <header>
-       <%- include('partials/header') %>  </header>
+  <header><%- include('partials/header') %></header>
   <body>
     <main>
-      <div class="flex container product-wrapper">
+      <div class="container product-wrapper box-shadow background_amarillo">
         <h1 class="main-title w-100">Registro</h1>
-        <form class="bg-white">
+        <form>
           <div class="form-input">
-            <label class="main-label" for="name">Nombre y apellido</label>
+            <label class="main-label" for="name">Nombre y apellido: </label>
             <input id="name" type="text" name="name" />
             <p class="error">Este campo es requerido</p>
           </div>
-          <br />
+
           <div class="form-input">
-            <label class="main-label" for="username">Nombre de usuario</label>
+            <label class="main-label" for="username">Nombre de usuario: </label>
             <input id="username" type="text" name="username" />
           </div>
-          <br />
+
           <div class="form-input">
-            <label class="main-label">Perfil de usuario</label>
+            <label class="main-label">Perfil de usuario:</label>
             <input
               type="radio"
               name="user-profile"
@@ -41,9 +40,8 @@
             <label for="user-profile-buyer">Usuario</label>
           </div>
 
-          <br />
-          <div class="form-input">
-            <label class="main-label" for="profile-pic">Foto de perfil</label>
+          <div class="form-inputFoto">
+            <label class="main-label" for="profile-pic">Foto de perfil: </label>
             <input
               id="profile-pic"
               type="file"
@@ -51,21 +49,22 @@
               accept="image/png,image/jpeg"
             />
           </div>
-          <br />
+
           <div class="form-input">
-            <label class="main-label" for="password">Contraseña</label>
+            <label class="main-label" for="password">Contraseña: </label>
             <input id="password" type="password" name="password" />
           </div>
-          <br />
+
           <div class="form-input">
             <label class="main-label" for="rePassword"
-              >Repetir Contraseña</label
-            >
+              >Repetir Contraseña:
+            </label>
             <input id="rePassword" type="password" name="rePassword" />
           </div>
-
-          <button type="submit">Enviar</button>
-          <button type="reset">Resetear</button>
+          <div class="text-center">
+            <button class="button_1 margin-5" type="submit">Enviar</button>
+            <button class="button_3 margin-5" type="reset">Resetear</button>
+          </div>
         </form>
       </div>
     </main>

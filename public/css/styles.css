@@ -32,6 +32,10 @@ h3 {
   background-color: #26bc3a;
 }
 
+.bg-white {
+  background-color: white;
+}
+
 .text-center {
   text-align: center;
 }
@@ -64,10 +68,10 @@ h3 {
   text-align: center;
 }
 .banner {
-  width: 100%;
+  width: 80%;
   display: block;
   border-radius: 5%;
-  height: 50%;
+  margin: 1% auto;
 }
 
 .style-h3 {
@@ -77,19 +81,44 @@ h3 {
   text-align: center;
 }
 .product {
-  border: 1px solid #ebebeb;
+  justify-content: space-around;
+  padding: 2%;
 }
 .product-wrapper {
   padding: 15px;
-  box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 .product-content {
   position: relative;
-  border-top: 1px solid #ebebeb;
+  border: 1px solid #111111;
+  padding: 1%;
 }
+
+.zindex-1 {
+  z-index: -1;
+}
+.compras {
+  align-items: center;
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.total {
+  justify-content: flex-end;
+}
+
 .style-section {
   display: flex;
   flex-wrap: nowrap;
+}
+
+/*seteos productos*/
+.section_flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.section_flex article {
+  width: 25%;
 }
 /*seteos header*/
 .h1-header {
@@ -118,15 +147,10 @@ h3 {
 .size-65x20:hover {
   background-color: rgb(100, 100, 100);
 }
-.navbar a {
-  text-decoration: none;
-  color: #000000;
-  font-weight: bold;
-}
 
 .navbar a {
   text-decoration: none;
-  color: #fff;
+  color: #ffffff;
   font-weight: bold;
 }
 
@@ -163,9 +187,16 @@ h3 {
 .form-input {
   width: 100%;
   text-align: center;
+  margin: 3%;
 }
 .form-input input {
   border-radius: 15px;
+}
+.form-inputFoto {
+  width: 100%;
+  text-align: center;
+  margin: 3%;
+  border-radius: 0px;
 }
 
 /*seteos logo*/
@@ -316,4 +347,11 @@ footer i {
 .mapa {
   margin: auto;
   padding: 0 1%;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }

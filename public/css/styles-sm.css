@@ -24,10 +24,4 @@ footer h4 {
 
 .size-65x20 {
   display: none;
-  width: 65px;
-  height: 20px;
-  font-size: x-small;
-  border-radius: 5px;
-  border: coral;
-  margin: 5px;
 }
