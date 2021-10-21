@@ -147,15 +147,10 @@ h3 {
 .size-65x20:hover {
   background-color: rgb(100, 100, 100);
 }
-.navbar a {
-  text-decoration: none;
-  color: #000000;
-  font-weight: bold;
-}
 
 .navbar a {
   text-decoration: none;
-  color: #fff;
+  color: #ffffff;
   font-weight: bold;
 }
 

@@ -9,11 +9,11 @@
     },
     {
         "id": 2,
-        "producto": "Energy Transfer Equity, L.P.",
-        "proveedor": "Dabjam",
-        "vendido": false,
-        "precio": "$19327.37",
-        "imagen": "http://dummyimage.com/150x100.png/cc0000/ffffff"
+        "producto": "",
+        "proveedor": "",
+        "precio": "",
+        "imagen": "http://dummyimage.com/150x100.png/cc0000/ffffff",
+        "image": "default-image.jpg"
     },
     {
         "id": 3,

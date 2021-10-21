@@ -83,14 +83,29 @@
   box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 .button_1 {
-  color: #26bc3a;
-  font-size: 1.5em;
+  color: white;
+  font-weight: 600;
+  background-color: green;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .button_2 {
-  color: #202020;
-  font-size: 1.5em;
+  color: white;
+  font-weight: 600;
+  background-color: red;
+  padding: 10px;
+  border-radius: 10px;
 }
-.opacity {
-  opacity: 0.5;
+
+.button_3 {
+  color: white;
+  font-weight: 600;
+  background-color: #0e80de;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: grey;
 }
