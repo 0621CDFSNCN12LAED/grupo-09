@@ -1,51 +1,51 @@
 /** @format */
 
 .w-100 {
-	width: 100%;
+  width: 100%;
 }
 .w-35 {
-	width: 35%;
+  width: 35%;
 }
 .w-65 {
-	width: 65%;
+  width: 65%;
 }
 .new-margin {
-	margin: 40px 0px 40px 0px;
+  margin: 40px 0px 40px 0px;
 }
 .no-wrap {
-	flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 .flex {
-	display: flex;
-	flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 .padding-8 {
-	padding: 8px;
+  padding: 8px;
 }
 .text-align {
-	text-align: center;
+  text-align: center;
 }
 .article-flex {
-	display: flex;
-	flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 .imgs {
-	border-radius: 5px;
+  border-radius: 5px;
 }
 #main-content {
-	padding: 0 8%;
-	border-radius: 10px;
+  padding: 0 8%;
+  border-radius: 10px;
 }
 
 .margin-0 {
-	margin: 0%;
+  margin: 0%;
 }
 .margintop-0 {
-	margin-top: 0%;
+  margin-top: 0%;
 }
 .marginbtm-0 {
-	margin-bottom: 0%;
+  margin-bottom: 0%;
 }
 .justify {
-	text-align: justify;
+  text-align: justify;
 }

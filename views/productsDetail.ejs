@@ -7,17 +7,16 @@
 		<title>Detalle de Producto<%=productoUnico.producto %></title>
 	</head>
 	<body>
-		<header class="background_amarillo">
-			<%- include('partials/header') %>
-		</header>
+		<header><%- include('partials/header') %></header>
+
 		<main id="main-content">
 			<h3 class="style-h3"><%= productoUnico.producto%></h3>
 			<div class="product-wrapper">
 				<article class="product">
 					<img
 						class="imgs"
-						src="/imgProductos/<%=productoUnico.imagen%>"
-						alt="Imagen-Producto"
+						src="<%=productoUnico.imagen%>"
+						alt="casco"
 						width="100%"
 					/>
 					<div class="product-content text-align">

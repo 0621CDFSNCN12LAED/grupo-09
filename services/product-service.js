@@ -12,7 +12,7 @@ module.exports = {
 		});
 		return productoUnico;
 	},
-	productCreate(body, imagen) {
+	productCreate(body, image) {
 		const lastItem = productosDb[productosDb.length - 1];
 		const biggestItem = productosDb.length > 0 ? lastItem.id : 1;
 
@@ -20,7 +20,7 @@ module.exports = {
 			id: biggestItem + 1,
 			...body,
 			precio: Number(body.precio),
-			imagen: imagen ? imagen.filename : '../public/img/berm.jpg',
+			imagen: req.image ? req.image.filename : '.jpg',
 		};
 
 		productosDb.push(newProd);
