@@ -26,14 +26,17 @@ module.exports = {
 		productosDb.push(newProd);
 		this.save();
 	},
-	edit(id, body, image) {
+
+	edit(id, body, imagen) {
 		const pordToEdit = this.productoUnico(id);
 		pordToEdit.producto = body.producto;
 		pordToEdit.proveedor = body.proveedor;
 		pordToEdit.vendido = body.vendido;
 		pordToEdit.precio = body.precio;
-		pordToEdit.image = image ? image.filname : 'default-image.jpg';
-		this.save();
+		(pordToEdit.imagen = imagen
+			? imagen.filename
+			: '../public/img/berm.jpg'),
+			this.save();
 	},
 	save() {
 		const jsonStringy = JSON.stringify(productosDb, null, 4);

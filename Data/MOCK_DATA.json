@@ -25,11 +25,10 @@
 	},
 	{
 		"id": 4,
-		"producto": "Danaher Corporation",
-		"proveedor": "Leexo",
-		"vendido": true,
-		"precio": "$7400.73",
-		"imagen": "http://dummyimage.com/248x100.png/ff4444/ffffff"
+		"producto": "rt",
+		"proveedor": "kwnf",
+		"precio": "34",
+		"imagen": "berm.jpg"
 	},
 	{
 		"id": 5,
@@ -93,6 +92,34 @@
 		"proveedor": "Thoughtstorm",
 		"vendido": false,
 		"precio": 3656.12,
-		"imagen": "http://dummyimage.com/215x100.png/ff4444/ffffff"
+		"imagen": "IMG_20210407_130733.jpg"
+	},
+	{
+		"id": 13,
+		"producto": "dfe",
+		"proveedor": "kwnf",
+		"precio": 678,
+		"imagen": "1633384455092.jpg"
+	},
+	{
+		"id": 14,
+		"producto": "rt",
+		"proveedor": "kwnf",
+		"precio": 6789,
+		"imagen": "1633384757810.jpg"
+	},
+	{
+		"id": 15,
+		"producto": "rt",
+		"proveedor": "df",
+		"precio": 89,
+		"imagen": "1634669586432.jpeg"
+	},
+	{
+		"id": 16,
+		"producto": "kec",
+		"proveedor": "kwnf",
+		"precio": 4,
+		"imagen": "imagen-1634671605942.jpeg"
 	}
 ]

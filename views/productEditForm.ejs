@@ -18,6 +18,7 @@
 					class="bg-white"
 					action="/product/<%= productoUnico.id %>?_method=PUT"
 					method="POST"
+					enctype="multipart/form-data"
 				>
 					<div class="form-input">
 						<label class="main-label" for="producto"
@@ -47,7 +48,7 @@
 						<input
 							id="imagen"
 							type="file"
-							name="product-image"
+							name="imagen"
 							accept="image/png,image/jpeg"
 						/>
 					</div>
@@ -58,7 +59,7 @@
 			</div>
 
 			<div class="w-65">
-				<%-include('./partials/prodUnicoDetail.ejs') %>
+				<%-include('./partials/prodEditDetail.ejs') %>
 			</div>
 		</main>
 		<%- include('./partials/footer') %>

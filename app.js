@@ -7,6 +7,7 @@ const path = require('path');
 const router = require('./routes/main');
 const productRouter = require('./routes/product');
 const methodOverride = require('method-override');
+const userRouter = require('./routes/users');
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
@@ -20,3 +21,4 @@ app.listen(3000, () => {
 
 app.use('/', router);
 app.use('/product', productRouter);
+app.use('/users', userRouter);
