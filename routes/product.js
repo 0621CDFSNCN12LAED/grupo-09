@@ -15,7 +15,7 @@ router.get('/detail/:id', productController.productDetail);
 //get pagina de creacion de producto
 router.get('/create', productController.create);
 //Post producto creado a base de datos
-router.post('/', uploader.single('product-image'), productController.store);
+router.post('/', uploader.single('imagen'), productController.store);
 
 //get pagina de editacion de producto
 router.get('/edit/:id', productController.update);

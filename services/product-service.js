@@ -15,12 +15,11 @@ module.exports = {
 	productCreate(body, image) {
 		const lastItem = productosDb[productosDb.length - 1];
 		const biggestItem = productosDb.length > 0 ? lastItem.id : 1;
-
 		const newProd = {
 			id: biggestItem + 1,
 			...body,
 			precio: Number(body.precio),
-			imagen: req.image ? req.image.filename : '.jpg',
+			imagen: image ? image.filename : '.jpg',
 		};
 
 		productosDb.push(newProd);
