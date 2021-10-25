@@ -4,7 +4,7 @@
 
   - Reuniones de Trabajo de los Domingos y de Coordinacion de tareas de los Lunes
   - Trabajo en equipo pidiendo ayuda cuando alguien lo necesita.
-
+  
 - More Of
 
   - Finalizacion de las paginas creadas

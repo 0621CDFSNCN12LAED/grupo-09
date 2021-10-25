@@ -24,10 +24,14 @@
         "
       >
         <h1 class="main-title w-100">Create</h1>
+        <% if (locals.errors){ errors.forEach(errors=>{ %>
+        <p class="gp"><%= errors.msg %></p>
+        <% }) } %>
         <form method="post" action="/product" enctype="multipart/form-data">
           <div class="form-input">
             <label class="main-label" for="producto">Nombre de Producto</label>
-            <input id="producto" type="text" name="producto" />
+            <input id="producto" type="text" name="producto" value="<%=
+            locals.old && old.producto? old.producto: " "%>" />
             <p class="error">Este campo es requerido</p>
           </div>
           <br />
@@ -35,12 +39,14 @@
             <label class="main-label" for="proveedor"
               >Nombre de Proveedor</label
             >
-            <input id="proveedor" type="text" name="proveedor" />
+            <input id="proveedor" type="text" name="proveedor" value="<%=
+            locals.old && old.proveedor? old.proveedor: " "%>" />
           </div>
           <br />
           <div class="form-input">
             <label class="main-label" for="precio">Precio</label>
-            <input id="precio" type="number" name="precio" />
+            <input id="precio" type="number" name="precio" value="<%= locals.old
+            && old.precio? old.precio: " "%>" />
           </div>
 
           <br />
