@@ -2,31 +2,31 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- include('./head') %>
-    <title>Detalle de Producto</title>
-  </head>
-  <body>
-    <section Class="flex">
-      <% for(let prod of productosDb){%>
-      <div class="product-wrapper box-shadow margin-1 w-25">
-        <article class="flex">
-          <a href="/product/detail/<%= prod.id %> ">
-            <img
-              class="imgs"
-              src="<%=prod.imagen%>"
-              alt="<%= prod.producto%>"
-              width="100%"
-            />
-            <div class="product-content text-align zindex-1">
-              <h4 class="style-h4"><%= prod.proveedor%></h4>
-              <p class="precios"><%=prod.precio%></p>
-              <p class="descripciones"><%= prod.producto%></p>
-            </div>
-          </a>
-        </article>
-      </div>
-      <% } %>
-    </section>
-  </body>
+	<head>
+		<%- include('./head') %>
+		<title>Detalle de Producto</title>
+	</head>
+	<body>
+		<section Class="flex">
+			<% for(let prod of productosDb){%>
+			<div class="product-wrapper box-shadow margin-1 w-25">
+				<article class="flex">
+					<a href="/product/detail/<%= prod.id %> ">
+						<img
+							class="imgs"
+							src="public/imgProductos/<%=prod.imagen%>"
+							alt="<%= prod.producto%>"
+							width="100%"
+						/>
+						<div class="product-content text-align zindex-1">
+							<h4 class="style-h4"><%= prod.proveedor%></h4>
+							<p class="precios"><%=prod.precio%></p>
+							<p class="descripciones"><%= prod.producto%></p>
+						</div>
+					</a>
+				</article>
+			</div>
+			<% } %>
+		</section>
+	</body>
 </html>

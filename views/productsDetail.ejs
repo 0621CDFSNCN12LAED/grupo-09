@@ -2,29 +2,33 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- include('./partials/head') %>
-    <title>Detalle de Producto <%=productoUnico.producto %></title>
-  </head>
-  <body>
-    <%- include('partials/header') %>
-    <main class="background_amarillo">
-      <%- include('./partials/prodEditDetail') %>
-      <form action="" method="GET">
-        <div class="text-align padding-8">
-          <button
-            class="button_1"
-            type="submit"
-            formaction="/product/edit/<%= productoUnico.id%>"
-          >
-            Editar
-          </button>
-          <button class="button_2" type="submit" formaction="/destroy">
-            Eliminar
-          </button>
-        </div>
-      </form>
-    </main>
-    <%- include('./partials/footer') %>
-  </body>
+	<head>
+		<%- include('./partials/head') %>
+		<title>Detalle de Producto <%- productoUnico.producto %></title>
+	</head>
+	<body>
+		<%- include('partials/header') %>
+		<main class="background_amarillo">
+			<%- include('./partials/prodEditDetail') %>
+			<form action="" method="GET">
+				<div class="text-align padding-8">
+					<button
+						class="button_1"
+						type="submit"
+						formaction="/product/edit/<%= productoUnico.id%>"
+					>
+						Editar
+					</button>
+					<button
+						class="button_2"
+						type="submit"
+						formaction="/destroy"
+					>
+						Eliminar
+					</button>
+				</div>
+			</form>
+		</main>
+		<%- include('./partials/footer') %>
+	</body>
 </html>
