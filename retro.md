@@ -1,10 +1,19 @@
+### Retro Sprint 5 >_Minuta_
+
+- Keep Doing
+- More Of
+- Start Doing
+- Less of
+
+---
+
 ### Retro Sprint 4 >_Minuta_
 
 - Keep Doing
 
   - Reuniones de Trabajo de los Domingos y de Coordinacion de tareas de los Lunes
   - Trabajo en equipo pidiendo ayuda cuando alguien lo necesita.
-  
+
 - More Of
 
   - Finalizacion de las paginas creadas
