@@ -1,5 +1,5 @@
 /** @format */
-
+const {validationResult} = require('express-validator');
 const userService = require('../services/usuario_service');
 
 const users = {
@@ -14,8 +14,16 @@ const users = {
 
 	//crear un item nuevo y guardarlos
 	store: (req, res) => {
-		userService.userCreate(req.body, req.file);
-		res.redirect('/profile');
+		let errors = validationResult(req);
+		if (errors.isEmpty()) {
+			userService.userCreate(req.body, req.file);
+			res.redirect('home');
+		} else {
+			res.render('registro', {
+				errors: errors.array(),
+				old: req.body,
+			});
+		}
 	},
 	registro: (req, res) => {
 		res.render('registro');

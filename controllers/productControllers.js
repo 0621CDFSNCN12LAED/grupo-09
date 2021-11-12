@@ -2,11 +2,13 @@
 
 const fs = require('fs');
 const path = require('path');
+const validacion = require('../validations/ValidacionProducto');
 
 const productosJSON = path.join(__dirname, '../Data/MOCK_DATA.json');
 const productosDb = JSON.parse(fs.readFileSync(productosJSON, 'utf-8'));
 
 const productService = require('../services/product-service');
+const {validationResult} = require('express-validator');
 
 const product = {
 	//mostrar todos los items
@@ -26,8 +28,17 @@ const product = {
 	},
 	//guardar datos de los items
 	store: (req, res) => {
-		productService.productCreate(req.body, req.file);
-		res.redirect('/product');
+		let errors = validationResult(req);
+		if (errors.isEmpty()) {
+			//productService.productCreate(req.body, req.file);
+			res.redirect('/product');
+		} else {
+			res.render('productCreateForm', {
+				errors: errors.array(),
+				old: req.body,
+			});
+			s;
+		}
 	},
 	//modificar un item especifico
 	//extraer item especifico y editarlo

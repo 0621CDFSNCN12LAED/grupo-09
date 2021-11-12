@@ -1,73 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- include('./partials/head') %>
+	<head>
+		<%- include('./partials/head') %>
 
-    <title>Registro</title>
-  </head>
-  <header><%- include('partials/header') %></header>
-  <body>
-    <main>
-      <div class="container product-wrapper box-shadow background_amarillo">
-        <h1 class="main-title w-100">Registro</h1>
-        <form>
-          <div class="form-input">
-            <label class="main-label" for="name">Nombre y apellido: </label>
-            <input id="name" type="text" name="name" />
-            <p class="error">Este campo es requerido</p>
-          </div>
+		<title>Registro</title>
+	</head>
+	<header><%- include('partials/header') %></header>
+	<body>
+		<main>
+			<div
+				class="container product-wrapper box-shadow background_amarillo"
+			>
+				<h1 class="main-title w-100">Registro</h1>
+				<% if (locals.errors){ errors.forEach(errors=>{ %>
+				<p class="gp"><%= errors.msg %></p>
+				<% }) } %>
+				<form action="/users/registro" method="POST">
+					<div class="form-input">
+						<label class="main-label" for="name"
+							>Nombre y apellido:
+						</label>
+						<input id="name" type="text" name="name" />
+						<p class="error">Este campo es requerido</p>
+					</div>
 
-          <div class="form-input">
-            <label class="main-label" for="username">Nombre de usuario: </label>
-            <input id="username" type="text" name="username" />
-          </div>
+					<div class="form-input">
+						<label class="main-label" for="username"
+							>Nombre de usuario:
+						</label>
+						<input id="username" type="text" name="username" />
+					</div>
 
-          <div class="form-input">
-            <label class="main-label">Perfil de usuario:</label>
-            <input
-              type="radio"
-              name="user-profile"
-              id="user-profile-seller"
-              value="seller"
-            />
-            <label for="user-profile-seller">Mecanico</label>
-            <input
-              type="radio"
-              name="user-profile"
-              id="user-profile-buyer"
-              value="buyer"
-            />
-            <label for="user-profile-buyer">Usuario</label>
-          </div>
+					<div class="form-input">
+						<label class="main-label">Perfil de usuario:</label>
+						<input
+							type="radio"
+							name="user-profile"
+							id="user-profile-seller"
+							value="seller"
+						/>
+						<label for="user-profile-seller">Mecanico</label>
+						<input
+							type="radio"
+							name="user-profile"
+							id="user-profile-buyer"
+							value="buyer"
+						/>
+						<label for="user-profile-buyer">Usuario</label>
+					</div>
 
-          <div class="form-inputFoto">
-            <label class="main-label" for="profile-pic">Foto de perfil: </label>
-            <input
-              id="profile-pic"
-              type="file"
-              name="profile-pic"
-              accept="image/png,image/jpeg"
-            />
-          </div>
+					<div class="form-inputFoto">
+						<label class="main-label" for="profile-pic"
+							>Foto de perfil:
+						</label>
+						<input
+							id="profile-pic"
+							type="file"
+							name="profile-pic"
+							accept="image/png,image/jpeg"
+						/>
+					</div>
 
-          <div class="form-input">
-            <label class="main-label" for="password">Contraseña: </label>
-            <input id="password" type="password" name="password" />
-          </div>
+					<div class="form-input">
+						<label class="main-label" for="password"
+							>Contraseña:
+						</label>
+						<input id="password" type="password" name="password" />
+					</div>
 
-          <div class="form-input">
-            <label class="main-label" for="rePassword"
-              >Repetir Contraseña:
-            </label>
-            <input id="rePassword" type="password" name="rePassword" />
-          </div>
-          <div class="text-center">
-            <button class="button_1 margin-5" type="submit">Enviar</button>
-            <button class="button_3 margin-5" type="reset">Resetear</button>
-          </div>
-        </form>
-      </div>
-    </main>
-    <%- include('./partials/footer') %>
-  </body>
+					<div class="form-input">
+						<label class="main-label" for="rePassword"
+							>Repetir Contraseña:
+						</label>
+						<input
+							id="rePassword"
+							type="password"
+							name="rePassword"
+						/>
+					</div>
+					<div class="text-center">
+						<button class="button_1 margin-5" type="submit">
+							Enviar
+						</button>
+						<button class="button_3 margin-5" type="reset">
+							Resetear
+						</button>
+					</div>
+				</form>
+			</div>
+		</main>
+		<%- include('./partials/footer') %>
+	</body>
 </html>

@@ -5,6 +5,7 @@ const router = express.Router();
 const productController = require('../controllers/productControllers');
 
 const uploader = require('../middlewares/productMulter');
+const validacion = require('../validations/ValidacionProducto');
 
 //get todos los productos
 router.get('/', productController.show);
@@ -15,7 +16,12 @@ router.get('/detail/:id', productController.productDetail);
 //get pagina de creacion de producto
 router.get('/create', productController.create);
 //Post producto creado a base de datos
-router.post('/', uploader.single('imagen'), productController.store);
+router.post(
+	'/',
+	uploader.single('imagen'),
+	validacion,
+	productController.store
+);
 
 //get pagina de editacion de producto
 router.get('/edit/:id', productController.update);

@@ -250,33 +250,5 @@
 		"vendor": false,
 		"avatar": "https://robohash.org/similiquequiamodi.png?size=50x50&set=set1",
 		"password": "0a63e1339336f98e952ad185e1f4fada9d6f88c9"
-	},
-	{
-		"id": 19,
-		"username": "cdevonishi",
-		"first_name": "Constantino",
-		"last_name": "Devonish",
-		"email": "cdevonishi@liveinternet.ru",
-		"birth_date": "2/27/1959",
-		"city": "Jirkov",
-		"address": "32 Grasskamp Center",
-		"phone": "+420 143 602 9592",
-		"vendor": true,
-		"avatar": "https://robohash.org/pariaturexpeditaet.png?size=50x50&set=set1",
-		"password": "0a63e1339336f98e952ad185e1f4fada9d6f88c9"
-	},
-	{
-		"id": 20,
-		"username": "bdominguezj",
-		"first_name": "Bonita",
-		"last_name": "Dominguez",
-		"email": "bdominguezj@reuters.com",
-		"birth_date": "6/2/1993",
-		"city": "Ciwaru",
-		"address": "484 Walton Terrace",
-		"phone": "+62 848 557 3572",
-		"vendor": true,
-		"avatar": "https://robohash.org/commodiasperioresvoluptatem.png?size=50x50&set=set1",
-		"password": "0a63e1339336f98e952ad185e1f4fada9d6f88c9"
 	}
 ]

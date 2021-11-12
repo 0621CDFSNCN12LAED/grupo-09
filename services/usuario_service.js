@@ -3,6 +3,7 @@ const path = require('path');
 const fs = require('fs');
 const usuariosJSON = path.join(__dirname, '../Data/Users_appedal.json');
 const usuariosDb = JSON.parse(fs.readFileSync(usuariosJSON, 'utf-8'));
+const bcryptjs = require('bcryptjs');
 
 module.exports = {
 	usuarioUnico(id) {
@@ -11,18 +12,20 @@ module.exports = {
 			return user.id == userId;
 		});
 		return usuarioUnico;
+		s;
 	},
 	userCreate(body, imagen) {
-		const lastItem = usuariosDb[usuariosDb.length - 1];
-		const biggestItem = usuariosDb.length > 0 ? lastItem.id : 1;
+		const lastUser = usuariosDb[usuariosDb.length - 1];
+		const biggestUser = usuariosDb.length > 0 ? lastUser.id : 1;
 
-		const newProd = {
-			id: biggestItem + 1,
+		const newUser = {
+			id: biggestUser + 1,
 			...body,
+			password: bcryptjs.hashSync(body.password),
 			imagen: imagen ? imagen.filename : '../public/img/berm.jpg',
 		};
 
-		usuariosDb.push(newProd);
+		usuariosDb.push(newUser);
 		this.save();
 	},
 	edit(id, body, imagen) {
@@ -35,7 +38,7 @@ module.exports = {
 		userToEdit.adress = body.adress;
 		userToEdit.phone = body.phone;
 		userToEdit.birthday = body.birthday;
-		userToEdit.password = body.password;
+		userToEdit.password = bcryptjs.hashSync(body.password);
 
 		(userToEdit.avatar = imagen
 			? imagen.filename
