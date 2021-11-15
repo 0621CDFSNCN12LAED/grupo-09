@@ -42,7 +42,7 @@ CREATE TABLE users (
     city VARCHAR(50) NOT NULL,
     adress VARCHAR(50) NOT NULL,
     phone INT(10) NOT NULL,
-    avatar VARCHAR(100) DEFAULT "/imgusUarios/defaultUser.png",
+    avatar VARCHAR(100) DEFAULT "/imgUsuarios/defaultUser.png",
     pass VARCHAR(20) NOT NULL,
     categoriaUser_id INT(10) UNSIGNED NOT NULL,
     PRIMARY KEY (id),
@@ -80,7 +80,7 @@ CREATE TABLE products (
     user_id INT(10) UNSIGNED NOT NULL,
     producto VARCHAR(50) NOT NULL,
     proveedor VARCHAR(50) NOT NULL,
-    vendido TINYINT NOT NULL
+    vendido TINYINT NOT NULL,
     precio DECIMAL NOT NULL,
     imagen VARCHAR(100) DEFAULT "/imgProductos/defaultProduct.png",
     categoriaProducts_id INT(10) UNSIGNED NOT NULL,
