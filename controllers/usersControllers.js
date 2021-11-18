@@ -17,7 +17,7 @@ const users = {
 		let errors = validationResult(req);
 		if (errors.isEmpty()) {
 			userService.userCreate(req.body, req.file);
-			res.redirect('home');
+			res.redirect('/');
 		} else {
 			res.render('registro', {
 				errors: errors.array(),

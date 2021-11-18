@@ -33,20 +33,22 @@
 
 					<div class="form-input">
 						<label class="main-label">Perfil de usuario:</label>
-						<input
-							type="radio"
-							name="user-profile"
-							id="user-profile-seller"
-							value="seller"
-						/>
-						<label for="user-profile-seller">Mecanico</label>
-						<input
-							type="radio"
-							name="user-profile"
-							id="user-profile-buyer"
-							value="buyer"
-						/>
-						<label for="user-profile-buyer">Usuario</label>
+						<select name="user-profile">
+							<option
+								type="radio"
+								id="user-profile-seller"
+								value="seller"
+							>
+								Mecanico
+							</option>
+							<option
+								type="radio"
+								id="user-profile-buyer"
+								value="buyer"
+							>
+								Usuario
+							</option>
+						</select>
 					</div>
 
 					<div class="form-inputFoto">

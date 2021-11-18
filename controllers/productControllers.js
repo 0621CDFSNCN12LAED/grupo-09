@@ -2,10 +2,10 @@
 
 const fs = require('fs');
 const path = require('path');
-const validacion = require('../validations/ValidacionProducto');
 
 const productosJSON = path.join(__dirname, '../Data/MOCK_DATA.json');
 const productosDb = JSON.parse(fs.readFileSync(productosJSON, 'utf-8'));
+const loginValidation = require('../middlewares/loginValidation');
 
 const productService = require('../services/product-service');
 const {validationResult} = require('express-validator');
@@ -23,8 +23,14 @@ const product = {
 
 	//crear un item nuevo y guardarlos
 	create: (req, res) => {
+		if (loginValidation == true) {
+			res.render('productCreateForm');
+		} else {
+			res.render('login', {
+				err: ['Debes Estar Registrado para Crear'],
+			});
+		}
 		//va por get y trae el formulario en blanco
-		res.render('productCreateForm');
 	},
 	//guardar datos de los items
 	store: (req, res) => {
@@ -48,8 +54,14 @@ const product = {
 		res.render('productEditForm', {productoUnico});
 	},
 	edit: (req, res) => {
-		productService.edit(req.params.id, req.body, req.file);
-		res.redirect('/product');
+		if (loginValidation == true) {
+			productService.edit(req.params.id, req.body, req.file);
+			res.redirect('/product');
+		} else {
+			res.render('Login', {
+				err: ['Debes estar logeado para Editar'],
+			});
+		}
 	},
 
 	//borrar un item especifico

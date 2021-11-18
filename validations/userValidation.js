@@ -13,6 +13,7 @@ const validacion = [
 		if (value !== req.body.password) {
 			throw new Error('Password Confirmation does not match password');
 		}
+		return true;
 	}),
 	body('user-profile')
 		//.notEmpty()
