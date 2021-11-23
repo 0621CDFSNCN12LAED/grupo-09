@@ -2,7 +2,6 @@
 
 /// const fs = require("fs");
 /// const path = require("path");
-
 /// const productosJSON = path.join(__dirname, "../Data/MOCK_DATA.json");
 /// const productosDb = JSON.parse(fs.readFileSync(productosJSON, 'utf-8'));
 const loginValidation = require("../middlewares/loginValidation");
@@ -21,7 +20,12 @@ const product = {
 
   productDetail: async (req, res) => {
     const productoUnico = await Products.findByPk(req.params.id);
-    res.render("productsDetail", { productoUnico });
+    if (productoUnico) {
+      res.render("productsDetail", { productoUnico });
+    } else {
+      //error
+      res.redirect("/product");
+    }
   },
   // productDetail: (req, res) => {
   //   const productoUnico = productService.productoUnico(req.params.id);
@@ -50,7 +54,6 @@ const product = {
         errors: errors.array(),
         old: req.body,
       });
-      s;
     }
   },
   //modificar un item especifico
@@ -65,7 +68,8 @@ const product = {
   },
   edit: (req, res) => {
     if (loginValidation == true) {
-      productService.edit(req.params.id, req.body, req.file);
+      // productService.edit(req.params.id, req.body, req.file);
+
       res.redirect("/product");
     } else {
       res.render("Login", {
@@ -75,7 +79,14 @@ const product = {
   },
 
   //borrar un item especifico
-  delete: (req, res) => {},
+  delete: async (req, res) => {
+    await Product.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    res.redirect("/product");
+  },
 };
 
 module.exports = product;

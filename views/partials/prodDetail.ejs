@@ -19,9 +19,9 @@
               max-width="100px"
               />
             <div class="product-content text-align zindex-1">
-              <h4 class="style-h4"><%= prod.proveedor%></h4>
-              <p class="precios"><%=prod.precio%></p>
-              <p class="descripciones"><%= prod.producto%></p>
+              <p class="style-h4"><%= prod.producto%></p>
+              <h4 class="descripciones"><%= prod.proveedor%></h4>
+              <p class="precios">Precio: $<%=prod.precio%>.00</p>
             </div>
             <div class="text-align padding-8">
             <form action="" method="GET">
