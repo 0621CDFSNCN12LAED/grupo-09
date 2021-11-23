@@ -1,3 +1,25 @@
+### Retro Sprint 6 >_Minuta_
+
+- Keep Doing
+  - Trabajo en Equipo
+- More Of
+  - Reuniones dias Domingo para coordinar tareas
+  - Reuniones de feedback semanales de los lunes
+  - Mas participacion activa en el desarrollo
+  - Cargar Jamboard de Retros y darle seguimiento al tablero en Trello
+- Start Doing
+  - ultimo esfuerzo para encarar el final del proyecto
+- Stop Doing
+  - Enfermarse de COVID-19
+- Less of
+
+  - Reuniones sin Cuorum
+  - retrasos en las entregas
+
+  https://jamboard.google.com/d/1QjkiYpiN-MyVCFG_fT2Mn_I5TXhwJhkNjpFVF9wDR3k/viewer?f=5
+
+---
+
 ### Retro Sprint 5 >_Minuta_
 
 - Keep Doing

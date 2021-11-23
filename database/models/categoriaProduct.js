@@ -10,16 +10,16 @@ module.exports = function (sequelize, dataTypes) {
 	};
 
 	let config = {
-		tablename: 'ccategorias_products',
+		tablename: 'categorias_products',
 		timestamps: false,
 	};
 	let categoriaProducto = sequelize.define(alias, cols, config);
 
-	categoriaProducto.associate = function (models) {
-		categoriaProducto.hasOne(models.Productos, {
-			as: 'productos',
-			foreignKey: 'categoriaProducts_id',
-		});
-	};
+	// categoriaProducto.associate = function (models) {
+	//   categoriaProducto.hasOne(models.Productos, {
+	//     as: "productos",
+	//     foreignKey: "categoriaProducts_id",
+	//   });
+	// };
 	return categoriaProducto;
 };

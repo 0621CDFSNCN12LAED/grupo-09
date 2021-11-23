@@ -8,16 +8,16 @@
   </head>
   <body>
     <section Class="flex">
-      <% for(let prod of productosDb){%>
-      <div class="product-wrapper box-shadow margin-1 w-25">
-        <article class="flex">
+      <% for(let prod of productos){%>
+      <div class="product-wrapper box-shadow margin-1 w-20">
+        <article class="flex text-center">
           <a href="/product/detail/<%= prod.id %> ">
             <img
-              class="imgs"
+              class="imgs center"
               src="imgProductos/<%=prod.imagen%>"
               alt="<%= prod.producto%>"
-              width="100%"
-            />
+              max-width="100px"
+              />
             <div class="product-content text-align zindex-1">
               <h4 class="style-h4"><%= prod.proveedor%></h4>
               <p class="precios"><%=prod.precio%></p>
