@@ -6,13 +6,14 @@ const fs = require("fs");
 const productosDb = require("../database/models");
 
 module.exports = {
-  productoUnico(id) {
-    const prodId = id;
-    const productoUnico = productosDb.Product.findByPK((prod) => {
-      return prod.id == prodId;
-    });
-    return productoUnico;
-  },
+  // productoUnico(id) {
+  //   const prodId = id;
+  //   const productoUnico = productosDb.Product.findByPK((prod) => {
+  //     return prod.id == prodId;
+  //   });
+  //   return productoUnico;
+  // },
+
   productCreate(body, image) {
     const lastItem = productosDb[productosDb.length - 1];
     const biggestItem = productosDb.length > 0 ? lastItem.id : 1;

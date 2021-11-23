@@ -19,9 +19,8 @@ const product = {
     res.render("productsAll", { productos: Prods });
   },
 
-  //mostrar detalle de producto
-  productDetail: (req, res) => {
-    const productoUnico = productService.productoUnico(req.params.id);
+  productDetail: async (req, res) => {
+    const productoUnico = await Products.findByPk(req.params.id);
     res.render("productsDetail", { productoUnico });
   },
 
