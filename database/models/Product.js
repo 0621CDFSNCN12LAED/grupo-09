@@ -1,5 +1,5 @@
 module.exports = function (sequelize, dataTypes) {
-  let alias = "Productos";
+  let alias = "Products";
   let cols = {
     id: {
       type: dataTypes.INTEGER,
@@ -24,13 +24,13 @@ module.exports = function (sequelize, dataTypes) {
 
   Product.associate = function (models) {
     Product.hasOne(models.Usuario, {
-      as: "usurio",
-      foreignKey: "user_id",
+      as: "usuario",
+      foreignKey: "id",
     });
-    Product.belongsTo(models.CategoriaProducto, {
-      as: "CategoriaProducto",
-      foreignKey: "categoriaProducts_id",
-    });
+    //   Product.belongsTo(models.CategoriaProducto, {
+    //     as: "CategoriaProducto",
+    //     foreignKey: "categoriaProducts_id",
+    //   });
   };
 
   return Product;

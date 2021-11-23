@@ -25,14 +25,14 @@ module.exports = function (sequelize, dataTypes) {
   let Usuario = sequelize.define(alias, cols, config);
 
   Usuario.associate = function (models) {
-    Usuario.hasMany(models.Productos, {
+    Usuario.hasMany(models.Products, {
       as: "productos",
       foreignKey: "user_id",
     });
-    Usuario.belongsTo(models.CategoriaUsuario, {
-      as: "CategoriaUsuario",
-      foreignKey: "categoriaUser_id",
-    });
+    // Usuario.belongsTo(models.CategoriaUsuario, {
+    //   as: "CategoriaUsuario",
+    //   foreignKey: "categoriaUser_id",
+    // });
   };
   return Usuario;
 };
