@@ -1,22 +1,21 @@
 /** @format */
 const path = require('path');
 const fs = require('fs');
-const usuariosJSON = path.join(__dirname, '../Data/Users_appedal.json');
-const usuariosDb = JSON.parse(fs.readFileSync(usuariosJSON, 'utf-8'));
+//const usuariosJSON = path.join(__dirname, '../Data/Users_appedal.json');
+//const usuariosDb = JSON.parse(fs.readFileSync(usuariosJSON, 'utf-8'));
+
+const db = require('../database/models');
 const bcryptjs = require('bcryptjs');
+const Users = db.Usuario;
 
 module.exports = {
-	usuarioUnico(id) {
-		const userId = id;
-		const usuarioUnico = usuariosDb.find((user) => {
-			return user.id == userId;
-		});
+	async usuarioUnico(id) {
+		const usuarioUnico = await Users.findByPk(id);
 		return usuarioUnico;
-		s;
 	},
 	userCreate(body, imagen) {
-		const lastUser = usuariosDb[usuariosDb.length - 1];
-		const biggestUser = usuariosDb.length > 0 ? lastUser.id : 1;
+		const lastUser = Users[Users.length - 1];
+		const biggestUser = Users.length > 0 ? lastUser.id : 1;
 
 		const newUser = {
 			id: biggestUser + 1,

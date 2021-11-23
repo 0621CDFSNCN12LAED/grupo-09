@@ -1,39 +1,38 @@
-const path = require('path');
-const fs = require('fs');
+//const path = require('path');
+//const fs = require('fs');
 const bcryptjs = require('bcryptjs');
+const db = require('../database/models');
 
-const usuariosJSON = path.join(__dirname, '../Data/Users_appedal.json');
-const usuariosDb = JSON.parse(fs.readFileSync(usuariosJSON, 'utf-8'));
+//const usuariosJSON = path.join(__dirname, '../Data/Users_appedal.json');
+//const usuariosDb = JSON.parse(fs.readFileSync(usuariosJSON, 'utf-8'));
 
-const loggedOn = function (req) {
-	const reqUser = req.body;
-	const user = usuariosDb.find((u) => {
-		return reqUser.name == u.username;
+const Users = db.Usuario;
+
+const loggedOn = async function (req, res) {
+	const user = await Users.findOne({
+		where: {username: req.body.name},
 	});
 
 	if (user) {
 		console.log('sirve');
 		bcryptjs.compare(
-			reqUser.password,
+			req.body.password,
 			user.password,
 			function (err, response) {
 				if (err) {
-					return false;
-					//res.render('login', {err: 'Ingrese Password'});
+					res.render('login', {err: 'Ingrese Password'});
+					git;
 				} else if (response) {
-					return true;
-					//next();
+					next();
 				} else {
-					return false;
-					//res.render('login', {
-					//	err: 'Password o Usuario no coinciden',
-					//});
+					res.render('login', {
+						err: 'Password o Usuario no coinciden',
+					});
 				}
 			}
 		);
 	} else {
-		false;
+		res.render('login', {err: 'Usuario no existe'});
 	}
 };
-
 module.exports = loggedOn;

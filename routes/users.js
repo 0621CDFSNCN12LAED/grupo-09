@@ -37,13 +37,8 @@ router.delete('/:id', userController.delete);
 //Get Login
 router.get('/login', userController.login);
 
-router.post('/login', (req, res) => {
-	if (loginValidation(req) == true) {
-		res.render('login', {err: 'Usuario y Password no coinciden'});
-	} else {
-		req.session;
-		res.render('home');
-	}
+router.post('/login', loginValidation, (req, res) => {
+	res.render('home');
 });
 
 module.exports = router;

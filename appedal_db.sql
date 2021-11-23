@@ -32,7 +32,7 @@ INSERT INTO categorias_products VALUES
 
 UNLOCK TABLES;
 
-CREATE TABLE users (
+CREATE TABLE usuarios (
     id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
     username VARCHAR(20) NOT NULL,
     first_name VARCHAR(50) NOT NULL,
@@ -49,9 +49,9 @@ CREATE TABLE users (
     FOREIGN KEY (categoriaUser_id) REFERENCES categorias_users(id)
     ) ENGINE=InnoDB AUTO_INCREMENT=20;
 
-LOCK TABLES users WRITE;
+LOCK TABLES usuarios WRITE;
 
-INSERT INTO users VALUES
+INSERT INTO usuarios VALUES
  (1, 'kmccrann0', 'Kirsteni', 'McCrann', 'kmccrann0@odnoklassniki.ru', '1/29/1956', 'Haoguantun', '03 Superior Parkway', '+86 144 677 3932', 'defaultUser.png', 'fc6bb3e779f0d306f300911217bd542e762cbcb0', 3),
  (2, 'femm1', 'Florian', 'Emm', 'femm1@blogs.com', '9/4/1962', 'San Narciso', '54601 Straubel Pass', '+63 833 636 5140', 'defaultUser2.png', 'fc6bb3e779f0d306f300911217bd542e762cbcb0', 3),
  (3, 'tschutte2', 'Tierney', 'Schutte', 'tschutte2@youtu.be', '2/18/2006', 'Laslovo', '90354 Shasta Parkway', '+385 796 257 6587', 'defaultUser2.png', 'fc6bb3e779f0d306f300911217bd542e762cbcb0', 3),
@@ -86,7 +86,7 @@ CREATE TABLE products (
     categoriaProducts_id INT(10) UNSIGNED NOT NULL,
     descripcion TEXT NOT NULL,
     PRIMARY KEY (id),
-    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (user_id) REFERENCES usuarios(id),
     FOREIGN KEY (categoriaProducts_id) REFERENCES categorias_products(id)
     ) ENGINE=InnoDB AUTO_INCREMENT=25;
 
@@ -121,3 +121,11 @@ INSERT INTO products VALUES
 
 UNLOCK TABLES;
 
+
+Drop TABLE usuarios;
+Drop table products;
+
+drop table categorias_products;
+DROP Table categorias_users;
+
+Drop DATABASE appedal_db;
