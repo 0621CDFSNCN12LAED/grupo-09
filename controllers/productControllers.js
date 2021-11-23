@@ -23,6 +23,10 @@ const product = {
     const productoUnico = await Products.findByPk(req.params.id);
     res.render("productsDetail", { productoUnico });
   },
+  // productDetail: (req, res) => {
+  //   const productoUnico = productService.productoUnico(req.params.id);
+  //   res.render("productsDetail", { productoUnico });
+  // },
 
   //crear un item nuevo y guardarlos
   create: (req, res) => {
@@ -51,9 +55,12 @@ const product = {
   },
   //modificar un item especifico
   //extraer item especifico y editarlo
-  update: (req, res) => {
+  update: async (req, res) => {
     //va por put y tiene Id, trae el formulario con los datos del producto
-    const productoUnico = productService.productoUnico(req.params.id);
+    // const productoUnico = productService.productoUnico(req.params.id);
+    // res.render("productEditForm", { productoUnico });
+    // update: (req, res) => {
+    const productoUnico = await Products.findByPk(req.params.id);
     res.render("productEditForm", { productoUnico });
   },
   edit: (req, res) => {

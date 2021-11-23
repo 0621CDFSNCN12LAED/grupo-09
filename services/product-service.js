@@ -3,12 +3,13 @@ const path = require("path");
 const fs = require("fs");
 /// const productosJSON = path.join(__dirname, '../Data/MOCK_DATA.json');
 /// const productosDb = JSON.parse(fs.readFileSync(productosJSON, 'utf-8'));
-const productosDb = require("../database/models");
+/// const productosDb = require("../database/models");
+let { Products } = require("../database/models");
 
 module.exports = {
   // productoUnico(id) {
   //   const prodId = id;
-  //   const productoUnico = productosDb.Product.findByPK((prod) => {
+  //   const productoUnico = Products.findByPK((prod) => {
   //     return prod.id == prodId;
   //   });
   //   return productoUnico;
