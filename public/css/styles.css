@@ -265,7 +265,8 @@ footer a {
 
 .col-footer {
   width: 90%;
-  padding-left: 5vw;
+  padding-left: 3vw;
+  padding-right: 1vw;
 }
 .separador1 {
   background: #f4e92e;
@@ -321,7 +322,7 @@ footer i {
 .btm-foot {
   background: #fff;
   margin-top: 10vw 25vh;
-  padding: 15px 0;
+  padding: 1vw 1vw;
   font-size: 8px;
 }
 
@@ -374,4 +375,5 @@ footer i {
   top: 0;
   left: 0;
   width: 100%;
+  margin: 0%;
 }

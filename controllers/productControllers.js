@@ -80,7 +80,7 @@ const product = {
 
   //borrar un item especifico
   delete: async (req, res) => {
-    await Product.destroy({
+    await Products.destroy({
       where: {
         id: req.params.id,
       },
