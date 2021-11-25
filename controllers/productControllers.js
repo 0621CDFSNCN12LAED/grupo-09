@@ -4,13 +4,13 @@
 /// const path = require("path");
 /// const productosJSON = path.join(__dirname, "../Data/MOCK_DATA.json");
 /// const productosDb = JSON.parse(fs.readFileSync(productosJSON, 'utf-8'));
-const loginValidation = require("../middlewares/loginValidation");
 
-const productService = require("../services/product-service");
+const loginValidation = require("../middlewares/loginValidation");
 const { validationResult } = require("express-validator");
 
-let { Products } = require("../database/models");
-const categoriaProduct = require("../database/models/categoriaProduct");
+const productService = require("../services/product-service");
+
+const { Products, categoriaProduct } = require("../database/models");
 
 const product = {
   //mostrar todos los items
@@ -36,14 +36,18 @@ const product = {
   // },
 
   //crear un item nuevo y guardarlos
-  create: (req, res) => {
-    if (loginValidation == true) {
-      res.render("productCreateForm");
-    } else {
-      res.render("login", {
-        err: ["Debes Estar Registrado para Crear"],
-      });
-    }
+  create: async (req, res) => {
+    // if (loginValidation == true) {
+    const productoUnico = await Products.findByPk(req.params.id, {
+      include: "categoriaProduct",
+    });
+    res.render("productCreateForm", { productoUnico });
+    // } else {
+    // res.render("login", {
+    //   err: ["Debes Estar Registrado para Crear"],
+    // });
+    // }
+    // },
     //va por get y trae el formulario en blanco
   },
   //guardar datos de los items
@@ -61,11 +65,13 @@ const product = {
   },
   //modificar un item especifico
   //extraer item especifico y editarlo
+  //va por put y tiene Id, trae el formulario con los datos del producto
+
+  // update: (req, res) => {
+  //   const productoUnico = productService.productoUnico(req.params.id);
+  //   res.render("productEditForm", { productoUnico });
+
   update: async (req, res) => {
-    //va por put y tiene Id, trae el formulario con los datos del producto
-    // const productoUnico = productService.productoUnico(req.params.id);
-    // res.render("productEditForm", { productoUnico });
-    // update: (req, res) => {
     const productoUnico = await Products.findByPk(req.params.id);
     res.render("productEditForm", { productoUnico });
   },

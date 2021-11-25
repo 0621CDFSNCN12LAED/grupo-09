@@ -6,10 +6,10 @@
     <article class="flex text-center">
       <a href="/product/detail/<%= prod.id %> ">
         <img
-          class="imgs center w-85"
+          class="imgs center w-85 article-img"
           src="imgProductos/<%=prod.imagen%>"
           alt="<%= prod.producto%>"
-          width="100px"
+          max-width="100px"
         />
         <div class="product-content text-align zindex-1">
           <p class="style-h4"><%= prod.producto%></p>

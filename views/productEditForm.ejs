@@ -6,20 +6,28 @@
     <%- include('./partials/head') %>
 
     <title>Editar Producto</title>
+<link rel="icon" href="../img/favicon.png" type="image/png" />
   </head>
   <header class="background_amarillo">
     <%- include('./partials/header') %>
   </header>
   <body>
-    <main class="flex background_amarillo">
-      <div class="flex new-margin container product-wrapper w-35 box-shadow">
-        <h1 class="main-title w-100">Editar <%= productoUnico.producto %></h1>
-        <form
-          class="bg-white"
+    <main class="background_amarillo">
+      <div class="product-wrapper w-65 margin-auto ">
+        <h1 class="main-title w-100">Editar Producto <%= productoUnico.producto %></h1>
+        <article class="product flex box-shadow bg-white">
+          <img
+          class="imgs w-35"
+          src="/imgProductos/<%=productoUnico.imagen%>"
+          alt="<%=productoUnico.producto%>"
+          width="200px"
+          />
+          <form
+          class="w-65"
           action="/product/<%= productoUnico.id %>?_method=PUT"
           method="POST"
-        >
-          <div class="form-input">
+          >
+          <div class="form-input ">
             <label class="main-label" for="producto">Nombre del Producto</label>
             <input
               id="producto"
@@ -28,7 +36,6 @@
               value="<%= productoUnico.producto %>"
             />
           </div>
-          <br />
           <div class="form-input">
             <label class="main-label" for="proveedor"
               >Nombre del Proveedor</label
@@ -39,8 +46,18 @@
               name="proveedor"
               value="<%= productoUnico.proveedor %>"
             />
-          </div>
-          <br />
+          </div>   
+            <div class="form-input">
+            <label class="main-label" for="categoria"
+              >Categoria del Producto</label
+            >
+            <input
+              id="categoria"
+              type="text"
+              name="categoria"
+              value=""
+            />
+          </div>    
           <div class="form-input">
             <label class="main-label" for="precio">Precio: $</label>
             <input
@@ -50,14 +67,17 @@
               value="<%= productoUnico.precio %>"
             />
           </div>
-          
-          <br />
-          <img
-          class="imgs flex margin-auto"
-          src="/imgProductos/<%=productoUnico.imagen%>"
-          alt="<%= productoUnico.producto%>"
-          max-width="100px"
-          />
+           <div class="form-input ">
+            <label class="main-label" for="descripcion"
+              >Descripción del Producto</label>
+           <input
+              id="descripcion"
+              type="text"
+              size="40"
+              name="descripcion"
+              value="<%= productoUnico.descripcion %>"
+            />
+             </div>
           <div class="form-inputFoto">
             <label class="main-label" for="imagen">Foto de Producto</label>
             <input
@@ -66,16 +86,6 @@
             name="product-image"
             accept="image/png,image/jpeg"
             />
-            <div class="form-input">
-              <label class="main-label" for="proveedor"
-                >Descripción del Producto</label
-              >
-              <input
-                id="proveedor"
-                type="text"
-                name="descripcion"
-                value="<%= productoUnico.descripcion %>"
-              />
           </div>
 
           <div class="text-center">
@@ -85,7 +95,11 @@
             </button>
           </div>
         </form>
+      
       </div>
+    </article>  
+     </div>
+    
     </main>
     <%- include('./partials/footer') %>
   </body>

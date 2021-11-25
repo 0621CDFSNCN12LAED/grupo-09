@@ -103,6 +103,9 @@ h3 {
   position: relative;
   margin: auto;
 }
+.article-img {
+  max-width: 25vh;
+}
 a {
   text-decoration: none;
 }

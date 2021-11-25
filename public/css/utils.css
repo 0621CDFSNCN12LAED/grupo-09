@@ -110,6 +110,14 @@
   border-radius: 10px;
 }
 
+.button_4 {
+  color: white;
+  font-weight: 600;
+  background-color: orangered;
+  padding: 10px;
+  border-radius: 10px;
+}
+
 button:hover {
   background-color: grey;
 }
