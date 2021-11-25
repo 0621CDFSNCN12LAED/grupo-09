@@ -31,10 +31,19 @@ module.exports = function (sequelize, dataTypes) {
 			foreignKey: 'user_id',
 		});
 
+<<<<<<< Updated upstream
 		// Usuario.belongsTo(models.CategoriaUser, {
 		//   as: "CategoriaUsuario",
 		//   foreignKey: "categoriaUser_id",
 		// });
 	};
 	return Usuario;
+=======
+    Usuario.belongsTo(models.CategoriaUser, {
+      as: "CategoriaUsuario",
+      foreignKey: "categoriausers_id",
+    });
+  };
+  return Usuario;
+>>>>>>> Stashed changes
 };

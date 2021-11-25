@@ -50,22 +50,32 @@
               value="<%= productoUnico.precio %>"
             />
           </div>
-
+          
           <br />
           <img
-            class="imgs flex margin-auto"
-            src="/imgProductos/<%=productoUnico.imagen%>"
-            alt="<%= productoUnico.producto%>"
-            max-width="100px"
+          class="imgs flex margin-auto"
+          src="/imgProductos/<%=productoUnico.imagen%>"
+          alt="<%= productoUnico.producto%>"
+          max-width="100px"
           />
           <div class="form-inputFoto">
-            <label class="main-label" for="imagen">Foto de producto</label>
+            <label class="main-label" for="imagen">Foto de Producto</label>
             <input
-              id="imagen"
-              type="file"
-              name="product-image"
-              accept="image/png,image/jpeg"
+            id="imagen"
+            type="file"
+            name="product-image"
+            accept="image/png,image/jpeg"
             />
+            <div class="form-input">
+              <label class="main-label" for="proveedor"
+                >Descripción del Producto</label
+              >
+              <input
+                id="proveedor"
+                type="text"
+                name="descripcion"
+                value="<%= productoUnico.descripcion %>"
+              />
           </div>
 
           <div class="text-center">

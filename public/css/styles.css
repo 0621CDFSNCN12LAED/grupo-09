@@ -40,6 +40,9 @@ h3 {
   text-align: center;
 }
 
+.text-left {
+  text-align: left;
+}
 .searchbar {
   background-color: white;
   border-radius: 10px;
