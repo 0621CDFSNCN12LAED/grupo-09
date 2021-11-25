@@ -1,11 +1,13 @@
 /** @format */
-const path = require('path');
-const fs = require('fs');
+//const path = require('path');
+//const fs = require('fs');
 //const usuariosJSON = path.join(__dirname, '../Data/Users_appedal.json');
 //const usuariosDb = JSON.parse(fs.readFileSync(usuariosJSON, 'utf-8'));
 
-const db = require('../database/models');
 const bcryptjs = require('bcryptjs');
+const saltRounds = 10;
+
+const db = require('../database/models');
 const Users = db.Usuario;
 
 module.exports = {
@@ -13,19 +15,20 @@ module.exports = {
 		const usuarioUnico = await Users.findByPk(id);
 		return usuarioUnico;
 	},
-	userCreate(body, imagen) {
-		const lastUser = Users[Users.length - 1];
-		const biggestUser = Users.length > 0 ? lastUser.id : 1;
+	async userCreate(body, imagen) {
+		//const lastUser = Users[Users.length - 1];
+		//const biggestUser = Users.length > 0 ? lastUser.id : 1;
 
-		const newUser = {
-			id: biggestUser + 1,
-			...body,
-			password: bcryptjs.hashSync(body.password),
+		await Users.create({
+			//id: biggestUser + 1,
+			username: body.username,
+			first_name: body.first_name,
+			last_name: body.last_name,
+			email: body.email,
+			categoriaUser_id: body.userProfile,
+			pass: bcryptjs.hashSync(body.password, saltRounds),
 			imagen: imagen ? imagen.filename : '../public/img/berm.jpg',
-		};
-
-		usuariosDb.push(newUser);
-		this.save();
+		});
 	},
 	edit(id, body, imagen) {
 		const userToEdit = this.usuarioUnico(id);
@@ -37,7 +40,7 @@ module.exports = {
 		userToEdit.adress = body.adress;
 		userToEdit.phone = body.phone;
 		userToEdit.birthday = body.birthday;
-		userToEdit.password = bcryptjs.hashSync(body.password);
+		userToEdit.password = bcryptjs.hashSync(body.password, saltRounds);
 
 		(userToEdit.avatar = imagen
 			? imagen.filename

@@ -11,7 +11,9 @@ const users = {
 		const usuario = userService.usuarioUnico(req.params.id);
 		res.render('profile', {usuario: usuario});
 	},
-
+	registro: (req, res) => {
+		res.render('registro');
+	},
 	//crear un item nuevo y guardarlos
 	store: (req, res) => {
 		let errors = validationResult(req);
@@ -25,9 +27,7 @@ const users = {
 			});
 		}
 	},
-	registro: (req, res) => {
-		res.render('registro');
-	},
+
 	update: (req, res) => {
 		//va por put y tiene Id, trae el formulario con los datos del producto
 		const userUnico = userService.usuarioUnico(req.params.id);

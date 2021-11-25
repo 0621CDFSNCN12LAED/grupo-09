@@ -16,6 +16,7 @@ module.exports = function (sequelize, dataTypes) {
 		phone: {type: dataTypes.INTEGER},
 		avatar: {type: dataTypes.STRING},
 		categoriaUser_id: {type: dataTypes.INTEGER},
+		pass: {type: dataTypes.STRING},
 	};
 
 	let config = {
@@ -25,10 +26,10 @@ module.exports = function (sequelize, dataTypes) {
 	let Usuario = sequelize.define(alias, cols, config);
 
 	Usuario.associate = function (models) {
-		Usuario.hasMany(models.Productos, {
-			as: 'productos',
-			foreignKey: 'user_id',
-		});
+		//Usuario.hasMany(models.Productos, {
+		//	as: 'productos',
+		//	foreignKey: 'user_id',
+		//});
 		Usuario.belongsTo(models.CategoriaUsuario, {
 			as: 'CategoriaUsuario',
 			foreignKey: 'categoriaUser_id',

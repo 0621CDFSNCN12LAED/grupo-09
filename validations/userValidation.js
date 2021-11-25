@@ -1,7 +1,8 @@
 const {body} = require('express-validator');
 
 const validacion = [
-	body('name').notEmpty().withMessage('Debes completar el nombre'),
+	body('first_name').notEmpty().withMessage('Debes completar el nombre'),
+	body('last_name').notEmpty().withMessage('Debes completar el apellido'),
 	body('username').notEmpty().withMessage('Debes completar el usuario'),
 	body('password')
 		.trim()
@@ -15,9 +16,9 @@ const validacion = [
 		}
 		return true;
 	}),
-	body('user-profile')
+	body('userProfile')
 		//.notEmpty()
-		.isIn(['seller', 'buyer'])
+		.isIn([1, 2, 3])
 		.withMessage('Debes aclarar tipo de usuario'),
 ];
 
