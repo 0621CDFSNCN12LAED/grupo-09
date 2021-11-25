@@ -4,30 +4,30 @@ CREATE DATABASE appedal_db character set utf8;
 
 USE appedal_db;
 
-CREATE TABLE categoriasxusers (
+CREATE TABLE categoriausers (
     id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
     categoria VARCHAR(20) NOT NULL,
     PRIMARY KEY (id)
     ) ENGINE=InnoDB AUTO_INCREMENT=4;
     
-LOCK TABLES categoriasxusers WRITE;
+LOCK TABLES categoriausers WRITE;
 
-INSERT INTO categoriasxusers VALUES
+INSERT INTO categoriausers VALUES
 (1,'comprador'),
 (2,'vendedor'),
 (3,'mecánico');
 
 UNLOCK TABLES;
 
-CREATE TABLE categoriasxproducts (
+CREATE TABLE categoriaproducts (
     id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
     categoria VARCHAR(20) NOT NULL,
     PRIMARY KEY (id)
     ) ENGINE=InnoDB AUTO_INCREMENT=4;
     
-LOCK TABLES categoriasxproducts WRITE;
+LOCK TABLES categoriaproducts WRITE;
 
-INSERT INTO categoriasxproducts VALUES
+INSERT INTO categoriaproducts VALUES
 (1,'repuesto'),
 (2,'accesorio'),
 (3,'indumentaria');
@@ -46,9 +46,9 @@ CREATE TABLE users (
     phone INT(10) NOT NULL,
     avatar VARCHAR(100) DEFAULT "/imgUsuarios/defaultUser.png",
     pass VARCHAR(20) NOT NULL,
-    categoriaUser_id INT(10) UNSIGNED NOT NULL,
+    categoriausers_id INT(10) UNSIGNED NOT NULL,
     PRIMARY KEY (id),
-    FOREIGN KEY (categoriaUser_id) REFERENCES categoriasxusers(id)
+    FOREIGN KEY (categoriausers_id) REFERENCES categoriausers(id)
     ) ENGINE=InnoDB AUTO_INCREMENT=20;
 
 LOCK TABLES users WRITE;
@@ -85,11 +85,11 @@ CREATE TABLE products (
     vendido TINYINT NOT NULL,
     precio DECIMAL NOT NULL,
     imagen VARCHAR(100) DEFAULT "/imgProductos/defaultProduct.png",
-    categoriaProducts_id INT(10) UNSIGNED NOT NULL,
+    categoriaproducts_id INT(10) UNSIGNED NOT NULL,
     descripcion TEXT NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES users(id),
-    FOREIGN KEY (categoriaProducts_id) REFERENCES categoriasxproducts(id)
+    FOREIGN KEY (categoriaproducts_id) REFERENCES categoriaproducts(id)
     ) ENGINE=InnoDB AUTO_INCREMENT=25;
 
 LOCK TABLES products WRITE;

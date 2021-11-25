@@ -9,7 +9,8 @@
       />
       <div class="product-content text-align">
         <p class="style-h4"><%= productoUnico.producto%></p>
-        <h4 class="descripciones"><%= productoUnico.proveedor%></h4>
+        <p class="descripciones"><%= productoUnico.proveedor%></p>
+        <p class="descripciones">Categoria: <%= productoUnico.categoriaProduct.categoria%></p>
         <p class="precios">Precio: $<%= productoUnico.precio%>.00</p>
         <div class="text-align padding-8">
           <form action="" method="GET">

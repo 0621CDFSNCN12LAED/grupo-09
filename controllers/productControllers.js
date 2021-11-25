@@ -10,16 +10,19 @@ const productService = require("../services/product-service");
 const { validationResult } = require("express-validator");
 
 let { Products } = require("../database/models");
+const categoriaProduct = require("../database/models/categoriaProduct");
 
 const product = {
   //mostrar todos los items
   show: async (req, res) => {
-    const Prods = await Products.findAll();
+    const Prods = await Products.findAll({ include: "categoriaProduct" });
     res.render("productsAll", { productos: Prods });
   },
 
   productDetail: async (req, res) => {
-    const productoUnico = await Products.findByPk(req.params.id);
+    const productoUnico = await Products.findByPk(req.params.id, {
+      include: "categoriaProduct",
+    });
     if (productoUnico) {
       res.render("productsDetail", { productoUnico });
     } else {

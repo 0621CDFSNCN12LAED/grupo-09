@@ -11,7 +11,10 @@
         />
         <div class="product-content text-align zindex-1">
           <p class="style-h4"><%= prod.producto%></p>
-          <h4 class="descripciones"><%= prod.proveedor%></h4>
+          <p class="descripciones"><%= prod.proveedor%></p>
+          <p class="descripciones">
+            Categoria: <%= prod.categoriaProduct.categoria%>
+          </p>
           <p class="precios">Precio: $<%=prod.precio%>.00</p>
         </div>
         <div class="text-align padding-8">
