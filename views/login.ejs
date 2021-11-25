@@ -1,55 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<%- include('./partials/head') %>
+  <head>
+    <%- include('./partials/head') %>
 
-		<title>Login</title>
-	</head>
-	<body>
-		<header><%- include('partials/header') %></header>
-		<form action="/users/Login" method="POST">
-			<div
-				class="
-					container
-					text-center
-					product-wrapper
-					box-shadow
-					background_amarillo
-				"
-			>
-				<h1 class="main-title">Login</h1>
-				<div class="form-input">
-					<label class="main-label" for="user">Usuario: </label>
-					<input
-						id="user"
-						type="text"
-						name="name"
-						placeholder=" Usuario"
-					/>
-				</div>
-				<div class="form-input">
-					<label class="main-label" for="password"
-						>Contraseña:
-					</label>
-					<input
-						id="password"
-						type="password"
-						name="password"
-						placeholder=" Contraseña"
-					/>
-				</div>
-				<div>
-					<div class="margin-5">
-						<button class="button_1" type="submit">Login</button>
-					</div>
-					<p>no tenes ususario?</p>
+    <title>Login</title>
+  </head>
+  <body>
+    <header><%- include('partials/header') %></header>
+    <form action="/users/Login" method="POST">
+      <div
+        class="
+          container
+          text-center
+          product-wrapper
+          box-shadow
+          background_amarillo
+        "
+      >
+        <h1 class="main-title">Login</h1>
+        <div class="form-input">
+          <label class="main-label" for="user">Usuario: </label>
+          <input id="user" type="text" name="name" placeholder=" Usuario" />
+        </div>
+        <div class="form-input">
+          <label class="main-label" for="password">Contraseña: </label>
+          <input
+            id="password"
+            type="password"
+            name="password"
+            placeholder=" Contraseña"
+          />
+        </div>
+        <div>
+          <div class="margin-5">
+            <button class="button_1" type="submit">Login</button>
+          </div>
+          <p>no tenes ususario?</p>
 
-					<form>
-						<a href="/registro">Registrate ahora!</a>
-					</form>
-				</div>
-			</div>
-		</form>
-		<%- include('./partials/footer') %>
-	</body>
+          <form>
+            <a href="/users/registro">Registrate ahora!</a>
+          </form>
+        </div>
+      </div>
+    </form>
+    <%- include('./partials/footer') %>
+  </body>
 </html>

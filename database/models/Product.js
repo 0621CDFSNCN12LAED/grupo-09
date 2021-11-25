@@ -23,14 +23,14 @@ module.exports = function (sequelize, dataTypes) {
 	let Product = sequelize.define(alias, cols, config);
 
 	Product.associate = function (models) {
-		Product.hasOne(models.Usuario, {
+		Product.belongsTo(models.Usuario, {
 			as: 'usuario',
-			foreignKey: 'id',
+			foreignKey: 'user_id',
 		});
-		//   Product.belongsTo(models.CategoriaProducto, {
-		//     as: "CategoriaProducto",
-		//     foreignKey: "categoriaProducts_id",
-		//   });
+		Product.belongsTo(models.categoriaProduct, {
+			as: 'categoriaProduct',
+			foreignKey: 'categoriaproducts_id',
+		});
 	};
 
 	return Product;

@@ -63,6 +63,15 @@ h3 {
   font-size: 16px;
   font-weight: lighter;
   text-align: center;
+  color: #202020;
+}
+.descripciones {
+  color: #202020;
+}
+
+.precios {
+  color: #202020;
+  font-size: 16px;
 }
 .style-nav {
   text-align: center;
@@ -83,13 +92,17 @@ h3 {
 .product {
   justify-content: space-around;
   padding: 2%;
+  color: #111111;
 }
 .product-wrapper {
   padding: 15px;
 }
 .product-content {
   position: relative;
-  padding: 1%;
+}
+
+a {
+  text-decoration: none;
 }
 
 .zindex-1 {
@@ -122,7 +135,7 @@ h3 {
 /*seteos header*/
 .h1-header {
   font-family: "Poppins", Arial, sans-serif;
-  font-size: 4vw;
+  font-size: 3.5vw;
   font-weight: lighter;
   text-align: center;
 }
@@ -252,7 +265,8 @@ footer a {
 
 .col-footer {
   width: 90%;
-  padding-left: 5vw;
+  padding-left: 3vw;
+  padding-right: 1vw;
 }
 .separador1 {
   background: #f4e92e;
@@ -308,7 +322,7 @@ footer i {
 .btm-foot {
   background: #fff;
   margin-top: 10vw 25vh;
-  padding: 15px 0;
+  padding: 1vw 1vw;
   font-size: 8px;
 }
 
@@ -361,4 +375,5 @@ footer i {
   top: 0;
   left: 0;
   width: 100%;
+  margin: 0%;
 }

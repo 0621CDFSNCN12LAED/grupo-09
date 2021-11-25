@@ -5,7 +5,7 @@
   <head>
     <%- include('./partials/head') %>
 
-    <title>Editar Producto <%= productoUnico.producto %></title>
+    <title>Editar Producto</title>
   </head>
   <header class="background_amarillo">
     <%- include('./partials/header') %>
@@ -20,19 +20,18 @@
           method="POST"
         >
           <div class="form-input">
-            <label class="main-label" for="producto">Nombre de Producto</label>
+            <label class="main-label" for="producto">Nombre del Producto</label>
             <input
               id="producto"
               type="text"
               name="producto"
               value="<%= productoUnico.producto %>"
             />
-            <p class="error">Este campo es requerido</p>
           </div>
           <br />
           <div class="form-input">
             <label class="main-label" for="proveedor"
-              >Nombre de Proveedor</label
+              >Nombre del Proveedor</label
             >
             <input
               id="proveedor"
@@ -43,7 +42,7 @@
           </div>
           <br />
           <div class="form-input">
-            <label class="main-label" for="precio">Precio</label>
+            <label class="main-label" for="precio">Precio: $</label>
             <input
               id="precio"
               type="number"
