@@ -89,7 +89,7 @@ CREATE TABLE products (
     descripcion TEXT NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES usuarios(id),
-    FOREIGN KEY (categoriaProducts_id) REFERENCES categorias_products(id)
+    FOREIGN KEY (categoriaproducts_id) REFERENCES categoriaproducts(id)
     ) ENGINE=InnoDB AUTO_INCREMENT=25;
 
 LOCK TABLES products WRITE;
@@ -109,7 +109,7 @@ INSERT INTO products VALUES
  (12, 5, 'LANOXIN', 'Barrows, Stoltenberg and Prosacco', 1, 9035,'bici1.jpg', 3, 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.'),
  (13, 12, 'FLORIDE', 'Bahringer, Hayes and Marvin', 0, 7534,'repuesto5.jpg', 1, 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.'),
  (14, 11, 'Loraze', 'Wolff, Hilpert and Wiza', 0, 1127,'indumentaria4.jpg', 3, 'Fusce consequat. Nulla nisl. Nunc nisl. Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.'),
- (15, 9, 'PravaSo', 'Gutkowski, Durgan and Walker', 0, 723,'defaultProduct.png', 2, 'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'),
+ (15, 9, 'PravaSo', 'Gutkowski, Durgan and Walker', 0, 723,'indumentaria5.jpg', 2, 'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'),
  (16, 18, 'Walgreens Suns', 'Stroman-Emard', 1, 307,'repuesto6.jpg', 1, 'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.'),
  (17, 13, 'Sluggish ', 'Herzog LLC', 0, 4944,'berm.jpg', 2, 'Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.'),
  (18, 20, 'OXECTA', 'MacGyver-Hodkiewicz', 1, 348,'defaultProduct.png', 1, 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'),
@@ -123,11 +123,3 @@ INSERT INTO products VALUES
 
 UNLOCK TABLES;
 
-
-Drop TABLE usuarios;
-Drop table products;
-
-drop table categorias_products;
-DROP Table categorias_users;
-
-Drop DATABASE appedal_db;
