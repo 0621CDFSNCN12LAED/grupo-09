@@ -12,7 +12,37 @@
         src="/img/pexels-snapwire-310983.jpg"
         alt="banner"
       />
-      <%- include('./partials/prodDetail') %>
+      <section Class="flex">
+        <% for(let prod of productos){%>
+        <div class="product-wrapper flex box-shadow margin-1 w-20 text-align">
+          <article class="prodAll">
+            <a href="/product/detail/<%= prod.id %> ">
+              <div class="product-content zindex-1">
+                <div>
+                  <img
+                    class="imgs center w-85 article-img"
+                    src="imgProductos/<%=prod.imagen%>"
+                    alt="<%= prod.producto%>"
+                    max-width="100px"
+                  />
+                </div>
+                <p class="style-h4"><%= prod.producto%></p>
+                <p class="descripciones"><%= prod.proveedor%></p>
+                <p class="descripciones">
+                  Categoria: <%= prod.categoriaProduct.categoria%>
+                </p>
+                <p class="precios">Precio: $<%=prod.precio%>.00</p>
+              </div>
+              <div>
+                <form action="" method="GET">
+                  <button class="button_3" type="submit">Comprar</button>
+                </form>
+              </div>
+            </a>
+          </article>
+        </div>
+        <% } %>
+      </section>
     </main>
     <%- include('./partials/footer') %>
   </body>

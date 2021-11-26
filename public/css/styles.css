@@ -103,6 +103,10 @@ h3 {
   position: relative;
   margin: auto;
 }
+.prodAll {
+  display: flex;
+  flex-direction: column-reverse;
+}
 .article-img {
   max-width: 25vh;
 }
@@ -136,6 +140,7 @@ a {
 }
 .section_flex article {
   width: 25%;
+  align-items: stretch;
 }
 /*seteos header*/
 .h1-header {
