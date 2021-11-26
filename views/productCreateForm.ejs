@@ -31,44 +31,44 @@
         >
           <div class="form-input">
             <label class="main-label" for="producto">Nombre de Producto</label>
-            <input id="producto" type="text" name="producto" value="<%=
-            locals.old && old.producto? old.producto: " "%>" />
+            <input id="producto" type="text" name="producto" value=''/>
           </div>
           
           <div class="form-input">
             <label class="main-label" for="proveedor"
               >Nombre de Proveedor</label
             >
-            <input id="proveedor" type="text" name="proveedor" value="<%=
-            locals.old && old.proveedor? old.proveedor: " "%>" />
+            <input id="proveedor" type="text" name="proveedor" value=''/>
           </div>
-                      <div class="form-input">
+          <div class="form-input">
             <label class="main-label" for="categoria"
-              >Categoria del Producto</label
-            >
-            <input
+              >Categoria del Producto: </label>
+              <select name='categoria'>
+            <option
               id="categoria"
-              type="text"
-              name="categoria"
-              value=""
-            />
+              value="1">Repuestos</option>
+            <option
+              id="categoria"
+              value="2">Accesorios</option>
+            <option
+              id="categoria"
+              value="3">Indumentaria</option>
+            </select>
           </div> 
       
           <div class="form-input">
             <label class="main-label" for="precio">Precio</label>
-            <input id="precio" type="number" name="precio" value="<%= locals.old
-            && old.precio? old.precio: " "%>" />
+            <input id="precio" type="number" name="precio" value="" />
           </div>
-                     <div class="form-input ">
+           <div class="form-input ">
             <label class="main-label" for="descripcion"
-              >Descripción del Producto</label>
-           <input
+              >Descripción del Producto: </label>
+           <textarea
               id="descripcion"
-              type="text"
-              size="40"
-              name="descripcion"
-              value=""
-            />
+              rows='2'
+              cols='35'
+              name="descripcion">
+              </textarea>
              </div>
           <div class="form-inputFoto">
             <label class="main-label" for="imagen">Foto de producto</label>

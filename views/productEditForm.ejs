@@ -6,7 +6,7 @@
     <%- include('./partials/head') %>
 
     <title>Editar Producto</title>
-<link rel="icon" href="../img/favicon.png" type="image/png" />
+
   </head>
   <header class="background_amarillo">
     <%- include('./partials/header') %>
@@ -49,15 +49,19 @@
           </div>   
             <div class="form-input">
             <label class="main-label" for="categoria"
-              >Categoria del Producto</label
-            >
-            <input
+              >Categoria del Producto: </label>
+              <select name='categoria'>
+            <option
               id="categoria"
-              type="text"
-              name="categoria"
-              value=""
-            />
-          </div>    
+              value="1">Repuestos</option>
+            <option
+              id="categoria"
+              value="2">Accesorios</option>
+            <option
+              id="categoria"
+              value="3">Indumentaria</option>
+            </select>
+          </div> 
           <div class="form-input">
             <label class="main-label" for="precio">Precio: $</label>
             <input
@@ -69,14 +73,14 @@
           </div>
            <div class="form-input ">
             <label class="main-label" for="descripcion"
-              >Descripción del Producto</label>
-           <input
+              >Descripción del Producto: </label>
+           <textarea
               id="descripcion"
-              type="text"
-              size="40"
-              name="descripcion"
-              value="<%= productoUnico.descripcion %>"
-            />
+              rows='2'
+              cols='35'
+              name="descripcion">
+              <%= productoUnico.descripcion %>
+            </textarea>
              </div>
           <div class="form-inputFoto">
             <label class="main-label" for="imagen">Foto de Producto</label>

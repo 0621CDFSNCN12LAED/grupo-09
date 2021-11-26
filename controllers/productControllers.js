@@ -51,18 +51,31 @@ const product = {
     //va por get y trae el formulario en blanco
   },
   //guardar datos de los items
-  store: (req, res) => {
-    let errors = validationResult(req);
-    if (errors.isEmpty()) {
-      //productService.productCreate(req.body, req.file);
-      res.redirect("/product");
-    } else {
-      res.render("productCreateForm", {
-        errors: errors.array(),
-        old: req.body,
-      });
-    }
+  store: async (req, res) => {
+    // let errors = validationResult(req);
+    // if (errors.isEmpty()) {
+    await Products.create({
+      // user_id:
+      producto: req.body.producto,
+      proveedor: req.body.proveedor,
+      // vendido:
+      precio: req.body.precio,
+      imagen: req.file.filename,
+      // categoriaproducts_id:
+      descripcion: req.body.description,
+    });
+    res.redirect("/product");
   },
+  // } else {
+  //   res.render("productCreateForm", {
+  //     errors: errors.array(),
+  //     old: req.body,
+  //   });
+
+  //productService.productCreate(req.body, req.file);
+  // res.redirect("/product");
+  //   }
+  // },
   //modificar un item especifico
   //extraer item especifico y editarlo
   //va por put y tiene Id, trae el formulario con los datos del producto
@@ -75,16 +88,25 @@ const product = {
     const productoUnico = await Products.findByPk(req.params.id);
     res.render("productEditForm", { productoUnico });
   },
-  edit: (req, res) => {
-    if (loginValidation == true) {
-      // productService.edit(req.params.id, req.body, req.file);
-
-      res.redirect("/product");
-    } else {
-      res.render("Login", {
-        err: ["Debes estar logeado para Editar"],
-      });
-    }
+  edit: async (req, res) => {
+    // if (loginValidation == true) {
+    // productService.edit(req.params.id, req.body, req.file);
+    await Products.update({
+      // user_id:
+      producto: req.body.producto,
+      proveedor: req.body.proveedor,
+      // vendido:
+      precio: req.body.precio,
+      imagen: req.file.filename,
+      // categoriaproducts_id:
+      descripcion: req.body.description,
+    });
+    res.redirect("/product");
+    // } else {
+    //   res.render("Login", {
+    //     err: ["Debes estar logeado para Editar"],
+    //   });
+    // }
   },
 
   //borrar un item especifico
