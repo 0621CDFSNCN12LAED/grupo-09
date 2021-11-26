@@ -5,12 +5,9 @@
     <title>Detalle de Producto</title>
   </head>
   <body>
-    <head>
-      <%- include('partials/header') %>
-    </head>
+    <%- include('partials/header') %>
     <main class="background_amarillo">
       <%- include('./partials/prodEditDetail') %>
-      <!-- <form action="" method="GET"> -->
       <div class="flex text-align padding-8">
         <form
           action="/product/delete/<%= productoUnico.id%>?_method=DELETE"
@@ -25,7 +22,6 @@
           <button class="button_4 marginleft-10" type="submit">Crear</button>
         </form>
       </div>
-      <!-- </form> -->
     </main>
     <%- include('./partials/footer') %>
   </body>
