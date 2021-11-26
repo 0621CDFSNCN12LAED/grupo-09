@@ -31,10 +31,10 @@ module.exports = function (sequelize, dataTypes) {
 			foreignKey: 'user_id',
 		});
 
-		//Usuario.belongsTo(models.CategoriaUser, {
-		//	as: 'CategoriaUsuario',
-		//	foreignKey: 'categoriaUser_id',
-		//});
+		Usuario.belongsTo(models.CategoriaUser, {
+			as: 'CategoriaUsuario',
+			foreignKey: 'categoriausers_id',
+		});
 	};
 	return Usuario;
 };

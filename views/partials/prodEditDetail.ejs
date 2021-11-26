@@ -1,13 +1,19 @@
+<!-- Partial de productsDetail -->
+
 <section>
   <div class="product-wrapper w-65 margin-auto ">
+    <h1 class="main-title w-100">Detalle de Producto</h1>
     <article class="product flex box-shadow bg-white">
       <img
-        class="imgs"
+        class="imgs w-35"
         src="/imgProductos/<%=productoUnico.imagen%>"
         alt="<%=productoUnico.producto%>"
         width="200px"
-      />
-      <div class="product-content text-align">
+        />
+        <div class= 'w-25 margin-auto text-rigth'>
+        <p class="descripciones">Descripción: <%= productoUnico.descripcion%></p>
+        </div>
+      <div class="product-content text-align w-35">
         <p class="style-h4"><%= productoUnico.producto%></p>
         <p class="descripciones"><%= productoUnico.proveedor%></p>
         <p class="descripciones">Categoria: <%= productoUnico.categoriaProduct.categoria%></p>
