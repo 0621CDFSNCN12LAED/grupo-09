@@ -9,16 +9,15 @@ const loggedOn = async function (req, res, next) {
 	});
 
 	if (user) {
-		console.log('sirve');
-		bcryptjs.compare(req.body.password, user.pass, function (response) {
-			if (response) {
-				next();
-			} else {
-				res.render('login', {
-					err: 'Password o Usuario no coinciden',
-				});
-			}
-		});
+		const response = bcryptjs.compareSync(req.body.password, user.pass);
+		if (response) {
+			req.sessions.setItem('id', user.id);
+			next();
+		} else {
+			res.render('login', {
+				err: 'Password o Usuario no coinciden',
+			});
+		}
 	} else {
 		res.render('login', {err: 'Usuario no existe'});
 	}

@@ -1,6 +1,6 @@
 /** @format */
 
-const loginValidation = require('../middlewares/loginValidation');
+const loginValidation = require('../validations/loginValidation');
 const {validationResult} = require('express-validator');
 
 const productService = require('../services/product-service');
