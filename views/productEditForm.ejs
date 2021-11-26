@@ -4,14 +4,12 @@
 <html lang="en">
   <head>
     <%- include('./partials/head') %>
-
     <title>Editar Producto</title>
-
   </head>
+  <body>
   <header class="background_amarillo">
     <%- include('./partials/header') %>
   </header>
-  <body>
     <main class="background_amarillo">
       <div class="product-wrapper w-65 margin-auto ">
         <h1 class="main-title w-100">Editar Producto <%= productoUnico.producto %></h1>
@@ -26,8 +24,9 @@
           class="w-65"
           action="/product/<%= productoUnico.id %>?_method=PUT"
           method="POST"
+          enctype="multipart/form-data"
           >
-          <div class="form-input ">
+          <div class="form-input">
             <label class="main-label" for="producto">Nombre del Producto</label>
             <input
               id="producto"
