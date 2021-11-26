@@ -19,7 +19,7 @@ const users = {
 		let errors = validationResult(req);
 		if (errors.isEmpty()) {
 			userService.userCreate(req.body, req.file);
-			res.redirect('/');
+			res.redirect('login');
 		} else {
 			res.render('registro', {
 				errors: errors.array(),

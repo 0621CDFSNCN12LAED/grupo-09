@@ -45,7 +45,7 @@ CREATE TABLE usuarios (
     adress VARCHAR(50) NOT NULL,
     phone INT(10) NOT NULL,
     avatar VARCHAR(100) DEFAULT "/imgUsuarios/defaultUser.png",
-    pass VARCHAR(20) NOT NULL,
+    pass VARCHAR(250) NOT NULL,
     categoriausers_id INT(10) UNSIGNED NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (categoriausers_id) REFERENCES categoriausers(id)
@@ -89,7 +89,7 @@ CREATE TABLE products (
     descripcion TEXT NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES usuarios(id),
-    FOREIGN KEY (categoriaProducts_id) REFERENCES categorias_products(id)
+    FOREIGN KEY (categoriaproducts_id) REFERENCES categoriaproducts(id)
     ) ENGINE=InnoDB AUTO_INCREMENT=25;
 
 LOCK TABLES products WRITE;

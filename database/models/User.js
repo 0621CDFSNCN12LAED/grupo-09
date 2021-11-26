@@ -15,7 +15,7 @@ module.exports = function (sequelize, dataTypes) {
 		adress: {type: dataTypes.STRING},
 		phone: {type: dataTypes.INTEGER},
 		avatar: {type: dataTypes.STRING},
-		categoriaUser_id: {type: dataTypes.INTEGER},
+		categoriausers_id: {type: dataTypes.INTEGER},
 		pass: {type: dataTypes.STRING},
 	};
 
@@ -31,10 +31,10 @@ module.exports = function (sequelize, dataTypes) {
 			foreignKey: 'user_id',
 		});
 
-		// Usuario.belongsTo(models.CategoriaUser, {
-		//   as: "CategoriaUsuario",
-		//   foreignKey: "categoriaUser_id",
-		// });
+		//Usuario.belongsTo(models.CategoriaUser, {
+		//	as: 'CategoriaUsuario',
+		//	foreignKey: 'categoriaUser_id',
+		//});
 	};
 	return Usuario;
 };

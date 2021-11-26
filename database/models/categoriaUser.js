@@ -10,16 +10,16 @@ module.exports = function (sequelize, dataTypes) {
 	};
 
 	let config = {
-		tablename: 'categoriausers',
+		tablename: 'categorias_users',
 		timestamps: false,
 	};
 	let categoriaUsuario = sequelize.define(alias, cols, config);
 
-	categoriaUsuario.associate = function (models) {
-		categoriaUsuario.hasMany(models.Usuario, {
-			as: 'CategoriaUsuario',
-			foreignKey: 'categoriausers_id',
-		});
-	};
+	//categoriaUsuario.associate = function (models) {
+	//	categoriaUsuario.hasMany(models.Usuario, {
+	//		as: 'categoriaUsuario',
+	//		foreignKey: 'categoriaUsers_id',
+	//	});
+	//};
 	return categoriaUsuario;
 };

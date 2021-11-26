@@ -4,6 +4,12 @@ const validacion = [
 	body('first_name').notEmpty().withMessage('Debes completar el nombre'),
 	body('last_name').notEmpty().withMessage('Debes completar el apellido'),
 	body('username').notEmpty().withMessage('Debes completar el usuario'),
+	body('email')
+		.notEmpty()
+		.withMessage('Debes completar el usuario')
+		.bail()
+		.isEmail()
+		.withMessage('Debe ser email'),
 	body('password')
 		.trim()
 		.notEmpty()

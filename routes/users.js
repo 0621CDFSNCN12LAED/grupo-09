@@ -7,7 +7,7 @@ const userController = require('../controllers/usersControllers');
 const uploader = require('../middlewares/userMulter');
 const userCookies = require('../middlewares/user-cookies');
 const userValidation = require('../validations/userValidation');
-const loginValidation = require('../middlewares/loginValidation');
+const loginValidation = require('../validations/loginValidation');
 
 //get un solo Usuario
 router.get('/perfil/:id', userController.usuarioDetail);
