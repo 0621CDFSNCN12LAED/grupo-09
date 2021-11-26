@@ -10,14 +10,14 @@ const userValidation = require('../validations/userValidation');
 const loginValidation = require('../validations/loginValidation');
 
 //get un solo Usuario
-router.get('/perfil/:id', userController.usuarioDetail);
+//router.get('/perfil', userController.usuarioProfile);
 
 //get pagina de creacion de Usuario
 router.get('/registro', userController.registro);
 //Post Usuario creado a base de datos
 router.post(
 	'/registro',
-	userCookies,
+	//userCookies,
 	uploader.single('imagen'),
 	userValidation,
 	userController.store,

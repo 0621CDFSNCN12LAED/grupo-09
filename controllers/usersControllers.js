@@ -40,6 +40,11 @@ const users = {
 
 	//borrar un item especifico
 	delete: (req, res) => {},
+
+	/*userProfile: (req, res) => {
+		const usuario = userService.usuarioUnico(req.session.user);
+		res.render('profile', {usuario: usuario});
+	},*/
 };
 
 module.exports = users;

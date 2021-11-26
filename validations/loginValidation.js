@@ -11,7 +11,8 @@ const loggedOn = async function (req, res, next) {
 	if (user) {
 		const response = bcryptjs.compareSync(req.body.password, user.pass);
 		if (response) {
-			req.sessions.setItem('id', user.id);
+			req.session.isAuth = true;
+			console.log(req.session);
 			next();
 		} else {
 			res.render('login', {
