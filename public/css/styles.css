@@ -189,6 +189,11 @@ a {
   margin-left: 5%;
 }
 
+.floatR {
+  float: right;
+  margin-right: 1vw;
+}
+
 .navbar ul {
   list-style: none;
   padding-left: 0;
