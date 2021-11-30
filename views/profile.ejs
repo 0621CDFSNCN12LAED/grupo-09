@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<%- include('./partials/head') %>
+<head>
+    		<%- include('./partials/head') %>
 
-		<title>appedal-Login</title>
-	</head>
+    <title>Perfil Usuario<title>
+</head>
+<body>
+    <%- include('partials/header') %>
+    
+<h1><%= user.username%></h1>
+<h2>Editar perfil:</h2>
+    <select><option>Cambiar nombre de usuario</option></select> 
+    <select><option>Cambiar foto de perfil</option></select>
+    <select><option>Cerrar sesión</option></select>
+    <select><option>Borrar cuenta</option></select>
 
-	<body>
-		<h1>Perfil</h1>
-		<h1><% user.name%></h1>
-	</body>
+
+<h2>Configuración    </h2>
+
+
+
+
+    <h3>Mis compras:</h3>
+
+    
+
+</body>
 </html>
+

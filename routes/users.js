@@ -10,7 +10,6 @@ const userValidation = require('../validations/userValidation');
 const loginValidation = require('../validations/loginValidation');
 
 //get un solo Usuario
-//router.get('/perfil', userController.usuarioProfile);
 
 //get pagina de creacion de Usuario
 router.get('/registro', userController.registro);
@@ -26,6 +25,15 @@ router.post(
 	}
 );
 
+//Get Login
+router.get('/login', userController.login);
+
+router.post('/login', loginValidation, (req, res) => {
+	res.render('profile', {user: res.cookie.user});
+});
+router.get('/profile', (req, res) => {
+	res.render('profile');
+});
 //get pagina de editacion de Usuario
 router.get('/edit/:id', userController.update);
 //put ultima version de Usuario
@@ -33,12 +41,5 @@ router.put('/:id', userController.edit);
 
 //Dlete un unico Usuario
 router.delete('/:id', userController.delete);
-
-//Get Login
-router.get('/login', userController.login);
-
-router.post('/login', loginValidation, (req, res) => {
-	res.render('home');
-});
 
 module.exports = router;
