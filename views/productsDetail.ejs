@@ -7,7 +7,34 @@
   <body>
     <%- include('partials/header') %>
     <main class="background_amarillo">
-      <%- include('./partials/prodEditDetail') %>
+     <section>
+  <div class="product-wrapper w-65 margin-auto ">
+    <h1 class="main-title w-100">Detalle de Producto</h1>
+    <article class="product flex box-shadow bg-white">
+      <img
+        class="imgs w-35"
+        src="/imgProductos/<%=productoUnico.imagen%>"
+        alt="<%=productoUnico.producto%>"
+        width="200px"
+        />
+        <div class= 'w-25 margin-auto text-rigth'>
+        <p class="descripciones">Descripción: <%= productoUnico.descripcion%></p>
+        </div>
+      <div class="product-content text-align w-35">
+        <p class="style-h4"><%= productoUnico.producto%></p>
+        <p class="descripciones"><%= productoUnico.proveedor%></p>
+        <p class="descripciones">Categoria: <%= productoUnico.categoriaProduct.categoria%></p>
+        <p class="precios">Precio: $<%= productoUnico.precio%>.00</p>
+        <div class="text-align padding-8">
+          <form action="" method="GET">
+            <button class="button_3" type="submit" >Comprar </button>
+          </form>
+        </div>
+      </div>
+      </div>
+    </article>
+  </div>
+</section>
       <div class="flex text-align padding-8">
         <form
           action="/product/delete/<%= productoUnico.id%>?_method=DELETE"

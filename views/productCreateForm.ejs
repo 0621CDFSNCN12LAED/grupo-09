@@ -43,17 +43,12 @@
           <div class="form-input">
             <label class="main-label" for="categoria"
               >Categoria del Producto: </label>
-              <select name='categoria'>
-            <option
-              id="categoria"
-              value="1">Repuestos</option>
-            <option
-              id="categoria"
-              value="2">Accesorios</option>
-            <option
-              id="categoria"
-              value="3">Indumentaria</option>
-            </select>
+              <select name='categoria' id="categoria">
+              <% for (cateP of categorias) { %>
+                <option  value=<%= cateP.id%>><%=cateP.categoria%>
+                </option>
+              <%} %>
+              </select>             
           </div> 
       
           <div class="form-input">
