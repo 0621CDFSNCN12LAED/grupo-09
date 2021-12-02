@@ -398,7 +398,7 @@ footer i {
 .container_slider {
   width: 90%;
   max-width: 900px;
-  margin: 10px auto;
+  margin: 20px auto;
   overflow: hidden;
   box-shadow: 0 0 0 7px #ffffff, 0 10px 30px;
   position: relative;
