@@ -24,14 +24,14 @@ const product = {
 
   //crear un item nuevo y guardarlos
   create: async (req, res) => {
-    if (loginValidation == true) {
-      const categorias = await categoriaProduct.findAll();
-      res.render("productCreateForm", { categorias });
-    } else {
-      res.render("login", {
-        err: ["Debes Estar Registrado para Crear"],
-      });
-    }
+    // if (loginValidation == true) {
+    const categorias = await categoriaProduct.findAll();
+    res.render("productCreateForm", { categorias });
+    // } else {
+    //   res.render("login", {
+    //     err: ["Debes Estar Registrado para Crear"],
+    //   });
+    // }
   },
   //va por get y trae el formulario en blanco
   //guardar datos de los items
