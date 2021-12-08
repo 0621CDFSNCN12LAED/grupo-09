@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <%- include('./partials/head') %>
+    <script defer src="/js/userValidation.js"></script>
 
     <title>Registro</title>
   </head>
@@ -16,12 +17,12 @@
         <form action="/users/registro" method="POST">
           <div class="form-input">
             <label class="main-label" for="name">Nombre </label>
-            <input id="name" type="text" name="first_name" />
+            <input id="first_name" type="text" name="first_name" />
           </div>
 
           <div class="form-input">
             <label class="main-label" for="name">Apellido </label>
-            <input id="name" type="text" name="last_name" />
+            <input id="last_name" type="text" name="last_name" />
           </div>
 
           <div class="form-input">
