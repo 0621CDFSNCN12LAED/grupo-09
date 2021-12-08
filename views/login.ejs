@@ -2,12 +2,13 @@
 <html lang="en">
   <head>
     <%- include('./partials/head') %>
+    <script defer src="/js/loginValidation.js"></script>
 
     <title>Login</title>
   </head>
   <body>
     <header><%- include('partials/header') %></header>
-    <form action="/users/Login" method="POST">
+    <form action="/users/Login" method="POST" id="form">
       <div
         class="
           container
@@ -38,9 +39,13 @@
             size="40"
           />
         </div>
+        <div class="red userError"></div>
+        <div class="red passwordError"></div>
         <div>
           <div class="margin-5">
-            <button class="button_1" type="submit">Login</button>
+            <button class="button_1" type="submit" id="submitbutton">
+              Login
+            </button>
           </div>
           <p>no tenes ususario?</p>
 
