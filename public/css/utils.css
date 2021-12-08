@@ -1,5 +1,9 @@
 /** @format */
 
+.red {
+  color: red;
+}
+
 .w-100 {
   width: 100%;
 }
@@ -67,6 +71,9 @@
 }
 .margin-auto {
   margin: 0 auto 10px;
+}
+.margin-0auto {
+  margin: 0 auto;
 }
 .margintop-0 {
   margin-top: 0%;
