@@ -41,10 +41,10 @@ const users = {
 	//borrar un item especifico
 	delete: (req, res) => {},
 
-	/*userProfile: (req, res) => {
-		const usuario = userService.usuarioUnico(req.session.user);
+	userProfile: (req, res) => {
+		const usuario = userService.usuarioUnico(req.cookie.name);
 		res.render('profile', {usuario: usuario});
-	},*/
+	},
 };
 
 module.exports = users;

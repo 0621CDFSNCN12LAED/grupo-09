@@ -29,7 +29,7 @@ router.post(
 router.get('/login', userController.login);
 
 router.post('/login', loginValidation, (req, res) => {
-	res.render('profile', {user: res.cookie.user});
+	res.render('profile', {user: res.cookie.usuario});
 });
 router.get('/profile', (req, res) => {
 	res.render('profile');
