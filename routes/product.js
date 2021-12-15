@@ -6,6 +6,7 @@ const productController = require("../controllers/productControllers");
 
 const uploader = require("../middlewares/productMulter");
 const validacion = require("../validations/ValidacionProducto");
+const userAuth = require("../middlewares/userAuth");
 
 //get todos los productos
 router.get("/", productController.show);
@@ -15,6 +16,7 @@ router.get("/detail/:id", productController.productDetail);
 
 //get pagina de creacion de producto
 router.get("/create", productController.create);
+// router.get("/create", userAuth, productController.create);
 //Post producto creado a base de datos
 router.post(
   "/",

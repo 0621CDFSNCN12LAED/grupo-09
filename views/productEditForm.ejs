@@ -11,7 +11,7 @@
     <%- include('./partials/header') %>
   </header>
     <main class="background_amarillo">
-      <div class="product-wrapper w-65 margin-auto ">
+      <div class="product-wrapper w-65 margin-0auto ">
         <h1 class="main-title w-100">Editar Producto <%= productoUnico.producto %></h1>
         <article class="product flex box-shadow bg-white">
           <img
@@ -49,16 +49,15 @@
             <div class="form-input">
             <label class="main-label" for="categoria"
               >Categoria del Producto: </label>
-              <select name='categoria'>
-            <option
-              id="categoria"
-              value="1">Repuestos</option>
-            <option
-              id="categoria"
-              value="2">Accesorios</option>
-            <option
-              id="categoria"
-              value="3">Indumentaria</option>
+              <select name='categoria'id="categoria">
+                <% for (cateP of categorias) { %>
+                <option  
+                value=<%= cateP.id%> 
+                <% if(cateP.id==productoUnico.categoriaproducts_id){%>
+                  selected 
+                  <%} %>> <%=cateP.categoria%>
+                </option>
+              <%} %>
             </select>
           </div> 
           <div class="form-input">

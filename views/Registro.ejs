@@ -1,109 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<%- include('./partials/head') %>
+  <head>
+    <%- include('./partials/head') %>
+    <script defer src="/js/userRegistroValidation.js"></script>
 
-		<title>Registro</title>
-	</head>
-	<header><%- include('partials/header') %></header>
-	<body>
-		<main>
-			<div
-				class="container product-wrapper box-shadow background_amarillo"
-			>
-				<h1 class="main-title w-100">Registro</h1>
-				<% if (locals.errors){ errors.forEach(errors=>{ %>
-				<p class="gp"><%= errors.msg %></p>
-				<% }) } %>
-				<form action="/users/registro" method="POST">
-					<div class="form-input">
-						<label class="main-label" for="name">Nombre </label>
-						<input id="name" type="text" name="first_name" />
-					</div>
+    <title>Registro</title>
+  </head>
+  <header><%- include('partials/header') %></header>
+  <body>
+    <main>
+      <div class="container product-wrapper box-shadow background_amarillo">
+        <h1 class="main-title w-100">Registro</h1>
+        <!-- errores back end -->
+        <% if (locals.errors){ errors.forEach(errors=>{ %>
+        <p class="gp"><%= errors.msg %></p>
+        <% }) } %>
+        <form action="/users/registro" method="POST" id="form">
+          <div class="form-input">
+            <label class="main-label" for="name">Nombre </label>
+            <input id="first_name" type="text" name="first_name" size="40" />
+            <small class="red first_nameError"></small>
+          </div>
 
-					<div class="form-input">
-						<label class="main-label" for="name">Apellido </label>
-						<input id="name" type="text" name="last_name" />
-					</div>
+          <div class="form-input">
+            <label class="main-label" for="name">Apellido </label>
+            <input id="last_name" type="text" name="last_name" size="40" />
+            <small class="red last_nameError"></small>
+          </div>
 
-					<div class="form-input">
-						<label class="main-label" for="username"
-							>Nombre de usuario:
-						</label>
-						<input id="username" type="text" name="username" />
-					</div>
-					<div class="form-input">
-						<label class="main-label" for="Email">Email </label>
-						<input id="email" type="text" name="email" />
-					</div>
+          <div class="form-input">
+            <label class="main-label" for="username">Nombre de usuario: </label>
+            <input id="username" type="text" name="username" size="40" />
+            <small class="red usernameError"></small>
+          </div>
+          <div class="form-input">
+            <label class="main-label" for="Email">Email </label>
+            <input id="email" type="text" name="email" size="40" />
+            <small class="red emailError"></small>
+          </div>
 
-					<div class="form-input">
-						<label class="main-label">Perfil de usuario:</label>
-						<select name="userProfile">
-							<option
-								type="radio"
-								id="user-profile-seller"
-								value="3"
-							>
-								Mecanico
-							</option>
-							<option
-								type="radio"
-								id="user-profile-buyer"
-								value="2"
-							>
-								Comprador
-							</option>
-							<option
-								type="radio"
-								id="user-profile-seller"
-								value="1"
-							>
-								Vendedor
-							</option>
-						</select>
-					</div>
+          <div class="form-input">
+            <label class="main-label">Perfil de usuario:</label>
+            <select name="userProfile">
+              <option type="radio" id="user-profile-seller" value="3">
+                Mecanico
+              </option>
+              <option type="radio" id="user-profile-buyer" value="2">
+                Comprador
+              </option>
+              <option type="radio" id="user-profile-seller" value="1">
+                Vendedor
+              </option>
+            </select>
+          </div>
 
-					<div class="form-inputFoto">
-						<label class="main-label" for="profile-pic"
-							>Foto de perfil:
-						</label>
-						<input
-							id="profile-pic"
-							type="file"
-							name="profile-pic"
-							accept="image/png,image/jpeg"
-						/>
-					</div>
+          <div class="form-inputFoto">
+            <label class="main-label" for="profile-pic">Foto de perfil: </label>
+            <input
+              id="profile-pic"
+              type="file"
+              name="profile-pic"
+              accept="image/png,image/jpeg"
+            />
+          </div>
 
-					<div class="form-input">
-						<label class="main-label" for="password"
-							>Contraseña:
-						</label>
-						<input id="password" type="password" name="password" />
-					</div>
+          <div class="form-input">
+            <label class="main-label" for="password">Contraseña: </label>
+            <input id="password" type="password" name="password" size="40" />
+            <small class="red passwordError"></small>
+          </div>
 
-					<div class="form-input">
-						<label class="main-label" for="rePassword"
-							>Repetir Contraseña:
-						</label>
-						<input
-							id="rePassword"
-							type="password"
-							name="rePassword"
-						/>
-					</div>
-					<div class="text-center">
-						<button class="button_3 margin-5" type="reset">
-							Resetear
-						</button>
-						<button class="button_1 margin-5" type="submit">
-							Enviar
-						</button>
-					</div>
-				</form>
-			</div>
-		</main>
-		<%- include('./partials/footer') %>
-	</body>
+          <div class="form-input">
+            <label class="main-label" for="rePassword"
+              >Repetir Contraseña:
+            </label>
+            <input
+              id="rePassword"
+              type="password"
+              name="rePassword"
+              size="40"
+            />
+            <small class="red rePasswordError"></small>
+          </div>
+          <div class="text-center">
+            <button class="button_3 margin-5" type="reset">Resetear</button>
+            <button class="button_1 margin-5" type="submit" id="submitbutton">
+              Enviar
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <%- include('./partials/footer') %>
+  </body>
 </html>

@@ -27,7 +27,6 @@
 		"mysql2": "^2.3.3-rc.0",
 		"prettier": "^2.4.0",
 		"sequelize": "^6.9.0",
-		"express-session": "^1.17.2",
 		"sequelize-cli": "^6.3.0"
 	},
 	"devDependencies": {

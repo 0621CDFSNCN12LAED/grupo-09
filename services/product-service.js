@@ -1,33 +1,36 @@
 /** @format */
-const path = require("path");
-const fs = require("fs");
-/// const productosJSON = path.join(__dirname, '../Data/MOCK_DATA.json');
-/// const productosDb = JSON.parse(fs.readFileSync(productosJSON, 'utf-8'));
-/// const productosDb = require("../database/models");
-let { Products } = require("../database/models");
+// const path = require("path");
+// const fs = require("fs");
+const { Products, categoriaProduct } = require("../database/models");
 
 module.exports = {
-  // productoUnico(id) {
-  //   const prodId = id;
-  //   const productoUnico = Products.findByPK((prod) => {
-  //     return prod.id == prodId;
-  //   });
-  //   return productoUnico;
-  // },
-
+  findAll() {
+    const Productos = Products.findAll({
+      include: "categoriaProduct",
+    });
+    return Productos;
+  },
+  productoUnico(id) {
+    const productoUnico = Products.findByPk(id, {
+      include: "categoriaProduct",
+    });
+    return productoUnico;
+  },
   productCreate(body, image) {
-    const lastItem = productosDb[productosDb.length - 1];
-    const biggestItem = productosDb.length > 0 ? lastItem.id : 1;
+    // const lastItem = productosDb[productosDb.length - 1];
+    // const biggestItem = productosDb.length > 0 ? lastItem.id : 1;
 
-    const newProd = {
-      id: biggestItem + 1,
+    const newProd = Products.create({
+      // id: biggestItem + 1,
       ...body,
-      precio: Number(body.precio),
-      imagen: image ? image.filename : ".jpg",
-    };
-
-    productosDb.push(newProd);
-    this.save();
+      // precio: Number(body.precio),
+      imagen: image
+        ? image.filename
+        : "../public/imgProductos/defaultProduct.png",
+    });
+    console.log(body, image);
+    // productosDb.push(newProd);
+    // this.save();
   },
 
   edit(id, body, imagen) {
