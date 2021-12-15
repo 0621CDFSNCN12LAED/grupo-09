@@ -9,7 +9,13 @@ window.addEventListener("load", function () {
 	const password = document.querySelector("#password");
 	const rePassword = document.querySelector("#rePassword");
   
-	
+	// errores
+	let first_nameError = document.querySelector(".first_nameError");
+	let last_nameError = document.querySelector(".last_nameError");
+	let usernameError = document.querySelector(".usernameError");
+	let emailError = document.querySelector(".emailError");
+	let passwordError = document.querySelector(".passwordError");
+	let rePasswordError = document.querySelector(".rePasswordError");
   
 	submitbutton.addEventListener("click", function (event) {
 	  event.preventDefault();
