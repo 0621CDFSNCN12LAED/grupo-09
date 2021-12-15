@@ -1,25 +1,46 @@
-const bcryptjs = require('bcryptjs');
-
-const db = require('../database/models');
-const Users = db.Usuario;
-
-const loggedOn = async function (req, res, next) {
-	const user = await Users.findOne({
-		where: {username: req.body.name},
+window.addEventListener("load", function () {
+	// variables
+	const form = document.querySelector("#form");
+	const submitbutton = document.querySelector("#submitbutton");
+	const first_name = document.querySelector("#first_name");
+	const last_name = document.querySelector("#last_name");
+	const username = document.querySelector("#username");
+	const email = document.querySelector("#email");
+	const password = document.querySelector("#password");
+	const rePassword = document.querySelector("#rePassword");
+  
+	
+  
+	submitbutton.addEventListener("click", function (event) {
+	  event.preventDefault();
+	  let errores = {};
+	  if (first_name.value.length < 1) {
+		errores.first_name = "*El campo debe estar completo";
+	  }
+	  if (last_name.value.length < 1) {
+		errores.last_name = "*El campo debe estar completo";
+	  }
+	  if (username.value.length < 1) {
+		errores.username = "*El campo debe estar completo";
+	  }
+	  if (email.value.length < 1) {
+		errores.email = "*El campo debe estar completo";
+	  }
+	  if (password.value.length < 1) {
+		errores.password = "*El campo debe estar completo";
+	  }
+	  if (rePassword.value.length < 1) {
+		errores.rePassword = "*El campo debe estar completo";
+	  }
+	  if (Object.keys(errores).length >= 1) {
+		first_nameError.innerText = errores.first_name ? errores.first_name : "";
+		last_nameError.innerText = errores.last_name ? errores.last_name : "";
+		usernameError.innerText = errores.username ? errores.username : "";
+		emailError.innerText = errores.email ? errores.email : "";
+		passwordError.innerText = errores.password ? errores.password : "";
+		rePasswordError.innerText = errores.rePassword ? errores.rePassword : "";
+	  } else {
+		form.submit();
+	  }
 	});
-
-	if (user) {
-		const response = bcryptjs.compareSync(req.body.password, user.pass);
-		if (response) {
-			req.sessions.setItem('id', user.id);
-			next();
-		} else {
-			res.render('login', {
-				err: 'Password o Usuario no coinciden',
-			});
-		}
-	} else {
-		res.render('login', {err: 'Usuario no existe'});
-	}
-};
-module.exports = loggedOn;
+  });
