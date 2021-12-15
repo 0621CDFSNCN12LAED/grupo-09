@@ -7,20 +7,19 @@ const path = require('path');
 const router = require('./routes/main');
 const methodOverride = require('method-override');
 const session = require('express-session');
-const cookieParser = require('cookie-parser');
 const productRouter = require('./routes/product');
 const userRouter = require('./routes/users');
-const req = require('express/lib/request');
+
+const db = require('./database/models');
+const Users = db.Usuario;
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(cookieParser('secreto!!'));
 app.use(
 	session({
 		secret: 'secreto!!',
-		cookie: {maxAge: 60},
 		resave: false,
 		saveUninitialized: false,
 	})
@@ -30,7 +29,12 @@ app.set('view engine', 'ejs');
 app.listen(3000, () => {
 	console.log('Servidor corriendo');
 });
-
+app.use(async (req, res, next) => {
+	if (req.session.userId) {
+		res.locals.user = await Users.findByPk(req.session.userId);
+	}
+	next();
+});
 app.use('/', router);
 app.use('/product', productRouter);
 app.use('/users', userRouter);

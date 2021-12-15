@@ -4,21 +4,14 @@ const userService = require('../services/usuario_service');
 
 const users = {
 	login: (req, res) => {
-		res.render('login', {
-			session: req.session,
-		});
+		res.render('login');
 	},
 
 	usuarioDetail: (req, res) => {
-		res.render('profile', {
-			user: res.local.user,
-			session: req.session,
-		});
+		res.render('profile');
 	},
 	registro: (req, res) => {
-		res.render('registro', {
-			session: req.session,
-		});
+		res.render('registro');
 	},
 
 	//crear un item nuevo y guardarlos
@@ -31,7 +24,6 @@ const users = {
 			res.render('registro', {
 				errors: errors.array(),
 				old: req.body,
-				session: req.session,
 			});
 		}
 	},
@@ -41,12 +33,16 @@ const users = {
 		const userUnico = userService.usuarioUnico(req.params.id);
 		res.render('Registro', {
 			userUnico: userUnico,
-			session: req.session,
 		});
 	},
 	edit: (req, res) => {
 		userService.edit(req.params.id, req.body, req.file);
 		res.redirect('profile');
+	},
+
+	logout: (req, res) => {
+		req.session.userId = null;
+		res.redirect('home');
 	},
 
 	//borrar un item especifico

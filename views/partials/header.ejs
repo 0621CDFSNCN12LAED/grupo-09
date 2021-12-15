@@ -22,7 +22,7 @@
 			<li><a href="/productcart">Mis Compras</a></li>
 			<li><a href="#">Sugerencias</a></li>
 
-			<% if(!session.userId){%>
+			<% if(!locals.user){%>
 			<li class="floatR"><a href="/users/login">Login</a></li>
 			<li class="floatR"><a href="/users/registro">Registro</a></li>
 			<%}else{%>

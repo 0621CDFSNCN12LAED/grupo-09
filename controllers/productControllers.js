@@ -9,13 +9,13 @@ const {Products, categoriaProduct} = require('../database/models');
 const product = {
 	show: async (req, res) => {
 		const Prods = await productService.findAll();
-		res.render('productsAll', {productos: Prods, session: req.session});
+		res.render('productsAll', {productos: Prods});
 	},
 
 	productDetail: async (req, res) => {
 		const productoUnico = await productService.productoUnico(req.params.id);
 		if (productoUnico) {
-			res.render('productsDetail', {productoUnico, session: req.session});
+			res.render('productsDetail', {productoUnico});
 		} else {
 			//error
 			res.redirect('/product');
@@ -26,7 +26,7 @@ const product = {
 	create: async (req, res) => {
 		// if (loginValidation == true) {
 		const categorias = await categoriaProduct.findAll();
-		res.render('productCreateForm', {categorias, session: req.session});
+		res.render('productCreateForm', {categorias});
 		// } else {
 		//   res.render("login", {
 		//     err: ["Debes Estar Registrado para Crear"],
@@ -53,7 +53,6 @@ const product = {
 			res.render('productCreateForm', {
 				errors: errors.array(),
 				old: req.body,
-				session: req.session,
 			});
 		}
 	},
@@ -76,7 +75,6 @@ const product = {
 		res.render('productEditForm', {
 			productoUnico,
 			categorias,
-			session: req.session,
 		});
 	},
 	edit: async (req, res) => {
