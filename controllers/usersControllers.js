@@ -4,16 +4,23 @@ const userService = require('../services/usuario_service');
 
 const users = {
 	login: (req, res) => {
-		res.render('login');
+		res.render('login', {
+			session: req.session,
+		});
 	},
 
 	usuarioDetail: (req, res) => {
-		const usuario = userService.usuarioUnico(req.params.id);
-		res.render('profile', {usuario: usuario});
+		res.render('profile', {
+			user: res.local.user,
+			session: req.session,
+		});
 	},
 	registro: (req, res) => {
-		res.render('registro');
+		res.render('registro', {
+			session: req.session,
+		});
 	},
+
 	//crear un item nuevo y guardarlos
 	store: (req, res) => {
 		let errors = validationResult(req);
@@ -24,6 +31,7 @@ const users = {
 			res.render('registro', {
 				errors: errors.array(),
 				old: req.body,
+				session: req.session,
 			});
 		}
 	},
@@ -31,7 +39,10 @@ const users = {
 	update: (req, res) => {
 		//va por put y tiene Id, trae el formulario con los datos del producto
 		const userUnico = userService.usuarioUnico(req.params.id);
-		res.render('Registro', {userUnico: userUnico});
+		res.render('Registro', {
+			userUnico: userUnico,
+			session: req.session,
+		});
 	},
 	edit: (req, res) => {
 		userService.edit(req.params.id, req.body, req.file);
@@ -40,11 +51,6 @@ const users = {
 
 	//borrar un item especifico
 	delete: (req, res) => {},
-
-	userProfile: (req, res) => {
-		const usuario = userService.usuarioUnico(req.cookie.name);
-		res.render('profile', {usuario: usuario});
-	},
 };
 
 module.exports = users;

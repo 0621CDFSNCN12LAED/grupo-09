@@ -1,9 +1,8 @@
 const userAuth = (req, res, next) => {
-	if (req.session.isAuth) {
+	if (req.session.userId) {
 		next();
 	} else {
 		res.render('login');
-		console.log(req.session);
 	}
 };
 

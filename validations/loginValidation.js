@@ -11,10 +11,8 @@ const loggedOn = async function (req, res, next) {
 	if (user) {
 		const response = bcryptjs.compareSync(req.body.password, user.pass);
 		if (response) {
-			res.cookie('usuario', req.body.name, {
-				maxAge: 1000 * 60 * 5,
-			});
-			console.log(req.cookies.usuario);
+			req.session.userId = user.id;
+			res.locals.user = user;
 			next();
 		} else {
 			res.render('login', {

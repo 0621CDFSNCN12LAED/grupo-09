@@ -5,9 +5,9 @@ const router = express.Router();
 const userController = require('../controllers/usersControllers');
 
 const uploader = require('../middlewares/userMulter');
-const userCookies = require('../middlewares/user-cookies');
 const userValidation = require('../validations/userValidation');
 const loginValidation = require('../validations/loginValidation');
+const userAuth = require('../middlewares/userAuth');
 
 //get un solo Usuario
 
@@ -16,24 +16,18 @@ router.get('/registro', userController.registro);
 //Post Usuario creado a base de datos
 router.post(
 	'/registro',
-	//userCookies,
 	uploader.single('imagen'),
 	userValidation,
-	userController.store,
-	(req, res) => {
-		res.cookie('user', JSON.stringify(req.body));
-	}
+	userController.store
 );
 
 //Get Login
 router.get('/login', userController.login);
+//execute login
+router.post('/login', loginValidation, userController.usuarioDetail);
 
-router.post('/login', loginValidation, (req, res) => {
-	res.render('profile', {user: res.cookie.usuario});
-});
-router.get('/profile', (req, res) => {
-	res.render('profile');
-});
+//get profile
+router.get('/profile', userAuth, userController.usuarioDetail);
 //get pagina de editacion de Usuario
 router.get('/edit/:id', userController.update);
 //put ultima version de Usuario

@@ -1,28 +1,33 @@
 <header class="background_amarillo zindex-1">
-  <div>
-    <div class="titulo">
-      <a href="/">
-        <img class="logo" src="/img/appedal-logo.svg" alt="logo"
-      /></a>
-      <h1 class="h1-header">Ayudandote donde estes</h1>
-    </div>
-    <form action="/login" method="GET" class="align-center">
-      <button class="size-65x20">
-        Login <i class="fas fa-sign-in-alt"></i>
-      </button>
-    </form>
-  </div>
-  <nav class="navbar flex no-wrap">
-    <ul class="ul-md">
-      <li><a class="quienes" href="#">Quienes Somos</a></li>
+	<div>
+		<div class="titulo">
+			<a href="/">
+				<img class="logo" src="/img/appedal-logo.svg" alt="logo"
+			/></a>
+			<h1 class="h1-header">Ayudandote donde estes</h1>
+		</div>
+		<form action="/login" method="GET" class="align-center">
+			<button class="size-65x20">
+				Login <i class="fas fa-sign-in-alt"></i>
+			</button>
+		</form>
+	</div>
+	<nav class="navbar flex no-wrap">
+		<ul class="ul-md">
+			<li><a class="quienes" href="#">Quienes Somos</a></li>
 
-      <li>
-        <a href="/product">Productos</a>
-      </li>
-      <li><a href="/productcart">Mis Compras</a></li>
-      <li><a href="#">Sugerencias</a></li>
-      <li class="floatR"><a href="/users/registro">Registro</a></li>
-      <li class="floatR"><a href="/users/login">Login</a></li>
-    </ul>
-  </nav>
+			<li>
+				<a href="/product">Productos</a>
+			</li>
+			<li><a href="/productcart">Mis Compras</a></li>
+			<li><a href="#">Sugerencias</a></li>
+
+			<% if(!session.userId){%>
+			<li class="floatR"><a href="/users/login">Login</a></li>
+			<li class="floatR"><a href="/users/registro">Registro</a></li>
+			<%}else{%>
+			<li class="floatR"><a href="/users/profile">Perfil</a></li>
+			<%}%>
+		</ul>
+	</nav>
 </header>
