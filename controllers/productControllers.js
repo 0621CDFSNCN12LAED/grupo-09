@@ -39,7 +39,7 @@ const product = {
 		let errors = validationResult(req);
 		if (errors.isEmpty()) {
 			await Products.create({
-				// user_id: *id de ususario loggeado*
+				user_id: req.session.userId,
 				producto: req.body.producto,
 				proveedor: req.body.proveedor,
 				// vendido:

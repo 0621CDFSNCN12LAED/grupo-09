@@ -2,13 +2,19 @@
 const {validationResult} = require('express-validator');
 const userService = require('../services/usuario_service');
 
+const {Products, categoriaProduct} = require('../database/models');
+
 const users = {
 	login: (req, res) => {
 		res.render('login');
 	},
 
-	usuarioDetail: (req, res) => {
-		res.render('profile');
+	usuarioDetail: async (req, res) => {
+		console.log(req.session.userId);
+		const myProds = await Products.findAll({
+			where: {user_id: req.session.userId},
+		});
+		res.render('profile', {productos: myProds});
 	},
 	registro: (req, res) => {
 		res.render('registro');
