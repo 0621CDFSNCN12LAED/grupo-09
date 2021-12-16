@@ -10,10 +10,13 @@ const users = {
 	},
 
 	usuarioDetail: async (req, res) => {
-		console.log(req.session.userId);
 		const myProds = await Products.findAll({
-			where: {user_id: req.session.userId},
+			raw: true,
+			where: {
+				user_id: req.session.userId,
+			},
 		});
+		console.log(myProds);
 		res.render('profile', {productos: myProds});
 	},
 	registro: (req, res) => {

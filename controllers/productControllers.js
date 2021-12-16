@@ -5,6 +5,7 @@ const {validationResult} = require('express-validator');
 
 const productService = require('../services/product-service');
 const {Products, categoriaProduct} = require('../database/models');
+const {productoUnico} = require('../services/product-service');
 
 const product = {
 	show: async (req, res) => {
@@ -44,7 +45,7 @@ const product = {
 				proveedor: req.body.proveedor,
 				// vendido:
 				precio: req.body.precio,
-				imagen: req.file.filename,
+				imagen: req.file ? req.file.filename : 'defaultProduct.png',
 				categoriaproducts_id: req.body.categoria,
 				descripcion: req.body.descripcion,
 			});
@@ -80,16 +81,21 @@ const product = {
 	edit: async (req, res) => {
 		// if (loginValidation == true) {
 		// productService.edit(req.params.id, req.body, req.file);
-		await Products.update({
-			// user_id:
-			producto: req.body.producto,
-			proveedor: req.body.proveedor,
-			// vendido:
-			precio: req.body.precio,
-			imagen: req.file.filename,
-			categoriaproducts_id: req.body.categoria,
-			descripcion: req.body.description,
-		});
+		await Products.update(
+			{
+				// user_id:
+				producto: req.body.producto,
+				proveedor: req.body.proveedor,
+				// vendido:
+				precio: req.body.precio,
+				imagen: req.file ? req.file.filename : productoUnico.imagen,
+				categoriaproducts_id: req.body.categoria,
+				descripcion: req.body.description,
+			},
+			{
+				where: {id: req.params.id},
+			}
+		);
 		res.redirect('/product');
 		// } else {
 		//   res.render("Login", {

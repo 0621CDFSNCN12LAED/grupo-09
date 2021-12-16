@@ -8,65 +8,67 @@
 	<body>
 		<%- include('partials/header') %>
 		<h1>Bienvenido, <%= user.first_name +' ' + user.last_name%></h1>
-		<div>
-			<img src="<%= user.avatar%>" class="article-img" />
+		<div class="flex product">
+			<div class="w-35">
+				<img src="<%= user.avatar%>" class="article-img" />
 
-			<h2><%= user.username%></h2>
-			<h2><%= user.birth_date%></h2>
-			<h2><%= user.adress + ',' + user.city%></h2>
-			<h2><%= user.phone%></h2>
-			<h2><%= user.email%></h2>
-			<h2><%= user.categoriausers_id%></h2>
-			<form action="/user/edit/<%= user.id%>" method="GET">
-				<button class="button_1 marginleft-10" type="submit">
-					Editar mi Perfil
-				</button>
-			</form>
-			<form action="/user/delete/<%= user.id%>" method="GET">
-				<button class="button_2 marginleft-10" type="submit">
-					Eliminar Usuario
-				</button>
-			</form>
-		</div>
-		<div>
-			<section Class="flex">
-				<% for ( const prod in productos){%>
-				<div
-					class="
-						product-wrapper
-						flex
-						box-shadow
-						margin-1
-						w-20
-						text-align
-					"
-				>
-					<article class="prodAll">
-						<a href="/product/detail/<%= prod.id %> ">
-							<div class="product-content zindex-1">
-								<div>
-									<img
-										class="imgs center w-85 article-img"
-										src="imgProductos/<%=prod.imagen%>"
-										alt="<%= prod.producto%>"
-										max-width="100px"
-									/>
+				<h2><%= user.username%></h2>
+				<h2><%= user.birth_date%></h2>
+				<h2><%= user.adress + ',' + user.city%></h2>
+				<h2><%= user.phone%></h2>
+				<h2><%= user.email%></h2>
+				<h2><%= user.categoriausers_id%></h2>
+				<form action="/user/edit/<%= user.id%>" method="GET">
+					<button class="button_1 marginleft-10" type="submit">
+						Editar mi Perfil
+					</button>
+				</form>
+				<form action="/user/delete/<%= user.id%>" method="GET">
+					<button class="button_2 marginleft-10" type="submit">
+						Eliminar Usuario
+					</button>
+				</form>
+			</div>
+			<div class="widht :100%">
+				<section class="widht :100%">
+					<% for ( prod of productos){%>
+					<div
+						class="
+							product-wrapper
+							flex
+							box-shadow
+							margin-1
+							w-85
+							text-align
+						"
+					>
+						<article class="prodAll">
+							<a href="/product/detail/<%= prod.id %> ">
+								<div class="product-content zindex-1">
+									<div>
+										<img
+											class="imgs center w-85 article-img"
+											src="/imgProductos/<%=prod.imagen%>"
+											alt="<%= prod.producto%>"
+											max-width="100px"
+										/>
+									</div>
+									<p class="style-h4"><%= prod.producto%></p>
+									<p class="descripciones">
+										<%= prod.proveedor%>
+									</p>
+
+									<p class="precios">
+										Precio: $<%=prod.precio%>.00
+									</p>
 								</div>
-								<p class="style-h4"><%= prod.producto%></p>
-								<p class="descripciones">
-									<%= prod.proveedor%>
-								</p>
-
-								<p class="precios">
-									Precio: $<%=prod.precio%>.00
-								</p>
-							</div>
-							<div></div>
-						</a>
-					</article>
-				</div>
-				<% } %>
-			</section>
+								<div></div>
+							</a>
+						</article>
+					</div>
+					<% } %>
+				</section>
+			</div>
 		</div>
 	</body>
 </html>
