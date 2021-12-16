@@ -2,6 +2,7 @@
 
 const express = require('express');
 const app = express();
+var bodyParser = require('body-parser');
 
 const path = require('path');
 const router = require('./routes/main');
@@ -14,6 +15,8 @@ const db = require('./database/models');
 const Users = db.Usuario;
 
 app.use(express.urlencoded({extended: false}));
+app.use(bodyParser.text({type: 'text/html'}));
+
 app.use(express.json());
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));

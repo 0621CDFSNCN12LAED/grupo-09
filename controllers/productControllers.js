@@ -88,14 +88,17 @@ const product = {
 				proveedor: req.body.proveedor,
 				// vendido:
 				precio: req.body.precio,
-				imagen: req.file ? req.file.filename : productoUnico.imagen,
 				categoriaproducts_id: req.body.categoria,
-				descripcion: req.body.description,
+				descripcion: req.body.descripcion,
+				imagen: req.file ? req.file.filename : productoUnico.imagen,
 			},
 			{
 				where: {id: req.params.id},
 			}
 		);
+		console.log(req.query);
+		console.log(req.body);
+
 		res.redirect('/product');
 		// } else {
 		//   res.render("Login", {

@@ -2,110 +2,117 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- include('./partials/head') %>
-    <title>Editar Producto</title>
-  </head>
-  <body>
-  <header class="background_amarillo">
-    <%- include('./partials/header') %>
-  </header>
-    <main class="background_amarillo">
-      <div class="product-wrapper w-65 margin-0auto ">
-        <h1 class="main-title w-100">Editar Producto <%= productoUnico.producto %></h1>
-        <article class="product flex box-shadow bg-white">
-          <img
-          class="imgs w-35"
-          src="/imgProductos/<%=productoUnico.imagen%>"
-          alt="<%=productoUnico.producto%>"
-          width="200px"
-          />
-          <form
-          class="w-65"
-          action="/product/<%= productoUnico.id %>?_method=PUT"
-          method="POST"
-          enctype="multipart/form-data"
-          >
-          <div class="form-input">
-            <label class="main-label" for="producto">Nombre del Producto</label>
-            <input
-              id="producto"
-              type="text"
-              name="producto"
-              value="<%= productoUnico.producto %>"
-            />
-          </div>
-          <div class="form-input">
-            <label class="main-label" for="proveedor"
-              >Nombre del Proveedor</label
-            >
-            <input
-              id="proveedor"
-              type="text"
-              name="proveedor"
-              value="<%= productoUnico.proveedor %>"
-            />
-          </div>   
-            <div class="form-input">
-            <label class="main-label" for="categoria"
-              >Categoria del Producto: </label>
-              <select name='categoria'id="categoria">
-                <% for (cateP of categorias) { %>
-                <option  
-                value=<%= cateP.id%> 
-                <% if(cateP.id==productoUnico.categoriaproducts_id){%>
-                  selected 
-                  <%} %>> <%=cateP.categoria%>
-                </option>
-              <%} %>
-            </select>
-          </div> 
-          <div class="form-input">
-            <label class="main-label" for="precio">Precio: $</label>
-            <input
-              id="precio"
-              type="number"
-              name="precio"
-              value="<%= productoUnico.precio %>"
-            />
-          </div>
-           <div class="form-input ">
-            <label class="main-label" for="descripcion"
-              >Descripción del Producto: </label>
-           <textarea
-              id="descripcion"
-              rows='2'
-              cols='35'
-              name="descripcion">
+	<head>
+		<%- include('./partials/head') %>
+		<title>Editar Producto</title>
+	</head>
+	<body>
+		<header class="background_amarillo">
+			<%- include('./partials/header') %>
+		</header>
+		<main class="background_amarillo">
+			<div class="product-wrapper w-65 margin-0auto">
+				<h1 class="main-title w-100">
+					Editar Producto <%= productoUnico.producto %>
+				</h1>
+				<article class="product flex box-shadow bg-white">
+					<img
+						class="imgs w-35"
+						src="/imgProductos/<%=productoUnico.imagen%>"
+						alt="<%=productoUnico.producto%>"
+						width="200px"
+					/>
+					<form
+						class="w-65"
+            action="/product/<%= productoUnico.id %>?_method=PUT"
+						method="POST"
+						enctype="multipart/form-data"
+					>
+						<div class="form-input">
+							<label class="main-label" for="producto"
+								>Nombre del Producto</label
+							>
+							<input
+								id="producto"
+								type="text"
+								name="producto"
+								value="<%= productoUnico.producto %>"
+							/>
+						</div>
+						<div class="form-input">
+							<label class="main-label" for="proveedor"
+								>Nombre del Proveedor</label
+							>
+							<input
+								id="proveedor"
+								type="text"
+								name="proveedor"
+								value="<%= productoUnico.proveedor %>"
+							/>
+						</div>
+						<div class="form-input">
+							<label class="main-label" for="categoria"
+								>Categoria del Producto:
+							</label>
+							<select name="categoria" id="categoria">
+								<% for (cateP of categorias) { %>
+								<option value="<%= cateP.id %>"<%if(cateP.id==productoUnico.categoriaproducts_id){%>
+									selected <%}%> >
+									<%= cateP.categoria%>
+								</option>
+								<%} %>
+							</select>
+						</div>
+						<div class="form-input">
+							<label class="main-label" for="precio"
+								>Precio: $</label
+							>
+							<input
+								id="precio"
+								type="number"
+								name="precio"
+								value="<%= productoUnico.precio %>"
+							/>
+						</div>
+						<div class="form-input">
+							<label class="main-label" for="descripcion"
+								>Descripción del Producto:
+							</label>
+							<textarea
+								id="descripcion"
+								rows="2"
+								cols="35"
+								name="descripcion"
+							>
               <%= productoUnico.descripcion %>
-            </textarea>
-             </div>
-          <div class="form-inputFoto">
-            <label class="main-label" for="imagen">Foto de Producto</label>
-            <input
-            id="imagen"
-            type="file"
-            name="product-image"
-            accept="image/png,image/jpeg"
-            />
-          </div>
+            </textarea
+							>
+						</div>
+						<div class="form-inputFoto">
+							<label class="main-label" for="imagen"
+								>Foto de Producto</label
+							>
+							<input
+								id="imagen"
+								type="file"
+								name="product-image"
+								accept="image/png,image/jpeg"
+							/>
+						</div>
 
-          <div class="text-center">
-            <button class="button_3 margin-5" type="reset">Resetear</button>
-            <form method="POST" action="/product/<%= productoUnico.id%>?_method=PATCH">
-              <button class="button_1 margin-5" type="submit" >
-              Enviar
-            </button>
-            </form>
-            
-          </div>
-        </form>
-      
-      </div>
-    </article>  
-     </div>
-    
-    </main>
-    <%- include('./partials/footer') %>
-  </body>
+						<div class="text-center">
+							<button class="button_3 margin-5" type="reset">
+								Resetear
+							</button>
+							<button class="button_1 margin-5" type="submit">
+								Enviar
+							</button>
+						</div>
+					</form>
+			</article>
+			</div>
+      	
+		</main>
+		<%- include('./partials/footer') %>
+	</body>
 </html>
