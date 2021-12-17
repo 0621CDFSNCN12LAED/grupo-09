@@ -12,7 +12,7 @@ function SideBar() {
         href="/"
       >
         <div className="sidebar-brand-icon">
-          <img className="w-100" src={logo} alt="appedal" />
+          <img className="w-100" src={logo} alt="logo-appedal" />
         </div>
       </a>
 
