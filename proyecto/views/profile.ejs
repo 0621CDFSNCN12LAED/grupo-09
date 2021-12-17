@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/head') %>
+
+    <title>Perfil Usuario</title>
+  </head>
+  <body>
+    <%- include('partials/header') %>
+    <h1>Bienvenido, <%= user.first_name +' ' + user.last_name%></h1>
+    <div class="flex">
+      <div class="w-35">
+        <img src="<%= user.avatar%>" class="article-img" />
+
+        <h2>Usuario: <%= user.username%></h2>
+        <h2>Fecha de Nacimiento: <%= user.birth_date%></h2>
+        <h2>Dirección: <%= user.adress + ',' + user.city%></h2>
+        <h2>Teléfono: <%= user.phone%></h2>
+        <h2>E-mail: <%= user.email%></h2>
+        <h2>Categoria: <%= user.categoriausers_id%></h2>
+        <div class="flex text-align">
+          <form action="/user/edit/<%= user.id%>" method="GET">
+            <button class="button_1" type="submit">Editar Perfil</button>
+          </form>
+          <form action="/user/delete/<%= user.id%>" method="GET">
+            <button class="button_2" type="submit">Eliminar Usuario</button>
+          </form>
+        </div>
+      </div>
+      <div>
+        <% for ( prod of productos){%>
+        <div class="product-wrapper flex box-shadow margin-1 w-85 text-align">
+          <article class="prodAll">
+            <a href="/product/detail/<%= prod.id %> ">
+              <div class="product-content zindex-1">
+                <div>
+                  <img
+                    class="imgs center w-85 article-img"
+                    src="/imgProductos/<%=prod.imagen%>"
+                    alt="<%= prod.producto%>"
+                    max-width="100px"
+                  />
+                </div>
+                <p class="style-h4"><%= prod.producto%></p>
+                <p class="descripciones"><%= prod.proveedor%></p>
+
+                <p class="precios">Precio: $<%=prod.precio%>.00</p>
+              </div>
+              <div></div>
+            </a>
+          </article>
+        </div>
+        <% } %>
+      </div>
+    </div>
+  </body>
+</html>
