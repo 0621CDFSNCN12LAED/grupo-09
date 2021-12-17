@@ -14,6 +14,8 @@ router.get('/', productController.show);
 //get un solo producto
 router.get('/detail/:id', productController.productDetail);
 
+router.post('/detail/:id', productController.carrito);
+
 //get pagina de creacion de producto
 router.get('/create', userAuth, productController.create);
 //Post producto creado a base de datos
@@ -25,12 +27,17 @@ router.post(
 );
 
 //get pagina de editacion de producto
-router.get('/edit/:id', productController.update);
+router.get('/edit/:id', userAuth, productController.update);
 //put ultima version de producto
-router.put('/:id', productController.edit);
+router.put(
+	'/:id',
+	uploader.single('imagen'),
+	validacion,
+	productController.edit
+);
 
 //Dlete un unico producto
 
-router.delete('/delete/:id', productController.delete);
+router.delete('/delete/:id', userAuth, productController.delete);
 
 module.exports = router;
