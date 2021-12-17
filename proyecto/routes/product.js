@@ -30,6 +30,7 @@ router.get('/edit/:id', productController.update);
 router.put('/:id', productController.edit);
 
 //Dlete un unico producto
+
 router.delete('/delete/:id', productController.delete);
 
 module.exports = router;
