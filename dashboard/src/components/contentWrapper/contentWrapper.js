@@ -20,7 +20,7 @@ export default function ContentWrapper() {
         
             
             <div class="row">
-            <ContentCard title="Producto Destacado">
+            <ContentCard title="Último Producto Creado">
               <div class="text-center">
                 <img
                   class="img-fluid px-3 px-sm-4 mt-3 mb-4"
@@ -31,7 +31,7 @@ export default function ContentWrapper() {
               </div>
             </ContentCard>
 
-            <ContentCard title="Producto Destacado">
+            <ContentCard title="Último Cliente Registrado">
               <div class="text-center">
                 <img
                   class="img-fluid px-3 px-sm-4 mt-3 mb-4"
