@@ -1,7 +1,6 @@
 import Footer from "./footer/footer";
 import TopNavBar from "./topNavBar/topNavBar";
 import ContentCard from "./contentCard/contentCard";
-import ContentCardLarge from "./contentCard/contentCardLarge";
 import ContentRowTop from "./contentRowTop/contentRowTop";
 import ProductsInDb from "./productsInDb/productsInDb";
 import LastProductInDb from "./lastProductInDb/lastProductInDb";
@@ -24,18 +23,29 @@ export default function ContentWrapper() {
         
             
             <div class="row">
-              <ContentCard title="Último Producto Cargado">
-                 <LastProductInDb />
-              </ContentCard>
-              <ContentCard title="Detalle por Categorias">
-                <CategoriesInDb />
-              </ContentCard>     
-           </div>
-           <div class="row">
-              <ContentCardLarge title="Lista de Productos">
-                <ProductsInDb />
-              </ContentCardLarge>
+            <ContentCard title="Último Producto Creado">
+              <div class="text-center">
+                <img
+                  class="img-fluid px-3 px-sm-4 mt-3 mb-4"
+                  style={{ width: "15rem" }}
+                  src={Img}
+                  alt="Producto Destacado"
+                />
+              </div>
+            </ContentCard>
+
+            <ContentCard title="Último Usuario Registrado">
+              <div class="text-center">
+                <img
+                  class="img-fluid px-3 px-sm-4 mt-3 mb-4"
+                  style={{ width: "14rem" }}
+                  src={Img2}
+                  alt="Producto Destacado"
+                />
+              </div>
+            </ContentCard>
         </div>
+
         <Footer />
     </div>
     </div>
