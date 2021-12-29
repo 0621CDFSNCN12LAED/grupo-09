@@ -21,26 +21,30 @@ export default class ProductsInDb extends Component {
         }
 
         return (
-          
-            <div className="col-lg-12 mb-4 m-auto justify-content-evenly">
+         <div>
+        <div className="col-lg-8 mb-4">
+          <div className="card bg-dark text-white shadow">
               <div className="card-body">
-                  <h4> Repuestos</h4>
-                  <p>Total de productos: {count[0]}</p>
-                
+                  <h4> Repuestos: {count[0]}</h4>
+                </div>
               </div>
-              
-                <div className="card-body">
-                  <h4> Accesorios </h4>
-                  <p>Total de productos: {count[1]}</p>
-              
               </div>
-              
+              <div className="col-lg-8 mb-4">
+          <div className="card bg-dark text-white shadow">
                 <div className="card-body">
-                  <h4>Indumentaria </h4>
-                  <p>Total de productos: {count[2]}</p>
+                  <h4> Accesorios: {count[1]} </h4>
+              </div>
+              </div>
+              </div>
+              <div className="col-lg-8 mb-4">
+          <div className="card bg-dark text-white shadow">
+                <div className="card-body">
+                  <h4>Indumentaria: {count[2]} </h4>
               
               </div>
             </div>
+            </div>
+           </div>
           
         );
     }
