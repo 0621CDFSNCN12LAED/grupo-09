@@ -23,7 +23,7 @@ export default class ProductsInDb extends Component {
                 {this.state.products.map((product) => {
                     return (
                       <div className="col-lg-4 mb-4">
-                        <div className="card bg-hampi text-verde-musgo shadow">
+                        <div className="card bg-dark text-white shadow">
                           <div className="card-body">{product.name}</div>
                         </div>
                       </div>
