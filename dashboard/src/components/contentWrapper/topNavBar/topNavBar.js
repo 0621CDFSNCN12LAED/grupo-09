@@ -2,37 +2,41 @@ import defaultProfilePic from "../../../assets/images/toonjh.png";
 
 export default function TopNavBar(props) {
   return (
-    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+    <nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
       <button
         id="sidebarToggleTop"
-        class="btn btn-link d-md-none rounded-circle mr-3"
+        className="btn btn-link d-md-none rounded-circle mr-3"
       >
-        <i class="fa fa-bars"></i>
+        <i className="fa fa-bars"></i>
       </button>
 
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item dropdown no-arrow mx-1">
-          <a class="nav-link dropdown-toggle" href="/" id="alertsDropdown">
-            <i class="fas fa-bell fa-fw"></i>
+      <ul className="navbar-nav ml-auto">
+        <li className="nav-item dropdown no-arrow mx-1">
+          <a className="nav-link dropdown-toggle" href="/" id="alertsDropdown">
+            <i className="fas fa-bell fa-fw"></i>
           </a>
         </li>
 
-        <li class="nav-item dropdown no-arrow mx-1">
-          <a class="nav-link dropdown-toggle" href="/" id="messagesDropdown">
-            <i class="fas fa-envelope fa-fw"></i>
-            <span class="badge badge-danger badge-counter">1</span>
+        <li className="nav-item dropdown no-arrow mx-1">
+          <a
+            className="nav-link dropdown-toggle"
+            href="/"
+            id="messagesDropdown"
+          >
+            <i className="fas fa-envelope fa-fw"></i>
+            <span className="badge badge-danger badge-counter">1</span>
           </a>
         </li>
 
-        <div class="topbar-divider d-none d-sm-block"></div>
+        <div className="topbar-divider d-none d-sm-block"></div>
 
-        <li class="nav-item dropdown no-arrow">
-          <a class="nav-link dropdown-toggle" href="/" id="userDropdown">
-            <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+        <li className="nav-item dropdown no-arrow">
+          <a className="nav-link dropdown-toggle" href="/" id="userDropdown">
+            <span className="mr-2 d-none d-lg-inline text-gray-600 small">
               Local Admin
             </span>
             <img
-              class="img-profile rounded-circle"
+              className="img-profile rounded-circle"
               src={defaultProfilePic}
               alt="soy YO!"
               width="60"

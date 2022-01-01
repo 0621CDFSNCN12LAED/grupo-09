@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 // const PRODUCTS_URL = "http://localhost:3000/api/products";
-const PRODUCTS_URL = "/api/products";
+const PRODUCTS_URL = "./api/products";
 
 const count = [];
 
@@ -9,7 +9,7 @@ export default class ProductsInDb extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      products: [],
+      // products: [],
     };
 
     console.log("Evento: Constructor");
