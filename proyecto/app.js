@@ -11,7 +11,7 @@ const methodOverride = require("method-override");
 const session = require("express-session");
 const productRouter = require("./routes/product");
 const userRouter = require("./routes/users");
-const apisRouter = require("./apis/routes_api/index");
+const apiRouter = require("./api/routes_api/index");
 
 const db = require("./database/models");
 const Users = db.Usuario;
@@ -43,7 +43,7 @@ app.use(async (req, res, next) => {
 app.use("/", router);
 app.use("/product", productRouter);
 app.use("/users", userRouter);
-app.use("/api", apisRouter);
+app.use("/api", apiRouter);
 
 app.use(
   cors({
