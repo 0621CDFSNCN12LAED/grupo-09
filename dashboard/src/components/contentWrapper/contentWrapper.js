@@ -1,11 +1,11 @@
-import Footer from "./footer/footer";
 import TopNavBar from "./topNavBar/topNavBar";
-import ContentCard from "./contentCard/contentCard";
-import ContentCardLarge from "./contentCard/contentCardLarge";
 import ContentRowTop from "./contentRowTop/contentRowTop";
-import ProductsInDb from "./productsInDb/productsInDb";
 import LastProductInDb from "./lastProductInDb/lastProductInDb";
 import CategoriesInDb from "./categoriesInDb/categoriesInDb";
+import ProductsInDb from "./productsInDb/productsInDb";
+import ContentCard from "./contentCard/contentCard";
+import ContentCardLarge from "./contentCard/contentCardLarge";
+import Footer from "./footer/footer";
 
 import Img from "../../assets/images/WiseMonkey.png";
 import Img2 from "../../assets/images/WiseMonkey2.png";

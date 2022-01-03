@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 
-// const PRODUCTS_URL = "http://localhost:3000/api/products";
-const PRODUCTS_URL = "./api/products";
+const PRODUCTS_URL = "http://localhost:3000/api/products";
+// const PRODUCTS_URL = "/api/products";
 
 const count = [];
 
-export default class ProductsInDb extends Component {
+export default class CategoriesInDb extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -53,7 +53,7 @@ export default class ProductsInDb extends Component {
   }
 
   async fetchProducts() {
-    //Fetch de los generos
+    
     const result = await fetch(PRODUCTS_URL);
     const products = await result.json();
 
