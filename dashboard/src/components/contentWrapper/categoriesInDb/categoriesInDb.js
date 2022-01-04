@@ -55,7 +55,8 @@ export default class CategoriesInDb extends Component {
   async fetchProducts() {
     
     const result = await fetch(PRODUCTS_URL);
-    const products = await result.json();
+    const response = await result.json();
+    const products = response.data;
 
     count.push(products.meta.countByCategory.repuesto);
     count.push(products.meta.countByCategory.accesorio);
@@ -64,6 +65,6 @@ export default class CategoriesInDb extends Component {
     console.log(count);
 
     //Setear como un estado
-    this.setState({ count: count });
+    this.setState({ products:products });
   }
 }

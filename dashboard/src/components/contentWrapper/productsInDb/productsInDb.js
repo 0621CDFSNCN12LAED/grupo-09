@@ -43,7 +43,6 @@ export default class ProductsInDb extends Component {
     const result = await fetch(PRODUCTS_URL);
     const response = await result.json();
     const products = response.data;
-    console.log(products);
 
     //Setear como un estado
     this.setState({ products: products });

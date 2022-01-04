@@ -8,6 +8,8 @@ class LastProductInDb extends Component {
     constructor(props) {
         super(props);
         this.state = {};
+
+        console.log("Evento: Constructor");
     }
 
     render() {
@@ -34,19 +36,16 @@ class LastProductInDb extends Component {
     }
 
     componentDidMount() {
-        console.log("el componente se monto");
+        console.log("Evento: componentDidMount");
         this.fetchLastProduct();
     }
     async fetchLastProduct() {
         const result = await fetch(PRODUCTS_URL);
         const response = await result.json();
         const products = response.data;
-        console.log("estos son los " + products);
-
         const lastProductId = products.length - 1;
-        console.log(lastProductId);
         const lastProduct = products[lastProductId];
-        console.log("este es el ultimo" + lastProduct);
+
 
         this.setState({ lastProduct: lastProduct });
     }

@@ -3,7 +3,6 @@ const { Product } = require("../../database/models");
 module.exports = {
   list: async (req, res) => {
     const products = await Product.findAll();
-
     return res.json({
       meta: {
         status: 200,
