@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
-const PRODUCTS_URL = "http://localhost:3000/api/products";
-// const PRODUCTS_URL = "/api/products";
+// const PRODUCTS_URL = "http://localhost:3000/api/products";
+const PRODUCTS_URL = "/api/products";
 
 const count = [];
 
@@ -55,8 +55,8 @@ export default class CategoriesInDb extends Component {
   async fetchProducts() {
     
     const result = await fetch(PRODUCTS_URL);
-    const response = await result.json();
-    const products = response.data;
+    const products = await result.json();
+    
 
     count.push(products.meta.countByCategory.repuesto);
     count.push(products.meta.countByCategory.accesorio);
@@ -65,6 +65,6 @@ export default class CategoriesInDb extends Component {
     console.log(count);
 
     //Setear como un estado
-    this.setState({ products:products });
+    this.setState({ count: count });
   }
 }

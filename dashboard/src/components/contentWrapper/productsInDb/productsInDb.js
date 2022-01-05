@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
-const PRODUCTS_URL = "http://localhost:3000/api/products";
-// const PRODUCTS_URL = "/api/products";
+// const PRODUCTS_URL = "http://localhost:3000/api/products";
+const PRODUCTS_URL = "/api/products";
 
 export default class ProductsInDb extends Component {
   constructor(props) {

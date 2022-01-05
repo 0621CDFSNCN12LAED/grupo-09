@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import ValueCard from "./valueCard/valueCard";
 
-const productsUrl = "http://localhost:3000/api/products";
-const usersUrl = "http://localhost:3000/api/users";
+// const productsUrl = "http://localhost:3000/api/products";
+const productsUrl = "/api/products";
+// const usersUrl = "http://localhost:3000/api/users";
+const usersUrl = "/api/users"
 
 
 export default function ContentRowTop() {

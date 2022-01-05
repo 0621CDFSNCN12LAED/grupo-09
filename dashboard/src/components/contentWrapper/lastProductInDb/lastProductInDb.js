@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import ContentCard from "../contentCard/contentCard";
 
 
-const PRODUCTS_URL = "http://localhost:3000/api/products";
+// const PRODUCTS_URL = "http://localhost:3000/api/products";
+const PRODUCTS_URL = "/api/products";
 
 class LastProductInDb extends Component {
     constructor(props) {
@@ -23,14 +24,12 @@ class LastProductInDb extends Component {
               <img
                 className="img-fluid px-3 px-sm-4 mt-3 mb-4"
                 style={{ width: "20rem" }}
-                src={`http://localhost:3000/images/product-images/${this.state.lastProduct.image}`}
+                src={`http://localhost:3000/img/imgProductos/${this.state.lastProduct.image}`}
                 alt="Imagen del producto"
               />
             </div>
             <p className="text-center">Price: {this.state.lastProduct.price}</p>
-            <p className="text-center">
-              Description: {this.state.lastProduct.description}
-            </p>
+            
           </ContentCard>
         );
     }

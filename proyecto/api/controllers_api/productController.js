@@ -1,8 +1,8 @@
-const { Product } = require("../../database/models");
+const { Products } = require("../../database/models");
 
 module.exports = {
   list: async (req, res) => {
-    const products = await Product.findAll();
+    const products = await Products.findAll();
     return res.json({
       meta: {
         status: 200,
@@ -34,7 +34,7 @@ module.exports = {
     });
   },
   detail: async (req, res) => {
-    const product = await Product.findByPk(req.params.id);
+    const product = await Products.findByPk(req.params.id);
     if (product) {
       res.json({
         id: product.id,
