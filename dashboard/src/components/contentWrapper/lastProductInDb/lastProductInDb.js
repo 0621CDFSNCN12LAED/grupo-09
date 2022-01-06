@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import ContentCard from "../contentCard/contentCard";
 
 
-// const PRODUCTS_URL = "http://localhost:3000/api/products";
-const PRODUCTS_URL = "/api/products";
+const PRODUCTS_URL = "http://localhost:3000/api/products";
+// const PRODUCTS_URL = "/api/products";
 
 class LastProductInDb extends Component {
     constructor(props) {
@@ -18,17 +18,18 @@ class LastProductInDb extends Component {
             return <div>Cargando...</div>;
         }
         return (
-          <ContentCard title="Last product in Database">
-            <div className="text-center">
-              <h2>{this.state.lastProduct.name}</h2>
-              <img
+          <ContentCard  title={this.state.lastProduct.name}>
+            <div className="justify-content-center text-center">
+            <h2>{this.state.lastProduct.producto}</h2>
+            <img
                 className="img-fluid px-3 px-sm-4 mt-3 mb-4"
                 style={{ width: "20rem" }}
-                src={`http://localhost:3000/img/imgProductos/${this.state.lastProduct.image}`}
+                 src={`http://localhost:3000/imgProductos/${this.state.lastProduct.image}`}
                 alt="Imagen del producto"
               />
+            <h5 className="text-center">Proveedor: {this.state.lastProduct.proveedor}</h5>
+            <p className="text-center">Precio: $ {this.state.lastProduct.precio}.-</p>
             </div>
-            <p className="text-center">Price: {this.state.lastProduct.price}</p>
             
           </ContentCard>
         );
@@ -44,6 +45,8 @@ class LastProductInDb extends Component {
         const products = response.data;
         const lastProductId = products.length - 1;
         const lastProduct = products[lastProductId];
+
+        console.log(lastProduct);
 
 
         this.setState({ lastProduct: lastProduct });

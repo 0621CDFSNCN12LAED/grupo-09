@@ -4,7 +4,7 @@ module.exports = {
   list: async (req, res) => {
     const users = await Usuario.findAll({
       order: [["id", "ASC"]],
-      limit: 10,
+      // limit: 10,
     });
     return res.json({
       meta: {

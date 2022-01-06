@@ -2,7 +2,9 @@ const { Products } = require("../../database/models");
 
 module.exports = {
   list: async (req, res) => {
-    const products = await Products.findAll();
+    const products = await Products.findAll({
+      // order: [["producto", "ASC"]],
+    });
     return res.json({
       meta: {
         status: 200,
@@ -24,11 +26,12 @@ module.exports = {
         return {
           id: product.id,
           name: product.producto,
+          proveedor: product.proveedor,
           description: product.descripcion,
           category: product.categoriaproducts_id,
           detail: "http://localhost:3000/api/products/" + product.id,
-          image: product.image,
-          price: product.price,
+          image: product.imagen,
+          precio: product.precio,
         };
       }),
     });

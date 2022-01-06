@@ -34,22 +34,24 @@ app.set("view engine", "ejs");
 app.listen(3000, () => {
   console.log("Servidor corriendo");
 });
+
 app.use(async (req, res, next) => {
   if (req.session.userId) {
     res.locals.user = await Users.findByPk(req.session.userId);
   }
   next();
 });
+
+app.use(
+  cors({
+    origin: "http://localhost:3001",
+  })
+);
+
 app.use("/", router);
 app.use("/product", productRouter);
 app.use("/users", userRouter);
 app.use("/api", apiRouter);
-
-app.use(
-  cors({
-    origin: "http://localhost:3000",
-  })
-);
 
 app.get("/slider", (req, res) => {
   res.render("slider");

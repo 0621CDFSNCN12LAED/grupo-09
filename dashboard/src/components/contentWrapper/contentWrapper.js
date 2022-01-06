@@ -26,7 +26,7 @@ export default function ContentWrapper() {
             <ContentCard title="Último Producto Cargado">
               <LastProductInDb />
             </ContentCard>
-            <ContentCard title="Detalle por Categorias">
+            <ContentCard title="Detalle Productos por Categoria">
               <CategoriesInDb />
             </ContentCard>
           </div>

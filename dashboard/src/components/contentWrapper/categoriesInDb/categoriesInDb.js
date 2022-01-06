@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
-// const PRODUCTS_URL = "http://localhost:3000/api/products";
-const PRODUCTS_URL = "/api/products";
+const PRODUCTS_URL = "http://localhost:3000/api/products";
+// const PRODUCTS_URL = "/api/products";
 
 const count = [];
 
@@ -9,7 +9,7 @@ export default class CategoriesInDb extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // products: [],
+      products: [],
     };
 
     console.log("Evento: Constructor");
@@ -22,21 +22,21 @@ export default class CategoriesInDb extends Component {
 
     return (
       <div>
-        <div className="col-lg-8 mb-4">
+        <div className="col-lg-12 mb-6">
           <div className="card bg-dark text-white shadow">
             <div className="card-body">
               <h4> Repuestos: {count[0]}</h4>
             </div>
           </div>
         </div>
-        <div className="col-lg-8 mb-4">
+        <div className="col-lg-12 mb-6">
           <div className="card bg-dark text-white shadow">
             <div className="card-body">
               <h4> Accesorios: {count[1]} </h4>
             </div>
           </div>
         </div>
-        <div className="col-lg-8 mb-4">
+        <div className="col-lg-12 mb-6">
           <div className="card bg-dark text-white shadow">
             <div className="card-body">
               <h4>Indumentaria: {count[2]} </h4>
